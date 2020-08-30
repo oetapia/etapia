@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -15,14 +15,18 @@ Delete the line below if you're just getting started and want to remove the welc
 {% endblock extra_css %}
 
 {% block content %}
-
+{% include 'intro.html' %}
 <div class="container">
     <div class="row">
-        <div class="col">
-            <h1>{{ self.title}}</h1>
-            {{self.intro}}
-            {{page.body|richtext}}
-        </div>
+        <div class="col-md-8 ">
+                {{page.body|richtext}}
+        </div><!-- col-md-8 -->
+        <div class="col-md-4">
+            
+            {% with page.gallery_images.all as items   %}
+               {% include 'streams/gallery.html' %}
+            {% endwith %}
+        </div><!-- col-md-4 -->
     </div>
 </div>
 

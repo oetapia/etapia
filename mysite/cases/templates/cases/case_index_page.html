@@ -1,0 +1,71 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+
+{% endblock extra_css %}
+
+{% block content %}
+
+
+<div class="container">
+<div class="row">
+<div class="col-lg-3 py-3 ">
+       <h1>{{ self.title}}</h1>
+            {{self.intro}}
+            {{page.body|richtext}}
+</div><!-- col -->
+<div class="col-8 offset-2 offset-sm-0">
+    <div class="row row-cols-sm-2 row-cols-xl-3 row-cols-1">
+          {% for post in posts %}
+            {% with post=post.specific %}
+            <div class="col pt-3 pb-5">
+  
+                    <div class="box">
+                        <div class="box-head">
+                            <div class="badge top date">{{post.date_start|date:"M Y" }} {%if post.date_end%} - {{post.date_end|date:"M Y"}}{%endif%}</div>
+                            {% with post.main_image as main_image %}
+                                {% if main_image %}{% image main_image class="img-fluid card-img-top" fill-300x300 %}{% endif %}
+                            {% endwith %}
+                                <div class="slider">
+                                    {% for item in post.gallery_images.all %}
+                                        {% image item.image fill-30x30  %}
+                                    {% endfor %}
+                                          
+                                </div>
+                        </div><!-- .card-head -->
+                        <h3>{{ post.title }} <small>{{post.location}}</small></h3>   
+                        <a href="{% pageurl post %}" class="stretched-link">View Case</a>
+                        <div class="box-text text-light">
+                            <ul class="list-unstyled">
+                                <li>Industry: {{post.industry}}</li>
+                                <li>About: {{ post.intro}}</li>
+                            </ul>
+                            
+                                                            
+                        </div><!-- boxtext -->
+                    </div><!-- box -->
+                </div><!-- col-->
+            {% endwith %}
+          {% endfor %}   
+          </div><!-- card-deck -->
+</div><!-- col -->
+</div><!-- row -->
+  
+</div><!-- container -->
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+{# include 'home/welcome_page.html' #}
+{% endblock content %}
+
+

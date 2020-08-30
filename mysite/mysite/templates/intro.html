@@ -1,0 +1,36 @@
+ {% load wagtailcore_tags wagtailimages_tags %}
+    <div class="container">
+        <div class="row pt-5 pb-4">
+            
+            {% if self.icon%}
+            <div class="col-md-1 col-3 ml-2 p-0 ">
+                <img src="{{self.icon.url}}" alt="{{self.title}} icon" class="img-fluid" />    
+                {#enable if main_image used in title #}
+                {# <img class="position-absolute" src="{{self.icon.url}}" />    #}
+                {# {% image self.main_image class="img-fluid" fill-100x100 %} #}
+            </div><!-- col -->
+            {% endif %}
+
+            <div class="col-auto">
+                
+                {% if self.get_ancestors|length > 1 %}
+                    <nav aria-label="breadcrumb">
+                        <ul class="breadcrumb mb-0">
+                            {% for page in self.get_ancestors.in_menu.live %}
+                                {% if page.is_root == False %}
+                                    <li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            <li class="breadcrumb-item active"><h1>{{ self.title }}</h1></li>
+                        </ul>
+                    </nav>
+                {% endif %}
+                {%if self.intro %}
+                    <p class="intro mb-2">{{self.intro}}</p>
+                {% endif %}
+                <div class="badge  date">{{self.date_start|date:"M Y" }} {%if self.date_end%} - {{self.date_end|date:"M Y"}}{%endif%}</div>
+                <p>{{self.industry}} | {{self.location}}</p>                
+            </div><!-- col -->
+  
+        </div><!-- row --> 
+    </div><!-- container -->
