@@ -1,0 +1,18 @@
+<section class="row {{self.cls}}">
+	<div class="container">
+		<div class="row ">
+			<div class="col-md-6">
+			<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+			<script>
+			hbspt.forms.create({
+				portalId: "{{self.portalId}}",
+				formId: "{{self.formId}}"
+			});
+			</script>
+			</div><!-- col-->
+			<div class="col-md-6">
+				{{self.content}}
+			</div><!-- col-->
+		</div><!-- row-->
+	</div><!-- container -->
+</section>

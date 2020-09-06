@@ -1,0 +1,36 @@
+{% load wagtailimages_tags %}
+
+<section class="row {% if self.bg_fixed %}bg_fixed{% endif %} {% if self.bg_repeat %}{% else %}bg_cover{% endif %}" style="{% if self.bg_color %} background-color: {{self.bg_color}};{% endif %}{% if self.bg_img %}{% image self.bg_img width-1800 as img%} background-image:url('{{img.url}}');{% endif %}">
+    <div class="col-12 {{self.cls}} {% if self.dark %} text-light {% endif %} {% if self.bg_img %} overlay {% endif %}">
+        <div class="{% if self.full_width %} container-fluid{% else %} container{% endif %}">
+            <div class="row">
+                {# if title #}   
+                {% if self.title %}
+                    <div class="col-12">
+                        <h2 class="mt-3">{{self.title}}</h2>
+                    </div><!-- title -->    
+                {% endif %}
+                {#endif title #}
+                {% for col in self.cols  %}
+                    <div class="{{col.cls}}">
+                        {% if col.img %}
+                            {% image col.img width-800 as img%}
+                            <img  src="{{img.url}}" class="img-fluid {%if col.round_img%} rounded-circle {%endif%}" alt="{{img.alt}}" data-container="body" data-toggle="popover" data-placement="top"  data-content="{{img.alt}}"/>
+                        {% endif %}
+                        {#endif image#}
+                        {{col.content}}
+                    </div>
+                {% endfor %}
+                {%with self as item %}
+                <div class="col-12  ">
+                 {% if item.buttons.0.link_title %}
+                        {#if link #} 
+                              {% include 'streams/link_block.html' %}
+                        {#endif link#}
+                </div>
+                {% endif %}                            
+                {%endwith%}    
+            </div><!-- row-->    
+        </div><!-- container-->
+    </div><!-- col -->
+</section><!-- row -->

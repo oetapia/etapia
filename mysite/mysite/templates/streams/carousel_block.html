@@ -1,0 +1,61 @@
+{% load wagtailimages_tags %}
+
+    <section class="row intro">
+        <div id="{{self.id}}" class="{{self.cls}} carousel col-12 slide  pr-0 pl-0" data-ride="carousel">
+            {# indicators (bottom pills) #}
+            {% if self.indicator_ctrl %}
+            <ol class="carousel-indicators">
+                {% for item in self.items  %}
+                    <li data-target="#{{self.id}}" data-slide-to="{{ forloop.counter0 }}" class="{#if counter 0 then active#}{% if forloop.counter0 == 0 %}active{% endif %}">
+                    </li>
+                {% endfor %}{#carousel indicators#}
+            </ol>
+             {% endif %}    
+            <div class="carousel-inner banner ">
+
+            {% for item in self.items  %}
+
+                <div class="carousel-item  {% if forloop.counter0 == 0 %}active{% endif %} {% if item.dark %}text-light {% endif %} " style="{% if item.bg_color %}background-color: {{item.bg_color}};{% endif %} {% if item.bg_img %}{% image item.bg_img width-1800 as img%}background-image:url('{{img.url}}');{% endif %}">
+                    {#if video #} 
+                    {% if item.bg_vid %}
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="{{item.bg_vid.url}}" type="video/mp4">
+                    </video>
+                    {% endif %}
+                    {#endif#}
+                    <div class="row {{item.cls}} {% if item.dark %}overlay{% endif %} text-center">
+                        <div class="col-12">
+                            {#if title #}
+                            {% if item.title %}
+                            <h3 class="display-1">{{item.title}}</h3>
+                            {% endif %}
+                            {#endif title#}
+                            {#if title #}
+                            <div>{{item.content}}</div>
+                            {#if link #} 
+                             {% if item.buttons.0.link_title %}
+                            <div class="my-3">
+                                 {% include 'streams/link_block.html' %}
+                            </div>
+                            {%endif%}     
+                            {#endif link#}
+                        </div>
+                    </div>
+
+               
+
+                </div><!-- carousel item -->
+                {% endfor %}{#carousel items#} 
+            </div><!-- carousel inner -->
+                {% if self.side_ctrl %}
+                    <a class="carousel-control-prev" href="#{{self.id}}" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#{{self.id}}" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                {% endif %}    
+        </div><!-- {{carousel.id}}.id carousel -->
+    </section>    

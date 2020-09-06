@@ -1,0 +1,71 @@
+{% load wagtailimages_tags %}
+      
+<section class="row {{self.cls}} ">
+    <div class="{% if self.full_width %}container-fluid {% else %}container {% endif %}">
+    {% if self.title %}
+        <h2 class="my-3">{{self.title}}</h2>
+    {% endif %}
+    <div class="{{self.col_len}} row-cols-1 row mb-3">
+        {% for item in self.cards  %}
+        {#adds card counter as an id to generate unique ids for each card so tabs can target by id#}
+        {% with my_id=forloop.counter %}
+        <div class="col">
+            <div class="card tab mb-3 {{item.cls}} ">
+                {% if item.image %}
+                    {% image item.image fill-300x200 as img%}
+                    <img src="{{img.url}}" alt="{{img.alt}}" class="card-img-top" />
+                {% endif %}
+                {% if item.tabs.0.title %}
+                 <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs" id="card{{ forloop.counter0 }}" role="tablist">
+                    {% for tab in item.tabs  %}
+                        <li class="nav-item">
+                        <a class=" nav-link {% if forloop.counter0 == 0 %}active{% endif %}" href="#tab_{{my_id}}_{{ forloop.counter0 }}" role="tab"  data-toggle="tab"  aria-controls="tab_{{my_id}}_{{ forloop.counter0 }}" aria-selected="true">{{tab.title}}</a>
+                        </li>
+                    {% endfor %}{#tab navs#}
+                    </ul>
+                </div><!-- header -->
+                {% endif %}
+                {#end if tabs on #}
+                <div class="card-body">
+                    <h4 class="card-title">
+                        {{item.title}}
+                    </h4>
+                    <p class="card-text">
+                        {{item.text}}
+                    </p>
+                    {% if item.tabs.0.title %}
+                    <div class="tab-content mt-3">
+                        {% for tab in item.tabs  %}
+                            <div class="tab-pane {{tab.cls}} 
+                            {#if counter 0 then active#}
+                            {% if forloop.counter0 == 0 %}
+                                active
+                            {% endif %}                                 
+                            {#endif#}
+                            " id="tab_{{my_id}}_{{ forloop.counter0 }}" role="tabpanel" aria-labelledby="tab_{{my_id}}_{{ forloop.counter0 }}-tab">
+                             {{tab.content}}
+                            </li>
+                            </div><!-- pane -->
+                        {% endfor %}{# tab items #}
+                    </div><!-- tab content-->
+                    {% endif %}
+                    {#end if tabs on #}
+                </div><!-- card body -->
+                {% if item.buttons.0.link_title %}
+                <div class="card-footer">
+                     {% include 'streams/link_block.html' %}
+                </div><!-- footer -->
+                {% endif %}                    
+            </div><!-- cards -->
+        </div><!-- col -->
+         {% endwith %}
+         {#end with var#}
+        {% endfor %}
+        {#endfor cards #}
+        
+        </div><!-- card-deck-->
+    </div><!-- container -->
+</section>    
+
+          

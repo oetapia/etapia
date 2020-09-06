@@ -1,0 +1,27 @@
+{% load wagtailcore_tags %}
+
+<h1>{{classname}}</h1>    
+
+{% if help_text %}
+        <p class="">{{ help_text }}</p>
+{% endif %}
+
+{% block fields %}
+
+<div class=" {{ classname }}">
+    <table class="fields" width="80%">
+        {% for child in children.values %}
+            <tr {% if child.block.required %} class="required"{% endif %}>
+                <td width="20%" valign="top" style="text-align:right;padding:4px">
+                {% if child.block.label %}
+                    <label {% if child.id_for_label %} style="width:100%" for="{{ child.id_for_label }}"{% endif %}>{{ child.block.label }}:</label>
+                {% endif %}
+                </td>
+                <td style="padding:4px">
+                {{ child.render_form }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

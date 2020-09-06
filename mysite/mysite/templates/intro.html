@@ -11,25 +11,27 @@
             </div><!-- col -->
             {% endif %}
 
-            <div class="col-auto">
+            <div class="{%if self.icon%}col-auto{%endif%}">
                 
                 {% if self.get_ancestors|length > 1 %}
                     <nav aria-label="breadcrumb">
-                        <ul class="breadcrumb mb-0">
+                        <ul class="breadcrumb p-0">
                             {% for page in self.get_ancestors.in_menu.live %}
-                                {% if page.is_root == False %}
+                                {#% if page.is_root == False %#}
                                     <li class="breadcrumb-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
-                                {% endif %}
+                                {#% endif %#}
                             {% endfor %}
-                            <li class="breadcrumb-item active"><h1>{{ self.title }}</h1></li>
                         </ul>
+                        <h1>{{ self.title }}</h1>
                     </nav>
                 {% endif %}
                 {%if self.intro %}
                     <p class="intro mb-2">{{self.intro}}</p>
                 {% endif %}
-                <div class="badge  date">{{self.date_start|date:"M Y" }} {%if self.date_end%} - {{self.date_end|date:"M Y"}}{%endif%}</div>
-                <p>{{self.industry}} | {{self.location}}</p>                
+                <p>
+                    {%if self.date_start%}<span class="badge  date">{{self.date_start|date:"M Y" }} {%if self.date_end%} - {{self.date_end|date:"M Y"}}{%endif%}</span>{%endif%}
+                    {% if self.industry %}| {{self.industry}}{%endif%} {%if self.location %} | <em>{{self.location}}</em>{%endif%}                
+                </p>
             </div><!-- col -->
   
         </div><!-- row --> 

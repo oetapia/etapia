@@ -1,0 +1,26 @@
+{% load wagtailimages_tags %}
+    <aside class="slider_menu {{self.cls}} row text-center {% if self.dark %}text-light{% endif %} ">
+        <div class=" {% if self.full_width %}container-fluid {% else %}container{% endif %}">
+        {# if title #}   
+        {% if self.title %}
+            <h2 class="mt-3">{{self.title}}</h2>
+        {% endif %}
+        {#endif title #}
+        <nav class="nav flatnav">
+            {% for col in self.cols  %}
+            <a href="{{col.link.url}}" class=" {{col.cls}}  nav-row col  slide-toggle">
+                <div>
+                {# if image #}   
+                {% if col.image %}
+                    {% image col.image fill-100x100 as img%}
+                    <img  src="{{img.url}}" alt="{{col.title}}"/>
+                {% endif %}
+                {#endif image#}
+                    <h3>{{col.title}}</h3>
+                    <p>{{col.content}}</p>
+                </div><!-- end col -->
+            </a>
+                {% endfor %}
+        </nav>
+        </div><!-- container -->     
+    </aside>
