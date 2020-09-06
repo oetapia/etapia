@@ -20,8 +20,7 @@ Delete the line below if you're just getting started and want to remove the welc
 <div class="container">
 <div class="row">
 <div class="col-lg-3 py-3 ">
-       <h1>{{ self.title}}</h1>
-            {{self.intro}}
+        {% include 'intro.html' %}
             {{page.body|richtext}}
 </div><!-- col -->
 <div class="col-8 offset-2 offset-sm-0">
