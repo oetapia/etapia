@@ -30,7 +30,7 @@ Delete the line below if you're just getting started and want to remove the welc
   
                     <div class="box">
                         <div class="box-head">
-                            <div class="badge top date">{{post.date_start|date:"M Y" }} {%if post.date_end%} - {{post.date_end|date:"M Y"}}{%endif%}</div>
+                            <div class="badge top date">{%if post.date_end%}{{post.date_end|date:"M Y"}} - {%endif%} {{post.date_start|date:"M Y" }} </div>
                             {% with post.main_image as main_image %}
                                 {% if main_image %}{% image main_image class="img-fluid card-img-top" fill-300x300 %}{% endif %}
                             {% endwith %}

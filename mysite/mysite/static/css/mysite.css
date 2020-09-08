@@ -3,17 +3,24 @@ body {
     font-family: 'Sanchez', serif;
     background-color: rgb(40,40,45);
     color: #ccc;
+    font-size: large;
 }
 
 .banner {
     background: rgba(0, 0, 0, 0.3);
 }
 
+H1,H2,H3 {
+    
+    
+}
+
 a, a:focus {
-  color: #ff6e67;
+  color: rgb(42, 170, 159);
 }
 a:HOVER, a:focus:HOVER {
-  color: #F96262;
+  color: rgb(35, 153, 143);
+  text-decoration: none;
 }
 
 .modal .close {
@@ -39,8 +46,8 @@ a:HOVER, a:focus:HOVER {
 }
 
 .btn.btn-secondary {
-    background-color: rgba(255, 110, 103, 0.8);
-    border: 1px solid #ff6e67;
+    background-color:rgba(42, 170, 159,0.8);
+    border: 1px solid rgb(42, 170, 159);;
 }
 
 .btn.btn-primary:hover {
@@ -54,7 +61,7 @@ a:HOVER, a:focus:HOVER {
 }
 
 .badge {
-    background: #F15A54;
+    background:rgb(42, 170, 159);
     color: #fafafa;
     z-index: 200;
     padding: 3px 0.5em;
