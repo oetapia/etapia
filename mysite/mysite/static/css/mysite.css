@@ -174,3 +174,20 @@ em {
   */
 
 
+
+/* Row BG */
+
+
+.row {
+    background-position: center;
+   
+}
+
+.bg_cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg_fixed {
+    background-attachment: fixed;
+}

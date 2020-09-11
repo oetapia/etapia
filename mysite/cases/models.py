@@ -86,6 +86,8 @@ class CasePage(Page):
     industry = models.CharField(max_length=100,blank=True,null=True)
     #tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
     #categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
+    # add non full time jobs 
+    # add main image, next images
     '''body_rich = StreamField(
         [
             ("cards",  blocks.CardBlock()),
