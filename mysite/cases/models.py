@@ -84,6 +84,8 @@ class CasePage(Page):
     date_end = models.DateField(blank=True,null=True)
     location = models.CharField(max_length=100,blank=True,null=True)
     industry = models.CharField(max_length=100,blank=True,null=True)
+    full_time = models.BooleanField(blank=True,null=True,help_text="Full time job")
+
     #tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
     #categories = ParentalManyToManyField('blog.BlogCategory', blank=True)
     # add non full time jobs 
@@ -119,6 +121,7 @@ class CasePage(Page):
         FieldPanel('intro'),
         FieldPanel('date_start'),
         FieldPanel('date_end'),
+        FieldPanel('full_time'),
         FieldPanel('industry'),
         FieldPanel('location'),
         FieldPanel('body'),
@@ -159,11 +162,11 @@ class CasePageGalleryImage(Orderable):
     image = models.ForeignKey(
         'wagtailimages.Image', on_delete=models.CASCADE, related_name='+'
     )
-    caption = models.CharField(blank=True, max_length=250)
+    #caption = models.CharField(blank=True, max_length=250)
 
     panels = [
         ImageChooserPanel('image'),
-        FieldPanel('caption'),
+        #FieldPanel('caption'),
     ]
 
 '''
