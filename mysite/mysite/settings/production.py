@@ -12,6 +12,17 @@ ALLOWED_HOSTS = ['*']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('SQL_DATABASE', 'db_wagtail'),
+        'USER': os.environ.get('SQL_USER', 'llama'),
+        'PASSWORD': os.environ.get('SQL_PASSWORD', 'monkeymagician'),
+        'HOST': os.environ.get('SQL_HOST', 'localhost'),
+        'PORT': os.environ.get('SQL_PORT', '5432'),
+    }
+}
+
 try:
     from .local import *
 except ImportError:
