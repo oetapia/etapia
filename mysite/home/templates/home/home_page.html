@@ -16,14 +16,16 @@ Delete the line below if you're just getting started and want to remove the welc
 
 {% block content %}
 
+{% include 'intro.html' %}
+{%if page.body%}
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 py-3 ">
-                    {% include 'intro.html' %}
+            <div class="col-lg-8 ">
                         {{page.body|richtext}}
             </div><!-- col -->
-        </div>
-    </div>
+        </div><!-- row -->
+    </div><!-- container -->
+ {%endif%}   
     <div class="container-fluid">
     {% for block in page.content  %}
         {% include_block block %}
