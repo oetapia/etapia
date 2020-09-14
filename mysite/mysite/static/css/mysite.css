@@ -100,7 +100,7 @@ em {
 }
 
 .box .slider {
-    transform: translate(0,-2.3em);
+    transform: translate(0,-3.4em);
     z-index: -10;
     position: relative;
     transition-duration: 300ms;
