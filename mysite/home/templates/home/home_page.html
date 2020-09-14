@@ -16,19 +16,19 @@ Delete the line below if you're just getting started and want to remove the welc
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-3 py-3 ">
-                {% include 'intro.html' %}
-                    {{page.body|richtext}}
-        </div><!-- col -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 py-3 ">
+                    {% include 'intro.html' %}
+                        {{page.body|richtext}}
+            </div><!-- col -->
+        </div>
     </div>
-</div>
-      <div class="container-fluid">
-        {% for block in page.content  %}
-            {% include_block block %}
-        {% endfor %}
-      </div><!-- container-fluid-->
+    <div class="container-fluid">
+    {% for block in page.content  %}
+        {% include_block block %}
+    {% endfor %}
+    </div><!-- container-fluid-->
 
 {% comment %}
 Delete the line below if you're just getting started and want to remove the welcome screen!

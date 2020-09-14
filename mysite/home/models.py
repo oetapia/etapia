@@ -1,13 +1,16 @@
 from django.db import models
-
+from django.utils import timezone
 from wagtail.core.models import Page
 
 from wagtail.admin.edit_handlers import FieldPanel,FieldRowPanel,StreamFieldPanel,MultiFieldPanel
+from wagtail.snippets.models import register_snippet
 from wagtail.core.fields import StreamField,RichTextField
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.documents.edit_handlers import DocumentChooserPanel
 from streams import blocks
 from wagtail.snippets.edit_handlers import SnippetChooserPanel
+
+from .settings import *
 
 #from miscellaneous.translations import TranslatablePageMixin
 #from menus.models import OrderableInMenuPageMixin
