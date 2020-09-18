@@ -17,7 +17,7 @@
                                 <a class="stretched-link" href="{{page.prev_sibling.url}}">{{page.prev_sibling}}</a>
                                 {% if page.flexpage or page.casepage %}
                                     {%if page.prev_sibling.specific.intro%}
-                                    <br/> <small>{{page.prev_sibling.specific.intro}}</small>
+                                    <br/> <p class="small">{{page.prev_sibling.specific.intro}}</p>
                                     {% endif %}    
                                 {% endif %}   
                             </div><!-- media body -->
@@ -48,18 +48,19 @@
                 <div class="col-md-4 pb-3 order-2 order-md-3">
                     {%if page.next_sibling %}
                     <div class=" border-0">
-                        <div class="media">
+                        <div class="media  ">
                                 {% if page.next_sibling.specific.main_image %}
                                     {% image page.next_sibling.specific.main_image fill-100x100 as img%}
-                                    <img src="{{img.url}}" alt="{{img.alt}}">
+                                    <img src="{{img.url}}" class="box-img" alt="{{img.alt}}">
                                 {% endif %}
-                              <div class="media-body p-2">
+                              <div class="media-body px-3 py-1">
                                 <a class=" stretched-link" href="{{page.next_sibling.url}}">{{page.next_sibling}} </a>
                                 {% if page.flexpage or page.casepage %}
                                     {%if page.next_sibling.specific.intro%}
-                                    <br/> <small>{{page.next_sibling.specific.intro}}</small>
+                                    <br/> <p class="small">{{page.next_sibling.specific.intro}}</p>
                                     {% endif %}    
                                 {% endif %}   
+                                
                             </div><!-- media body -->
                             <span class="  my-auto ">
                                 <svg class="bi bi-chevron-compact-right" width="1.6em" height="1.6em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

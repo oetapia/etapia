@@ -89,12 +89,12 @@ em {
     font-size: 1.2em;
 }
 
-.box .card-img-top {
+.box .card-img-top, .box:hover .box-img {
     box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.3) !important;
     transition-duration: 300ms;
 }
 
-.box:hover .card-img-top {
+.box:hover .card-img-top,.box:hover .box-img {
     transform: translate(0,-0.3em);   
     z-index: 100;
 }
@@ -195,4 +195,12 @@ em {
 
 .bg_fixed {
     background-attachment: fixed;
+}
+
+small {
+    line-height: 1em;
+}
+
+hr {
+    border-color: #333;
 }

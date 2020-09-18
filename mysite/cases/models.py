@@ -44,8 +44,9 @@ class CaseIndexPage(Page):
     def get_context(self, request):
         context = super().get_context(request)
         #   blogpages = self.get_children().live().public().order_by('-go_live_at')
-        blogpages = CasePage.objects.child_of(self).live().public().filter(go_live_at__lt=timezone.now()).order_by('-go_live_at')
-        paginator = Paginator(blogpages, 9) 
+        #blogpages = CasePage.objects.child_of(self).live().public().filter(go_live_at__lt=timezone.now()).order_by('-go_live_at')
+        blogpages = CasePage.objects.child_of(self)
+        paginator = Paginator(blogpages, 12) 
         page = request.GET.get("page")
 
         try:

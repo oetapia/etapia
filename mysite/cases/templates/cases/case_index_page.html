@@ -22,10 +22,12 @@ Delete the line below if you're just getting started and want to remove the welc
         {% include 'intro.html' %}
             {{page.body|richtext}}
 </div><!-- col -->
-<div class="col-8 offset-2 offset-sm-0">
+<div class="col-8 offset-2 offset-sm-0 pt-3">
+    <h2>Full Time</h2>
     <div class="row row-cols-sm-2 row-cols-xl-3 row-cols-1">
           {% for post in posts %}
             {% with post=post.specific %}
+            {%if post.full_time %}
             <div class="col pt-3 pb-5">
   
                     <div class="box">
@@ -50,9 +52,47 @@ Delete the line below if you're just getting started and want to remove the welc
                         </div><!-- boxtext -->
                     </div><!-- box -->
                 </div><!-- col-->
+               {%endif%}
             {% endwith %}
           {% endfor %}   
+
           </div><!-- card-deck -->
+            <hr>
+            <h2>Other Projects</h2>
+          <div class="row row-cols-sm-2 row-cols-xl-3 row-cols-1">
+            
+
+                 {% for post in posts %}
+            {% with post=post.specific %}
+            {%if not post.full_time %}
+            <div class="col pt-3 pb-5">
+  
+                    <div class="box">
+                        <div class="box-head">
+                            <div class="badge top date">{%if post.date_end%}{{post.date_end|date:"M Y"}} - {%endif%} {{post.date_start|date:"M Y" }} </div>
+                            {% with post.main_image as main_image %}
+                                {% if main_image %}{% image main_image class="img-fluid card-img-top" fill-300x300 %}{% endif %}
+                            {% endwith %}
+                                <div class="slider">
+                                    {% for item in post.gallery_images.all %}
+                                        {% image item.image fill-30x30  %}
+                                    {% endfor %}
+                                </div>
+                        </div><!-- .card-head -->
+                        <h3>{{ post.title }} <small>{{post.location}}</small></h3>   
+                        <a href="{% pageurl post %}" class="stretched-link">View Case</a>
+                        <div class="box-text text-light">
+                            <ul class="list-unstyled">
+                                <li>Industry: {{post.industry}}</li>
+                                <li>About: {{ post.intro}}</li>
+                            </ul>
+                        </div><!-- boxtext -->
+                    </div><!-- box -->
+                </div><!-- col-->
+               {%endif%}
+            {% endwith %}
+          {% endfor %}   
+          </div><!-- end col -->>
 </div><!-- col -->
 </div><!-- row -->
   
