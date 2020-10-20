@@ -1,0 +1,9 @@
+{# search_page.html #}
+{% extends "base.html" %}
+
+{% block content %}
+  {% for result in results.hits %}
+    {{ result.title }} {# Try changing to result.title for actual results #}
+    {{ result.intro }} {# Try changing to result.title for actual results #}
+  {% endfor %}
+{% endcontent %}
