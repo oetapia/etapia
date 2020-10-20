@@ -17,6 +17,7 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -27,7 +28,7 @@ INSTALLED_APPS = [
     'home',
     'search',
     'cases',
-
+   'algoliasearch_django',
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     "django.contrib.sitemaps",    
@@ -88,6 +89,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
+
+
+ALGOLIA = {
+    'APPLICATION_ID': '6WI6WCU8N4',
+    'API_KEY': '1b64a191c9eae1f5030161d78da30600'
+}
 
 
 # Database

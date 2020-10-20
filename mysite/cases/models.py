@@ -214,3 +214,4 @@ class BlogCategory(models.Model):
         verbose_name_plural = 'blog categories'
 
 '''
+
