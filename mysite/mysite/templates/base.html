@@ -72,6 +72,10 @@
              <div class="col pt-3 align-self-center  ">
                 <a class="navbar-brand" href="/{{ lang_slug }}"><img class="logo" src="{{ settings.home.Sitewide.logo.url }}" alt="{{ site_details.site_title }} Logo" height="48" /></a>
             </div><!-- col -->
+            <div class="col">
+            {%include 'nav.html'%}
+
+            </div><!-- col -->
         </div>
         </div>
         {%endif%}
