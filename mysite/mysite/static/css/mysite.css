@@ -205,3 +205,7 @@ small {
 hr {
     border-color: #333;
 }
+
+label {
+    color: #fff !important
+}
