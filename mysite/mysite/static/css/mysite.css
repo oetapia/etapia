@@ -37,12 +37,14 @@ a:HOVER, a:focus:HOVER {
 .btn {
     font-size: 90%;
     color: #ddd;
+    border-radius: 50rem !important
 }
 
 
 .btn.btn-primary {
-    background-color: rgba(90, 90, 90, 0.8);
-    border: 1px solid #333;
+    background-color: rgba(90, 90, 90, 0.1);
+    border: 2px solid #aaa;
+    padding: 0.6em 1em;
 }
 
 .btn.btn-secondary {
@@ -54,6 +56,7 @@ a:HOVER, a:focus:HOVER {
     background-color: rgba(80, 80, 80, 0.8);
     color: #eee;
     box-shadow: 0 1px 6px 3px rgba(130, 100, 100, 0.2);
+    transition-duration: 200ms;
 }
 
 .title-head {
@@ -122,7 +125,7 @@ em {
 }
 
 .overlay {
-    background-color: rgba( 10,10,15,.7);
+    background-color: rgba( 10,10,15,.3);
 }
 
 
@@ -208,4 +211,14 @@ hr {
 
 label {
     color: #fff !important;
+}
+
+/*extra padding*/
+
+.mt-10 {
+    margin-top:10em;
+}
+
+.pt-10 {
+    padding-top:10em;
 }
