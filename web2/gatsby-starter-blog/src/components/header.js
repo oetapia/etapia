@@ -5,7 +5,7 @@ import {Container, Nav, Navbar} from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <header className="sticky-top">
     <Container>
     <Navbar class >
 
@@ -16,42 +16,41 @@ const Header = ({ siteTitle }) => (
       width={40}
       formats={["auto", "webp", "avif"]}
       alt="E Logo"
-      
     />
-      <Nav.Link>
         <Link
           to="/"
           activeClassName="active"
+          className="nav-link mx-3"
         >
           Home
         </Link>
-      </Nav.Link> 
-      <Nav.Link>
+
           <Link
             to="/about/"
             activeClassName="active"
+            className="nav-link mx-3"
           >
             About
           </Link>
           
-        </Nav.Link>
-        <Nav.Link>
+
           <Link
             to="/experience/"
             activeClassName="active"
+            className="nav-link mx-3"
           >
             Experience
           </Link>
           
-        </Nav.Link>
-        <Nav.Link>
+ 
         <Link
           to="/contact/"
           activeClassName="active"
+          className="nav-link mx-3"
         >
           Contact
         </Link>
-        </Nav.Link>
+
     
     </Nav>
 

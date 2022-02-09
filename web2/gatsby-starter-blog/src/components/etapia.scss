@@ -1,0 +1,14 @@
+$bg: rgb(250, 248, 243);
+$primary: rgb(255,120,120);
+
+body {
+	background-color: $bg;
+	//font-family: 'Sanchez', serif;
+}
+
+a {
+	color: $primary;
+	&:hover {
+		color: darken($primary, 10%);
+	}
+}

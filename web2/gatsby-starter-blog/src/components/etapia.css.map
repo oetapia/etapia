@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,IAAI,CAAC;EACJ,gBAAgB,EAJZ,OAAkB;CAMtB;;AAED,AAAA,CAAC,CAAC;EACD,KAAK,EARI,OAAgB;CAYzB;;AALD,AAEC,CAFA,AAEC,MAAM,CAAC;EACP,KAAK,EAAE,OAAqB;CAC5B",
+    "sources": [
+        "etapia.scss"
+    ],
+    "names": [],
+    "file": "etapia.css"
+}
