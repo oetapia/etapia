@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Intro from "./intro"
+//import Intro from "./intro"
 //import "./layout.css"
 import "./dist/css/bootstrap.min.css"
 import "./etapia.css"

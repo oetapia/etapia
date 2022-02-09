@@ -62,7 +62,26 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        /*
+        defaultLayouts: {
+          posts: require.resolve("./src/components/posts-layout.js"),
+          default: require.resolve("./src/components/default-page-layout.js"),
+        },
+        */
+        /*
+         remarkPlugins: [
+          require("remark-abbr"),
+          // To pass options, use a 2-element array with the
+          // configuration in an object in the second element
+          [require("remark-external-links"), { target: false }],
+        ],
+        */
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
