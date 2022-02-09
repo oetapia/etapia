@@ -62,7 +62,7 @@ Delete the line below if you're just getting started and want to remove the welc
           <div class="row row-cols-sm-2 row-cols-xl-3 row-cols-1">
             
 
-                 {% for post in posts %}
+            {% for post in posts %}
             {% with post=post.specific %}
             {%if not post.full_time %}
             <div class="col pt-3 pb-5">
@@ -92,7 +92,7 @@ Delete the line below if you're just getting started and want to remove the welc
                {%endif%}
             {% endwith %}
           {% endfor %}   
-          </div><!-- end col -->>
+          </div><!-- end col -->
 </div><!-- col -->
 </div><!-- row -->
   
