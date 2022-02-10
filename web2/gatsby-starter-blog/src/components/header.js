@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Header = ({ siteTitle }) => (
   <header className="sticky-top">
     <Container>
-    <Navbar class >
+    <Navbar >
 
     <Nav>
     <StaticImage
