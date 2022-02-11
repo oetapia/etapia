@@ -1,13 +1,13 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Intro from "../components/intro"
 //import Light from "../components/light"
 import Seo from "../components/seo"
 
-import { Container, Row, Col } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 
 const IndexPage = () => (
 

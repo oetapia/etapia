@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import {Card,Col,Row,Badge} from "react-bootstrap"
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
 
 export default function Projects({ data }) {
   return (
@@ -25,6 +25,7 @@ export default function Projects({ data }) {
               <img 
               className="card-image"
               src={frontmatter.image.childImageSharp.original.src}
+              alt={frontmatter.title}
               />             
               ) : ''
               }

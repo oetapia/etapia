@@ -2,7 +2,6 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import {Container, Nav, Navbar,NavDropdown, } from "react-bootstrap"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header className="sticky-top">
@@ -11,11 +10,10 @@ const Header = ({ siteTitle }) => (
         <Link
             to="/"
           >
-          <StaticImage
+          <img
               className="me-lg-5"
               src="../images/elogo.svg"
               height={40}
-              formats={["auto", "webp", "avif", "svg"]}
               alt="E Logo"
             />
           </Link>

@@ -23,6 +23,7 @@ export default function Experience({ data }) {
               <img 
               className="card-image"
               src={frontmatter.image.childImageSharp.original.src}
+              alt={frontmatter.title}
               />             
               ) : ''
               }

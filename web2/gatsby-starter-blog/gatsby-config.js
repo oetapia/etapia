@@ -69,7 +69,7 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         
         defaultLayouts: {
-          default: require.resolve("./src/components/Layout.js"),
+          default: require.resolve("./src/components/layout.js"),
 
         },
 
