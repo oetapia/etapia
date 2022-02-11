@@ -18,7 +18,7 @@ export default function Projects({ data }) {
     </p>
     <Row>
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
-         <Col className="py-3" md="3">
+         <Col className="py-3" md="3" key={id}>
          <Card >
 
               {frontmatter.image !==null ? (

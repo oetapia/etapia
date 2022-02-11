@@ -16,7 +16,7 @@ export default function Experience({ data }) {
     <p>Full time jobs, describing objectives</p>
     <Row>
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
-         <Col className="py-3" md="4">
+         <Col className="py-3" md="4" key={id}>
          <Card >
 
               {frontmatter.image !==null ? (

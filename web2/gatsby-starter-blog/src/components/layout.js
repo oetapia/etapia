@@ -14,6 +14,7 @@ import Header from "./header"
 //import "./layout.css"
 import "./dist/css/bootstrap.min.css"
 import "./etapia.css"
+//import "./etapia.css.map"
 
 import { Container } from "react-bootstrap"
 
