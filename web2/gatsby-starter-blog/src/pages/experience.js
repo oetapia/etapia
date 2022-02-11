@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import {Card,Col,Row} from "react-bootstrap"
+import {Card,Col,Row,Badge} from "react-bootstrap"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Experience({ data }) {
   return (
@@ -12,35 +13,40 @@ export default function Experience({ data }) {
 
     <Seo title="Work Experience" />
     <h1>Experience</h1>
-    <h2>
-      Full time jobs
-    </h2>
-    <p>These were fun.</p>
-
-    <h2>
-      Other projects
-    </h2>
-
+    <p>Full time jobs, describing objectives</p>
     <Row>
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
-         <Col>
-         <Card>
-              <Card.Header>
+         <Col className="py-3" md="4">
+         <Card >
 
-                <Card.Title>
-                  {frontmatter.title}
-                </Card.Title>
-
-              </Card.Header>
+              {frontmatter.image !==null ? (
+              <img 
+              className="card-image"
+              src={frontmatter.image.childImageSharp.original.src}
+              />             
+              ) : ''
+              }
+              
               <Card.Body>
-                <p className="small text-muted">
-                  {frontmatter.date}
+                <Card.Title>
+                    {frontmatter.title}
+                </Card.Title>
+                <p className="small text-muted m-0">
+                  {frontmatter.date} @ {frontmatter.location} | {frontmatter.industry}
+                </p>
+                <p className="small mt-0">
+                {frontmatter.tags.map((tag, i) => [
+                  <Badge key={i} bg="secondary"  className="me-1">
+                    {tag}
+                  </Badge>
+                ])}
                 </p>
                 <p>
+                
                   {excerpt}
                 </p>
               </Card.Body>
-              <Card.Footer>
+              <Card.Footer className="text-end">
                 <Link  
                   to={`/${slug}`}
                   className="btn btn-primary"
@@ -62,13 +68,27 @@ export default function Experience({ data }) {
 
 export const query = graphql`
   query SITE_INDEX_QUERY {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: {fields: [frontmatter___date], order: DESC}
+      filter: {frontmatter: {tags: {eq: "full time"}}}
+    ) {
       nodes {
         id
         excerpt(pruneLength: 250)
         frontmatter {
           title
-          date(formatString: "YYYY MMMM Do")
+          date(formatString: "YYYY MMMM")
+          path
+          tags
+          location
+          industry
+          image{
+            childImageSharp {
+              original {
+                src
+              }
+            }
+          }
         }
         slug
       }

@@ -27,14 +27,14 @@ const About = () => (
       <p className="lead">
         Managed marketing teams.
       </p>
-      <p className="small">
+      <p>
         Research, Planning, Strategy, Demand generation, Branding, Positioning, Events, Promotion, MS Office, Google Drive, Database mining, Tableau, ATL and BTL.
       </p>
       <p>
         Digital Marketing: CMS (Django, Odoo, Wordpress), SEO, SEM, SMM, Google Analytics, Mailings, Landing pages, Copywriting and Content Creation
     </p>
      </Col>
-     <Col md={{span:5,offset:1}} className="my-5">
+     <Col md={{span:5,offset:1}} className="my-5 px-lg-5 border-start">
      <h3>Product</h3>
      <p className="lead">
      Designed and launched in various countries.
@@ -63,14 +63,14 @@ const About = () => (
     
     
      </Col>
-     <Col md={{span:5,offset:1}} className="my-5">
+     <Col md={{span:5,offset:1}} className="my-5 px-lg-5 border-start">
      <h3>
      Design
      </h3>
     <p className="lead">
       Educated in Art Direction.
     </p>    
-    <p className="small">
+    <p>
       Photography: Digital Photography, Lightning techniques, Adobe Photoshop, Adobe Lightroom, Affinity Photo. 
     </p>
     <p>

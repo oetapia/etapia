@@ -1,60 +1,70 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import {Container, Nav, Navbar} from "react-bootstrap"
+import {Container, Nav, Navbar,NavDropdown, } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header className="sticky-top">
     <Container>
-    <Navbar >
-
-    <Nav>
-    <StaticImage
-      className="me-5"
-      src="../images/elogo2.png"
-      width={40}
-      formats={["auto", "webp", "avif"]}
-      alt="E Logo"
-    />
-        <Link
-          to="/"
-          activeClassName="active"
-          className="nav-link mx-3"
-        >
-          Home
-        </Link>
-
+      <Navbar className="bg-1" expand="lg">
+        <StaticImage
+            className="me-lg-5"
+            src="../images/elogo.svg"
+            height={40}
+            formats={["auto", "webp", "avif", "svg"]}
+            alt="E Logo"
+          />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav>
+          
           <Link
-            to="/about/"
+            to="/"
             activeClassName="active"
             className="nav-link mx-3"
           >
-            About
+            Home
           </Link>
-          
 
+            <Link
+              to="/about/"
+              activeClassName="active"
+              className="nav-link mx-3"
+            >
+              About
+            </Link>
+            <NavDropdown className="mx-3" title="Experience" id="navbarScrollingDropdown">
+              <Link
+                to="/experience/"
+                activeClassName="active"
+                className="dropdown-item"
+              >
+                Experience
+              </Link>
+              <Link
+                to="/projects/"
+                activeClassName="active"
+                className="dropdown-item"
+              >
+                Projects
+              </Link>
+                                  
+            </NavDropdown>
+
+            
+            
+  
           <Link
-            to="/experience/"
+            to="/contact/"
             activeClassName="active"
             className="nav-link mx-3"
           >
-            Experience
+            Contact
           </Link>
-          
- 
-        <Link
-          to="/contact/"
-          activeClassName="active"
-          className="nav-link mx-3"
-        >
-          Contact
-        </Link>
-
-    
-    </Nav>
-
-    </Navbar>
+        </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     </Container>
   </header>
 )

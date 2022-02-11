@@ -37,6 +37,7 @@ module.exports = {
       options: {
         fonts: [
           `Sanchez`,
+          //`Trirong\:200i,400,400i,700`,
           //`source sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ],
         display: 'swap'
@@ -66,12 +67,21 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        /*
+        
         defaultLayouts: {
-          posts: require.resolve("./src/components/posts-layout.js"),
-          default: require.resolve("./src/components/default-page-layout.js"),
+          default: require.resolve("./src/components/Layout.js"),
+
         },
-        */
+
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+        
         /*
          remarkPlugins: [
           require("remark-abbr"),

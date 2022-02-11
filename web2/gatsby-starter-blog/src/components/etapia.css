@@ -1,12 +1,51 @@
 body {
-  background-color: #faf8f3;
+  background-color: #ecefe9;
+  font-family: 'Sanchez', serif;
+  color: #3c4747;
+}
+
+body .btn-primary, body .dropdown-item.active, body .dropdown-item:active {
+  background-color: #87a9a9;
+  border-color: #96b4b4;
+}
+
+body .btn-primary:hover, body .btn-primary:focus, body .dropdown-item.active:hover, body .dropdown-item.active:focus, body .dropdown-item:active:hover, body .dropdown-item:active:focus {
+  background-color: #789f9f;
+  border-color: #87a9a9;
+}
+
+body .bg-primary {
+  background-color: #96b4b4;
+}
+
+body .card-header, body .card-footer {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+body .card {
+  background-color: #ecefe9;
+  border-color: rgba(146, 180, 184, 0.3);
+}
+
+body .card:hover {
+  -webkit-box-shadow: rgba(146, 180, 184, 0.6) 0.3em 0.3em 1em;
+          box-shadow: rgba(146, 180, 184, 0.6) 0.3em 0.3em 1em;
+  -webkit-transform: translate(-0.2em, -0.2em);
+          transform: translate(-0.2em, -0.2em);
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.bg-1 {
+  background-color: rgba(236, 239, 233, 0.7);
 }
 
 a {
-  color: #ff7878;
+  color: #96b4b4;
 }
 
 a:hover {
-  color: #ff4545;
+  color: #789f9f;
 }
 /*# sourceMappingURL=etapia.css.map */
