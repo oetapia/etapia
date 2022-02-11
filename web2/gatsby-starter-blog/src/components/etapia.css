@@ -37,6 +37,10 @@ body .card:hover {
           transition-duration: 300ms;
 }
 
+body .bg-dark {
+  background-color: rgba(90, 133, 138, 0.6) !important;
+}
+
 .bg-1 {
   background-color: rgba(236, 239, 233, 0.7);
 }

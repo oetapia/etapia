@@ -8,13 +8,17 @@ const Header = ({ siteTitle }) => (
   <header className="sticky-top">
     <Container>
       <Navbar className="bg-1" expand="lg">
-        <StaticImage
-            className="me-lg-5"
-            src="../images/elogo.svg"
-            height={40}
-            formats={["auto", "webp", "avif", "svg"]}
-            alt="E Logo"
-          />
+        <Link
+            to="/"
+          >
+          <StaticImage
+              className="me-lg-5"
+              src="../images/elogo.svg"
+              height={40}
+              formats={["auto", "webp", "avif", "svg"]}
+              alt="E Logo"
+            />
+          </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>

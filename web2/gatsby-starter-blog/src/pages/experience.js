@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import {Card,Col,Row,Badge} from "react-bootstrap"
-import { StaticImage } from "gatsby-plugin-image"
+//import { StaticImage } from "gatsby-plugin-image"
 
 export default function Experience({ data }) {
   return (
@@ -46,7 +46,7 @@ export default function Experience({ data }) {
                   {excerpt}
                 </p>
               </Card.Body>
-              <Card.Footer className="text-end">
+              <Card.Footer className="text-center">
                 <Link  
                   to={`/${slug}`}
                   className="btn btn-primary"

@@ -34,12 +34,18 @@ body {
 			transition-duration: 300ms;
 		}
 	}
+
+	.bg-dark {
+		background-color: darken($dark,20%) !important;	
+	}
 	
 }
 
 .bg-1 {
 	background-color: transparentize($bg,0.3);
 }
+
+
 
 a {
 	color: $primary;
