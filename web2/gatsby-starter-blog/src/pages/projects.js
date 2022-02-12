@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import {Card,Col,Row,Badge} from "react-bootstrap"
-//import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Projects({ data }) {
   return (
@@ -22,8 +22,8 @@ export default function Projects({ data }) {
          <Card >
 
               {frontmatter.image !==null ? (
-              <img 
-              className="card-image"
+              <StaticImage 
+              imgStyle="card-image"
               src={frontmatter.image.childImageSharp.original.src}
               alt={frontmatter.title}
               />             
@@ -54,7 +54,7 @@ export default function Projects({ data }) {
               <Card.Footer className="text-center">
                 <Link  
                   to={`/${slug}`}
-                  className="btn btn-primary"
+                  className="btn btn-primary stretched-link"
                   >
                   See more
                 </Link>
