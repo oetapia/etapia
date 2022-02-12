@@ -7,16 +7,12 @@ import Intro from "../components/intro"
 //import Light from "../components/light"
 import Seo from "../components/seo"
 
-import { Row, Col } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
 const IndexPage = () => (
 
   <>
   
-     
-
-  
-
   <Layout>
       <Seo title="International Marketing" />
       <Intro>
@@ -28,8 +24,9 @@ const IndexPage = () => (
               Mixing product management, strategic marketing and tech to create cohesive brands.  
             </p>
       </Intro> 
-      
-    <Row className="my-5">
+     <Container>
+
+     <Row className="my-5">
       <Col>
         <h2>About Esteban</h2>
         <p className="lead">
@@ -59,6 +56,9 @@ const IndexPage = () => (
 
       </Col>
     </Row>
+       
+    </Container> 
+    
 
    
    

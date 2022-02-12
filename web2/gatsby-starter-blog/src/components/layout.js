@@ -36,16 +36,19 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
  
       
-      <Container className="mt-5">
+      
         <main>{children}</main>
         <footer 
         className="border-top py-3"
         >
+        <Container>  
+        
         <p className="small text-muted">
           {data.site.siteMetadata?.title}  © {new Date().getFullYear()}
         </p>  
-        </footer>
+        
       </Container>
+      </footer>
     </>
   )
 }

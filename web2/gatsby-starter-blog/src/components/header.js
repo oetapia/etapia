@@ -6,14 +6,15 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header className="sticky-top">
-    <Container>
-      <Navbar className="bg-1" expand="lg">
+    
+      <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
         <Link
             to="/"
           >
           <StaticImage
               className="me-lg-5"
-              src="../images/elogo.svg"
+              src="../images/elogo-w.svg"
               height={40}
               formats={["auto", "webp", "avif", "svg"]}
               alt="E Logo"
@@ -44,14 +45,14 @@ const Header = ({ siteTitle }) => (
                 activeClassName="active"
                 className="dropdown-item"
               >
-                Experience
+                Product &amp; MK
               </Link>
               <Link
                 to="/projects/"
                 activeClassName="active"
                 className="dropdown-item"
               >
-                Projects
+                Branding
               </Link>
                                   
             </NavDropdown>
@@ -68,8 +69,9 @@ const Header = ({ siteTitle }) => (
           </Link>
         </Nav>
         </Navbar.Collapse>
+        </Container>
       </Navbar>
-    </Container>
+    
   </header>
 )
 

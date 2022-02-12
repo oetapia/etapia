@@ -3,8 +3,10 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import {Card,Col,Row,Badge} from "react-bootstrap"
-import { StaticImage } from "gatsby-plugin-image"
+import Intro from "../components/intro"
+import {Container,Card,Col,Row,Badge,Image} from "react-bootstrap"
+//import { StaticImage } from "gatsby-plugin-image"
+
 
 export default function Projects({ data }) {
   return (
@@ -12,17 +14,21 @@ export default function Projects({ data }) {
   <Layout>
 
     <Seo title="Other Projects" />
-    <h1>Projects</h1>
-    <p>
-      Freelance, volunteer, personal, etc.
-    </p>
+    <Intro>
+      <h1>Branding projects</h1>
+      <p>
+        I designed different brands and helped with their positioning strategy as a consultant.
+      </p>
+    </Intro>
+    
+    <Container>
     <Row>
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
          <Col className="py-3" md="3" key={id}>
          <Card >
 
               {frontmatter.image !==null ? (
-              <StaticImage 
+              <Image 
               imgStyle="card-image"
               src={frontmatter.image.childImageSharp.original.src}
               alt={frontmatter.title}
@@ -64,6 +70,7 @@ export default function Projects({ data }) {
          </Col>
         ))}
     </Row>
+    </Container>
   </Layout>
   
   </>
@@ -96,6 +103,14 @@ export const query = graphql`
           }
         }
         slug
+      }
+      edges {
+        next {
+          slug
+        }
+        previous {
+          slug
+        }
       }
     }
   }

@@ -3,30 +3,32 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import {Card,Col,Row,Badge} from "react-bootstrap"
+import Intro from "../components/intro"
+import {Container,Card,Col,Row,Badge,Image} from "react-bootstrap"
 //import { StaticImage } from "gatsby-plugin-image"
 
 export default function Experience({ data }) {
   return (
   <>
   <Layout>
-
+    
     <Seo title="Work Experience" />
-    <h1>Experience</h1>
-    <p>Full time jobs, describing objectives</p>
+    <Intro>
+      <h1>Experience</h1>
+      <p>Product and Marketing experience in full time jobs.</p>
+    </Intro>
+    <Container>
     <Row>
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
          <Col className="py-3" md="4" key={id}>
          <Card >
 
-              {frontmatter.image !==null ? (
-              <img 
+              
+              <Image
               className="card-image"
               src={frontmatter.image.childImageSharp.original.src}
               alt={frontmatter.title}
               />             
-              ) : ''
-              }
               
               <Card.Body>
                 <Card.Title>
@@ -50,7 +52,7 @@ export default function Experience({ data }) {
               <Card.Footer className="text-center">
                 <Link  
                   to={`/${slug}`}
-                  className="btn btn-primary"
+                  className="btn btn-primary stretched-link"
                   >
                   See more
                 </Link>
@@ -60,6 +62,7 @@ export default function Experience({ data }) {
          </Col>
         ))}
     </Row>
+    </Container>
   </Layout>
   
   </>

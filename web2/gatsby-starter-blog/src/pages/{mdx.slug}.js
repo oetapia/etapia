@@ -2,20 +2,20 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import Layout from "../components/layout";
-import {Row, Col, Image} from 'react-bootstrap'
+import {Row, Col, Image, Badge, Container} from 'react-bootstrap'
 
 export default function PostPage({ data }) {
   
   const {
     body,
-    frontmatter: { title,location,image,images, date },
+    frontmatter: { title,location,image,images, date, tags, industry,excerpt },
   } = data.mdx;
   
   return (
     <>
     <Layout>
 
-      
+      <Container>
       <Row className="mb-5">
         <Col xs="4" sm="3" lg="3" xl="2">
         {image ? (
@@ -30,14 +30,26 @@ export default function PostPage({ data }) {
         <Col>
         <h1>{title}</h1>
         <p className="text-muted small">
-        {location} | {date}
-      </p>
+        {location} | {date} | {industry}
+        </p>
+        <p>
+          {tags.map((tag, i) => [
+                  <Badge key={i} bg="secondary"  className="me-1">
+                    {tag}
+                  </Badge>
+             ])}
+        </p>
+        <p>
+            {excerpt}
+        </p>
         </Col>
       </Row>
+      
       
       <div class="p-5 bg-white shadow" >
       <MDXRenderer>{body}</MDXRenderer>
       </div>         
+      </Container>
     </Layout>
       
     </>
@@ -55,6 +67,8 @@ export const query = graphql`
         title
         location
         tags
+        excerpt
+        industry
         images
         image {
           childImageSharp {

@@ -3,22 +3,23 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-import {Row,Col} from "react-bootstrap"
+import Intro from "../components/intro"
+import {Container,Row,Col} from "react-bootstrap"
 
 const About = () => (
   <>
   <Layout>
+    
     <Seo title="About" />
-    <Row>
-    <Col className="mb-5">
+
+    <Intro>
       <h1>About Me</h1>
       <p className="lead">
         Curiosity driven. Objective focused. Wide expertise. 
       </p>  
-    </Col>
+    </Intro>  
+    <Container>
     
-    </Row>
      <Row>
      <Col md={{span:5,offset:1}}>
       <h3>
@@ -83,7 +84,7 @@ const About = () => (
 </Col>
    </Row>
 
-   
+   </Container>
   </Layout>
   </>
 )
