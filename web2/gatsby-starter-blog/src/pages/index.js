@@ -27,7 +27,7 @@ const IndexPage = () => (
      <Container>
 
      <Row className="my-5">
-      <Col>
+        <Col className="py-5" lg="4" md="6">
         <h2>About Esteban</h2>
         <p className="lead">
           International background
@@ -43,7 +43,7 @@ const IndexPage = () => (
       </Col>
     </Row>
     <Row>
-      <Col>
+      <Col className="py-5" lg="4" md="6">
       <h2>
         Experience
       </h2>

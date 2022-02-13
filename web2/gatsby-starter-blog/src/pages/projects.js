@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Intro from "../components/intro"
 import {Container,Card,Col,Row,Badge,Image} from "react-bootstrap"
-//import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage,getImage } from "gatsby-plugin-image"
 
 
 export default function Projects({ data }) {
@@ -27,14 +27,11 @@ export default function Projects({ data }) {
          <Col className="py-3" md="3" key={id}>
          <Card >
 
-              {frontmatter.image !==null ? (
-              <Image 
-              imgStyle="card-image"
-              src={frontmatter.image.childImageSharp.original.src}
+                 
+              <GatsbyImage image={getImage(frontmatter.image)}    
+              className="card-image" 
               alt={frontmatter.title}
-              />             
-              ) : ''
-              }
+              />
 
               <Card.Body>
 
@@ -96,9 +93,7 @@ export const query = graphql`
           industry
           image{
             childImageSharp {
-              original {
-                src
-              }
+              gatsbyImageData(width: 400)
             }
           }
         }

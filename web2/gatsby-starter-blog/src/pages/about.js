@@ -20,7 +20,7 @@ const About = () => (
     </Intro>  
     <Container>
     
-     <Row>
+     <Row className="pt-lg-5">
      <Col md={{span:5,offset:1}}>
       <h3>
         Marketing
@@ -50,7 +50,7 @@ const About = () => (
      </Col>
    </Row>
 
-   <Row>
+   <Row className="py-lg-5">
      <Col md={{span:5,offset:1}} >
      <h3>
         Tech

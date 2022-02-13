@@ -5,9 +5,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Intro from "../components/intro"
 import {Container,Card,Col,Row,Badge,Image} from "react-bootstrap"
-//import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage,getImage } from "gatsby-plugin-image"
 
 export default function Experience({ data }) {
+  
+  
+  
   return (
   <>
   <Layout>
@@ -19,17 +22,19 @@ export default function Experience({ data }) {
     </Intro>
     <Container>
     <Row>
+         
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
+        
          <Col className="py-3" md="4" key={id}>
+           
          <Card >
-
+         
               
-              <Image
-              className="card-image"
-              src={frontmatter.image.childImageSharp.original.src}
+              <GatsbyImage image={getImage(frontmatter.image)}    
+              className="card-image" 
               alt={frontmatter.title}
-              />             
-              
+              />
+             
               <Card.Body>
                 <Card.Title>
                     {frontmatter.title}
@@ -88,9 +93,7 @@ export const query = graphql`
           industry
           image{
             childImageSharp {
-              original {
-                src
-              }
+              gatsbyImageData(width: 600)
             }
           }
         }

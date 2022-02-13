@@ -16,7 +16,7 @@
  
    return (
 	 <>
-		<section className="intro bg-dark mb-5">
+		<section className="intro bg-dark py-5 mb-5">
 			<Container>
 			<Row className="py-5 text-light">
 			<Col>
