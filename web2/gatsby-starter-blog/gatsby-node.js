@@ -7,7 +7,7 @@ exports.createPages = async ({ actions }) => {
     defer: true,
   })
 }
-/*
+
 exports.onCreatePage = ({
   page,
   actions: { createPage, deletePage },
@@ -21,4 +21,3 @@ exports.onCreatePage = ({
     });
   }
 };
-*/

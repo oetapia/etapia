@@ -59,9 +59,8 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-page-creator",
-      options: {
+        options: {
         path: `${__dirname}/src/posts`,
-        //context: { slug: slug },
       },
     },
     {

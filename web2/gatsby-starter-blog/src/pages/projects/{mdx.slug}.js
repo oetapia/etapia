@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 import {Row, Col, Image, Badge, Container} from 'react-bootstrap'
 
 export default function PostPage({ data }) {
@@ -57,7 +57,7 @@ export default function PostPage({ data }) {
 }
 
 export const query = graphql`
-  query POST_BY_SLUG($slug: String) {
+  query EXP_BY_SLUG($slug: String) {
     mdx(slug: { eq: $slug }) {
       id
       slug

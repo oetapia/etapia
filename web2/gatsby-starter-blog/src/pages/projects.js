@@ -56,7 +56,7 @@ export default function Projects({ data }) {
               </Card.Body>
               <Card.Footer className="text-center">
                 <Link  
-                  to={`/${slug}`}
+                  to={`/${frontmatter.path}`}
                   className="btn btn-primary stretched-link"
                   >
                   See more
