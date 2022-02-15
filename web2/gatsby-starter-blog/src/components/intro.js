@@ -9,16 +9,15 @@
  import PropTypes from "prop-types"
  //import { useStaticQuery, graphql } from "gatsby"
  import {Container, Row, Col} from "react-bootstrap"
- 
- 
- const Intro = ({ children }) => {
-   
- 
+  
+ const Intro = ({ children,img,bg,text }) => {
+
    return (
 	 <>
-		<section className="intro bg-dark py-5 mb-5">
+		<section className={bg +" intro py-5 mb-5"} >
 			<Container>
-			<Row className="py-5 text-light">
+			
+			<Row className={text+" py-5"}>
 			<Col>
 				{children}
 			</Col>

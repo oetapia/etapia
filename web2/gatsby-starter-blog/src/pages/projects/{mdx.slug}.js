@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
 import Layout from "../../components/layout";
@@ -8,7 +8,7 @@ export default function PostPage({ data }) {
   
   const {
     body,
-    frontmatter: { title,location,image,images, date, tags, industry,excerpt },
+    frontmatter: { title,location,image, date, tags, industry,excerpt },
   } = data.mdx;
   
   return (
@@ -28,6 +28,9 @@ export default function PostPage({ data }) {
 
         </Col>
         <Col>
+        <p className="small">
+          <Link to="/projects">/projects</Link>
+        </p>
         <h1>{title}</h1>
         <p className="text-muted small">
         {location} | {date} | {industry}

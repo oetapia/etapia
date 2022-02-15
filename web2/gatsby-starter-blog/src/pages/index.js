@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-//import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Intro from "../components/intro"
@@ -11,22 +11,100 @@ import { Container, Row, Col } from "react-bootstrap"
 
 const IndexPage = () => (
 
+  
   <>
   
   <Layout>
       <Seo title="International Marketing" />
-      <Intro>
-            <h1>Product and Brand</h1>
+      <Intro bg="bg-dark" text="text-light">
+            <h1 className="display-1">Product and Brand</h1>
             <p className="lead">
-              Helping you to shine brighter.
+              Helping you to shine brighter. 
             </p>
             <p>
               Mixing product management, strategic marketing and tech to create cohesive brands.  
             </p>
       </Intro> 
-     <Container>
+    
+    <Container>
+    <Row className="py-lg-5">
+      <Col className="py-5" lg="4" md="6">
+      <h2 className="display-4">
+        Projects
+      </h2>
+        <p className="lead">
+          Brand design and strategy
+        </p>
+        <p>
+          I have redesigned and created various brands. By working on their core values we've put them in a path that allows them, and their audience to grow. 
+        </p>
 
-     <Row className="my-5">
+        <Link
+          to="/projects/"
+          className="btn btn-primary"
+        >
+        Branding
+        </Link>
+
+      </Col>
+      
+      <Col lg={{span:4,offset:1}} className="py-3">
+        <StaticImage 
+        src="../images/latamcham/latamcham-construction.png" 
+        alt="Branding Project" 
+        className="mt-5"
+        quality="100"
+        />
+
+      </Col>
+      
+    </Row>
+    </Container>
+
+    
+    <section className="bg-dark text-light">
+      <Container>
+        <Row>
+          <Col className="py-5" lg="4" md="6">
+          <h2 >
+            Career
+          </h2>
+            <p className="lead">
+              From concept to launch
+            </p>
+            <p>
+              I've market researched, designed and launched products in the IT and Food industries. I've also exported and promoted them in international events. 
+            </p>
+            
+
+            <Link
+              to="/experience/"
+              className="btn btn-secondary"
+            >
+            Experience
+            </Link>
+
+          </Col>
+
+
+          <Col lg={{span:5,offset:1}}>
+
+          <StaticImage 
+            src="../images/steps.png" 
+            alt="Promotion" 
+            className="mt-5"
+            />
+                      
+          </Col>
+
+        </Row>
+      </Container>
+    </section>
+
+    
+    
+    <Container>
+    <Row className="my-5">
         <Col className="py-5" lg="4" md="6">
         <h2>About Esteban</h2>
         <p className="lead">
@@ -38,57 +116,21 @@ const IndexPage = () => (
         </p>
         <Link
           to="/about/"
-          className="btn btn-primary"
+          className="btn btn-link"
         >
         About E
+        </Link>
+
+        <Link
+          to="/contact/"
+          className="btn btn-primary ms-3"
+        >
+        Contact me
         </Link>
         
       </Col>
 
 
-    </Row>
-    <Row>
-      <Col className="py-5" lg="4" md="6">
-      <h2>
-        Projects
-      </h2>
-        <p className="lead">
-          Brand design and strategy
-        </p>
-        <p>
-          I have redesigned and created various brands. By working on their core values we put them in a path that allows them and their audience to grow. 
-        </p>
-
-        <Link
-          to="/projects/"
-          className="btn btn-primary"
-        >
-        Branding
-        </Link>
-
-      </Col>
-    </Row>
-       
-    <Row>
-      <Col className="py-5" lg="4" md="6">
-      <h2>
-        Work trajectory
-      </h2>
-        <p className="lead">
-          From concept to launch
-        </p>
-        <p>
-          I've market researched, designed and launched products in the IT and Food industries. I've also exported, promoted in international events and designed brands.
-        </p>
-
-        <Link
-          to="/projects/"
-          className="btn btn-primary"
-        >
-        Experience
-        </Link>
-
-      </Col>
     </Row>
 
     </Container> 

@@ -40,17 +40,22 @@ body {
 	}
 	
 
+
+	a, .btn-link {
+		color: $primary;
+		&:hover {
+			color: darken($primary, 10%);
+		}
+	}
+
+	.btn {
+		border-radius: 2em;
+		padding-left: 1.2em;
+		padding-right: 1.2em;
+	}
 }
 
 .bg-1 {
 	background-color: transparentize($bg,0.3);
 }
 
-
-
-a {
-	color: $primary;
-	&:hover {
-		color: darken($primary, 10%);
-	}
-}

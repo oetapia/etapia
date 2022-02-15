@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Intro from "../components/intro"
-import {Container,Card,Col,Row,Badge,Image} from "react-bootstrap"
+import {Container,Card,Col,Row,Badge} from "react-bootstrap"
 import { GatsbyImage,getImage } from "gatsby-plugin-image"
 
 
@@ -14,7 +14,7 @@ export default function Projects({ data }) {
   <Layout>
 
     <Seo title="Other Projects" />
-    <Intro>
+    <Intro bg="bg-dark"  text="text-light">
       <h1>Branding projects</h1>
       <p>
         I designed different brands and helped with their positioning strategy as a consultant.
@@ -93,7 +93,7 @@ export const query = graphql`
           industry
           image{
             childImageSharp {
-              gatsbyImageData(width: 400)
+              gatsbyImageData(width: 600)
             }
           }
         }

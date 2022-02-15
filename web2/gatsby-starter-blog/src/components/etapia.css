@@ -41,15 +41,21 @@ body .bg-dark {
   background-color: rgba(90, 133, 138, 0.6) !important;
 }
 
-.bg-1 {
-  background-color: rgba(236, 239, 233, 0.7);
-}
-
-a {
+body a, body .btn-link {
   color: #96b4b4;
 }
 
-a:hover {
+body a:hover, body .btn-link:hover {
   color: #789f9f;
+}
+
+body .btn {
+  border-radius: 2em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+}
+
+.bg-1 {
+  background-color: rgba(236, 239, 233, 0.7);
 }
 /*# sourceMappingURL=etapia.css.map */

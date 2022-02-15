@@ -12,7 +12,7 @@ const About = () => (
     
     <Seo title="About" />
 
-    <Intro>
+    <Intro bg="bg-dark"  text="text-light">
       <h1>About Me</h1>
       <p className="lead">
         Curiosity driven. Objective focused. Wide expertise. 
@@ -21,7 +21,7 @@ const About = () => (
     <Container>
     
      <Row className="pt-lg-5">
-     <Col md={{span:5,offset:1}}>
+     <Col lg={{span:5,offset:1}}>
       <h3>
         Marketing
       </h3>
@@ -35,7 +35,7 @@ const About = () => (
         Digital Marketing: CMS (Django, Odoo, Wordpress), SEO, SEM, SMM, Google Analytics, Mailings, Landing pages, Copywriting and Content Creation
     </p>
      </Col>
-     <Col md={{span:5,offset:1}} className="my-5 px-lg-5 border-start">
+     <Col lg={{span:5,offset:1}} className="my-5 px-lg-5 border-start">
      <h3>Product</h3>
      <p className="lead">
      Designed and launched in various countries.
@@ -51,7 +51,7 @@ const About = () => (
    </Row>
 
    <Row className="py-lg-5">
-     <Col md={{span:5,offset:1}} >
+     <Col lg={{span:5,offset:1}} >
      <h3>
         Tech
     </h3>
@@ -64,7 +64,7 @@ const About = () => (
     
     
      </Col>
-     <Col md={{span:5,offset:1}} className="my-5 px-lg-5 border-start">
+     <Col lg={{span:5,offset:1}} className="my-5 px-lg-5 border-start">
      <h3>
      Design
      </h3>
