@@ -19,7 +19,7 @@ const IndexPage = () => (
       <Intro bg="bg-dark" text="text-light">
             <h1 className="display-1">Product and Brand</h1>
             <p className="lead">
-              Helping you to shine brighter. 
+              I help products to <span className="bright">shine brighter</span>. 
             </p>
             <p>
               Mixing product management, strategic marketing and tech to create cohesive brands.  
@@ -66,14 +66,14 @@ const IndexPage = () => (
       <Container>
         <Row>
           <Col className="py-5" lg="4" md="6">
-          <h2 >
+          <h2>
             Career
           </h2>
             <p className="lead">
               From concept to launch
             </p>
             <p>
-              I've market researched, designed and launched products in the IT and Food industries. I've also exported and promoted them in international events. 
+              I've market researched, designed and launched products in the tech and Food industries. I've also exported and promoted them in international events. 
             </p>
             
 
@@ -118,7 +118,7 @@ const IndexPage = () => (
           to="/about/"
           className="btn btn-link"
         >
-        About E
+        About me
         </Link>
 
         <Link

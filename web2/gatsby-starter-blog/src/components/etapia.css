@@ -41,6 +41,16 @@ body .bg-dark {
   background-color: rgba(90, 133, 138, 0.6) !important;
 }
 
+body .bright {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+body .bright:hover {
+  color: #eff4f4;
+  text-shadow: #d2dfdf 1px 1px 7px;
+}
+
 body a, body .btn-link {
   color: #96b4b4;
 }

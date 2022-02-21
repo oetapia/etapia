@@ -67,6 +67,8 @@ const Header = ({ siteTitle }) => (
           >
             Contact
           </Link>
+
+      
         </Nav>
         </Navbar.Collapse>
         </Container>

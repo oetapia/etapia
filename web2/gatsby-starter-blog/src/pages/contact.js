@@ -18,8 +18,8 @@ const Contact = () => (
     
     <ul>
       <li>Linkedin: <Link target="_blank" to="https://www.linkedin.com/in/estebantapia">estebantapia</Link></li>
-      <li>Twitter: @oetapia</li> 
-      <li>email: e@estebantapia.com</li>
+      <li>Twitter: <Link target="_blank" to="https://twitter.com/oetapia">@oetapia</Link></li> 
+      <li>email: <Link target="_blank" to="mailto:e@estebantapia.com">e@estebantapia.com</Link></li>
     </ul>
     </Container>
   </Layout>

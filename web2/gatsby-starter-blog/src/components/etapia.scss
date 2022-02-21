@@ -40,6 +40,15 @@ body {
 	}
 	
 
+	.bright {
+
+		transition-duration: 300ms;
+
+		&:hover {
+			color: lighten($primary,30%);
+			text-shadow: lighten($primary,20%) 1px 1px 7px;
+		}
+	}
 
 	a, .btn-link {
 		color: $primary;

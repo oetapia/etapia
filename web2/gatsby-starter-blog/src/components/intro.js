@@ -9,12 +9,14 @@
  import PropTypes from "prop-types"
  //import { useStaticQuery, graphql } from "gatsby"
  import {Container, Row, Col} from "react-bootstrap"
-  
+ import { StaticImage } from "gatsby-plugin-image" 
+
+
  const Intro = ({ children,img,bg,text }) => {
 
    return (
 	 <>
-		<section className={bg +" intro py-5 mb-5"} >
+		<section className={bg +" intro py-5 mb-5"}  >
 			<Container>
 			
 			<Row className={text+" py-5"}>

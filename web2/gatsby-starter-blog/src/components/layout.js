@@ -7,7 +7,7 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import {Link, useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 //import Intro from "./intro"
@@ -15,8 +15,9 @@ import Header from "./header"
 import "./dist/css/bootstrap.min.css"
 import "./etapia.css"
 //import "./etapia.css.map"
+import { StaticImage } from "gatsby-plugin-image"
 
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
 
 const Layout = ({ children }) => {
@@ -42,11 +43,27 @@ const Layout = ({ children }) => {
         className="border-top py-3"
         >
         <Container>  
-        
-        <p className="small text-muted">
-          {data.site.siteMetadata?.title}  © {new Date().getFullYear()}
-        </p>  
-        
+        <Row>
+          <Col>
+            <p className="small text-muted">
+              {data.site.siteMetadata?.title}  © {new Date().getFullYear()}
+            </p>  
+          </Col>
+          <Col className="text-end small">
+            <Link
+              to="https://www.linkedin.com/in/estebantapia"
+              activeClassName="active"
+              className="nav-link"
+            >
+              Let's connect  <StaticImage 
+          src="../images/linkedin.png" 
+          alt="Linkedin Logo" 
+          quality="100" 
+          height="16"
+          />
+            </Link>
+          </Col>
+        </Row>        
       </Container>
       </footer>
     </>
