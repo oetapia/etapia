@@ -14,7 +14,7 @@ export default function Projects({ data }) {
   <Layout>
 
     <Seo title="Other Projects" />
-    <Intro bg="bg-dark"  text="text-light">
+    <Intro bg="bg-2"  text="text-light">
       <h1>Branding projects</h1>
       <p>
         I designed different brands and helped with their positioning strategy as a consultant.

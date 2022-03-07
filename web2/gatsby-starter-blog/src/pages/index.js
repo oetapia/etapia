@@ -9,6 +9,8 @@ import Seo from "../components/seo"
 
 import { Container, Row, Col } from "react-bootstrap"
 
+
+
 const IndexPage = () => (
 
   
@@ -16,7 +18,7 @@ const IndexPage = () => (
   
   <Layout>
       <Seo title="International Marketing" />
-      <Intro bg="bg-dark" text="text-light">
+      <Intro bg="bg-2" text="text-light">
             <h1 className="display-1">Product and Brand</h1>
             <p className="lead">
               I help products to <span className="bright">shine brighter</span>. 
@@ -73,7 +75,7 @@ const IndexPage = () => (
               From concept to launch
             </p>
             <p>
-              I've market researched, designed and launched products in the tech and Food industries. I've also exported and promoted them in international events. 
+              I've market researched, designed and launched products in the Tech and Food industries. I've also exported and promoted them in international events. 
             </p>
             
 

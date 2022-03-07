@@ -9,9 +9,9 @@ import {Container} from "react-bootstrap"
 const Contact = () => (
   <Layout>
     <Seo title="Contact me" />
-    <Intro bg="bg-dark" text="text-light">
+    <Intro bg="bg-2" text="text-light">
     <h1>Contact me</h1>
-    <p>I'm always happy to help and connect with others.</p>
+    <p>Let's connect.</p>
     </Intro>
     <Container>
 

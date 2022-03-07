@@ -5,9 +5,9 @@ import {Container, Nav, Navbar,NavDropdown, } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
-  <header className="sticky-top">
+  <header className="fixed-top" >
     
-      <Navbar bg="dark" variant="dark" expand="lg">
+      <Navbar  variant="dark" id="scroll" expand="lg">
       <Container>
         <Link
             to="/"

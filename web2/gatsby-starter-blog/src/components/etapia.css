@@ -38,7 +38,7 @@ body .card:hover {
 }
 
 body .bg-dark {
-  background-color: rgba(90, 133, 138, 0.6) !important;
+  background-color: rgba(115, 159, 164, 0.6) !important;
 }
 
 body .bright {
@@ -67,5 +67,40 @@ body .btn {
 
 .bg-1 {
   background-color: rgba(236, 239, 233, 0.7);
+}
+
+.bg-2 {
+  background-color: rgba(146, 180, 184, 0.3);
+}
+
+.bg-3 {
+  background: linear-gradient(221deg, rgba(148, 176, 176, 0.4), rgba(197, 230, 230, 0.1), rgba(193, 224, 227, 0.4));
+  background-size: 200% 200%;
+  -webkit-animation: bg-grad 3s ease infinite;
+  animation: bg-grad 3s ease infinite;
+}
+
+@-webkit-keyframes bg-grad {
+  0% {
+    background-position: 91% 0%;
+  }
+  50% {
+    background-position: 10% 100%;
+  }
+  100% {
+    background-position: 91% 0%;
+  }
+}
+
+@keyframes bg-grad {
+  0% {
+    background-position: 91% 0%;
+  }
+  50% {
+    background-position: 10% 100%;
+  }
+  100% {
+    background-position: 91% 0%;
+  }
 }
 /*# sourceMappingURL=etapia.css.map */

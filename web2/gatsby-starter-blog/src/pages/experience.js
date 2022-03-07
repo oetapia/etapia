@@ -16,7 +16,7 @@ export default function Experience({ data }) {
   <Layout>
     
     <Seo title="Work Experience" />
-    <Intro bg="bg-dark"  text="text-light">
+    <Intro bg="bg-2"  text="text-light">
       <h1>Experience</h1>
       <p>Product and Marketing experience in full time jobs.</p>
     </Intro>

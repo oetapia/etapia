@@ -12,7 +12,7 @@ const About = () => (
     
     <Seo title="About" />
 
-    <Intro bg="bg-dark"  text="text-light">
+    <Intro bg="bg-2"  text="text-light">
       <h1>About Me</h1>
       <p className="lead">
         Curiosity driven. Objective focused. Wide expertise. 
@@ -44,7 +44,7 @@ const About = () => (
        In Food: Product design, packaging, legislation requirements, nutritional tables, in store material, promotional material. 
      </p>
      <p>
-        In tech: Product concept, prototypes, use cases, personas, roadmap elaboration, project management, product management. 
+        In Tech: Product concept, prototypes, use cases, personas, roadmap elaboration, project management, product management. 
      </p>
 
      </Col>

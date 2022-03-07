@@ -15,7 +15,7 @@ export default function PostPage({ data }) {
     <>
     <Layout>
 
-      <Container className="mt-5">
+      <Container className="mt-5 pt-5">
       <Row className="mb-5">
         <Col xs="4" sm="3" lg="3" xl="2">
         {image ? (
