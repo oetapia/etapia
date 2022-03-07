@@ -25,12 +25,12 @@ body .card-header, body .card-footer {
 
 body .card {
   background-color: #ecefe9;
-  border-color: rgba(146, 180, 184, 0.3);
+  border-color: rgba(146, 180, 184, 0.5);
 }
 
 body .card:hover {
-  -webkit-box-shadow: rgba(146, 180, 184, 0.6) 0.3em 0.3em 1em;
-          box-shadow: rgba(146, 180, 184, 0.6) 0.3em 0.3em 1em;
+  -webkit-box-shadow: rgba(146, 180, 184, 0.8) 0.3em 0.3em 1em;
+          box-shadow: rgba(146, 180, 184, 0.8) 0.3em 0.3em 1em;
   -webkit-transform: translate(-0.2em, -0.2em);
           transform: translate(-0.2em, -0.2em);
   -webkit-transition-duration: 300ms;
@@ -38,7 +38,7 @@ body .card:hover {
 }
 
 body .bg-dark {
-  background-color: rgba(115, 159, 164, 0.6) !important;
+  background-color: rgba(115, 159, 164, 0.8) !important;
 }
 
 body .bright {
@@ -69,8 +69,12 @@ body .btn {
   background-color: rgba(236, 239, 233, 0.7);
 }
 
+.collapse.show {
+  background-color: rgba(146, 180, 184, 0.8);
+}
+
 .bg-2 {
-  background-color: rgba(146, 180, 184, 0.3);
+  background-color: rgba(146, 180, 184, 0.2);
 }
 
 .bg-3 {

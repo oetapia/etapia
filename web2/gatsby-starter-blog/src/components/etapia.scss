@@ -1,7 +1,7 @@
 $bg: rgb(236, 239, 233);
 $primary: rgb(150,180,180);
 $main: rgb(60, 71, 71);
-$dark: rgba(146, 180, 184,0.6);
+$dark: rgba(146, 180, 184,0.8);
 
 body {
 	background-color: $bg;
@@ -68,8 +68,12 @@ body {
 	background-color: transparentize($bg,0.3);
 }
 
+.collapse.show {
+	background-color: $dark;
+}
+
 .bg-2 {
-	background-color: transparentize($dark,0.3);
+	background-color: transparentize($dark,0.6);
 }
 
 .bg-3 {
