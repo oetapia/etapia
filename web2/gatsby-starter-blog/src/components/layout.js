@@ -6,6 +6,7 @@
  */
 
 import * as React from "react"
+import { useEffect } from "react"
 import PropTypes from "prop-types"
 import {Link, useStaticQuery, graphql } from "gatsby"
 
@@ -20,7 +21,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap"
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, type }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -31,24 +32,27 @@ const Layout = ({ children }) => {
     }
   `)
 
-
-    window.onscroll = function() {myFunction()};
-
-    function myFunction() {
+  useEffect(() => {
+    if (!type) {
+    function checkScroll()  {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("scroll").classList.add("bg-dark");
       } else {
         document.getElementById("scroll").classList.remove("bg-dark");
       }
     }
-     
+    document.addEventListener('scroll', _ => 
+        checkScroll()
+    )  
+  } 
+  })
 
+
+  
   return (
     <>
     
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
- 
-      
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} type={type} />
       
         <main>{children}</main>
         <footer 
