@@ -69,10 +69,6 @@ body .btn {
   background-color: rgba(236, 239, 233, 0.7);
 }
 
-.collapse.show {
-  background-color: rgba(146, 180, 184, 0.8);
-}
-
 .bg-2 {
   background-color: rgba(146, 180, 184, 0.2);
 }

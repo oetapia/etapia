@@ -32,28 +32,34 @@ const Layout = ({ children, type }) => {
     }
   `)
 
+  /*
+
   useEffect(() => {
     if (!type) {
-    function checkScroll()  {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("scroll").classList.add("bg-dark");
-      } else {
-        document.getElementById("scroll").classList.remove("bg-dark");
-      }
-    }
-    document.addEventListener('scroll', _ => 
-        checkScroll()
-    )  
-  } 
-  })
+      function checkScroll()  {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          document.getElementById("scroll").classList.add("bg-dark");
+          console.log('<50');
+          } else {
+             document.getElementById("scroll").classList.remove("bg-dark");
+          }
+        }
 
+        document.addEventListener('scroll', _ => 
+        checkScroll()
+        );    
+      }
+  },[])
+
+  */
+  
 
   
   return (
     <>
     
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} type={type} />
-      
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} type="dark" />
+        
         <main>{children}</main>
         <footer 
         className="border-top py-3"
@@ -66,10 +72,10 @@ const Layout = ({ children, type }) => {
             </p>  
           </Col>
           <Col className="text-end small">
-            <Link
+            <a
               to="https://www.linkedin.com/in/estebantapia"
               activeClassName="active"
-              className="nav-link"
+              className="nav-link p-0"
             >
               Let's connect  <StaticImage 
           src="../images/linkedin.png" 
@@ -77,7 +83,7 @@ const Layout = ({ children, type }) => {
           quality="100" 
           height="16"
           />
-            </Link>
+            </a>
           </Col>
         </Row>        
       </Container>
