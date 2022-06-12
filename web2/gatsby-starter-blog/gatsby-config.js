@@ -44,6 +44,7 @@ module.exports = {
       options: {
         fonts: [
           `Sanchez`,
+          `Rubik Mono One`,
           //`Trirong\:200i,400,400i,700`,
           //`source sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ],

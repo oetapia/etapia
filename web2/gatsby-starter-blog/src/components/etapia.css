@@ -1,21 +1,19 @@
 body {
-  background-color: #ecefe9;
+  color: #165b60;
+  background-color: #40C6CE;
   font-family: 'Sanchez', serif;
-  color: #3c4747;
 }
 
-body .btn-primary, body .dropdown-item.active, body .dropdown-item:active {
-  background-color: #87a9a9;
-  border-color: #96b4b4;
+body h1, body h2, body h3, body h4 {
+  font-family: 'Rubik Mono One', sans-serif;
 }
 
-body .btn-primary:hover, body .btn-primary:focus, body .dropdown-item.active:hover, body .dropdown-item.active:focus, body .dropdown-item:active:hover, body .dropdown-item:active:focus {
-  background-color: #789f9f;
-  border-color: #87a9a9;
+body .highlight {
+  color: #32DDB4;
 }
 
 body .bg-primary {
-  background-color: #96b4b4;
+  background-color: #40C6CE;
 }
 
 body .card-header, body .card-footer {
@@ -23,14 +21,9 @@ body .card-header, body .card-footer {
   border-color: transparent;
 }
 
-body .card {
-  background-color: #ecefe9;
-  border-color: rgba(146, 180, 184, 0.5);
-}
-
-body .card:hover {
-  -webkit-box-shadow: rgba(146, 180, 184, 0.8) 0.3em 0.3em 1em;
-          box-shadow: rgba(146, 180, 184, 0.8) 0.3em 0.3em 1em;
+body .animate .card:hover {
+  -webkit-box-shadow: #165b60 0.3em 0.3em 1em;
+          box-shadow: #165b60 0.3em 0.3em 1em;
   -webkit-transform: translate(-0.2em, -0.2em);
           transform: translate(-0.2em, -0.2em);
   -webkit-transition-duration: 300ms;
@@ -38,7 +31,7 @@ body .card:hover {
 }
 
 body .bg-dark {
-  background-color: rgba(115, 159, 164, 0.8) !important;
+  background-color: #2da7ae !important;
 }
 
 body .bright {
@@ -47,34 +40,104 @@ body .bright {
 }
 
 body .bright:hover {
-  color: #eff4f4;
-  text-shadow: #d2dfdf 1px 1px 7px;
+  color: #baeaed;
+  text-shadow: #91dee3 1px 1px 7px;
 }
 
-body a, body .btn-link {
-  color: #96b4b4;
+body .text-light a, body .text-light .btn-link, body .text-light .nav-link {
+  color: #ffffff;
 }
 
-body a:hover, body .btn-link:hover {
-  color: #789f9f;
+body .text-light a:hover, body .text-light .btn-link:hover, body .text-light .nav-link:hover {
+  color: #e6e6e6;
+}
+
+body a, body .btn-link, body .nav-link {
+  color: #165b60;
+}
+
+body a:hover, body .btn-link:hover, body .nav-link:hover {
+  color: #1b6f75;
 }
 
 body .btn {
   border-radius: 2em;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
+  padding: 0.6em 2em;
+  border-width: 2px;
+  margin: 1em 0;
+}
+
+body .btn-primary {
+  background-color: rgba(64, 198, 206, 0.1);
+  border-color: #54ccd3;
+  color: #40C6CE;
+}
+
+body .btn-primary:hover, body .btn-primary:focus {
+  background-color: #54ccd3;
+  border-color: #40C6CE;
+}
+
+body .btn-outline-light:hover {
+  color: #40C6CE !important;
+}
+
+body .btn-outline-dark {
+  border-color: #165b60;
+  color: #165b60;
+}
+
+body .btn-outline-dark:hover {
+  background-color: #165b60;
+  color: #32DDB4;
+}
+
+body .btn-secondary {
+  background-color: #32DDB4;
+  border-color: #32DDB4;
+}
+
+body .btn-secondary:hover, body .btn-secondary:focus {
+  background-color: rgba(50, 221, 180, 0.2);
+  border-color: #23d3a8;
+  color: #32DDB4;
+}
+
+body .bg-secondary {
+  background-color: #165b60 !important;
+}
+
+body .dropdown-item:hover, body .dropdown-item:focus {
+  background-color: #40C6CE;
+  color: #ffffff;
+}
+
+body .dropdown-item.active, body .dropdown-item:active {
+  background-color: #40C6CE;
+}
+
+body .dropdown-item.active:hover, body .dropdown-item.active:focus, body .dropdown-item:active:hover, body .dropdown-item:active:focus {
+  background-color: #40C6CE;
+}
+
+body .text-light .text-muted {
+  color: #165b60 !important;
 }
 
 .bg-1 {
-  background-color: rgba(236, 239, 233, 0.7);
+  background-color: #32bac3;
 }
 
 .bg-2 {
-  background-color: rgba(146, 180, 184, 0.2);
+  background-color: rgba(50, 221, 180, 0.7);
 }
 
 .bg-3 {
-  background: linear-gradient(221deg, rgba(148, 176, 176, 0.4), rgba(197, 230, 230, 0.1), rgba(193, 224, 227, 0.4));
+  background-color: rgba(59, 201, 36, 0.7);
+}
+
+.bg-loop {
+  background: linear-gradient(221deg, rgba(91, 245, 245, 0.4), rgba(150, 254, 192, 0.1), rgba(27, 225, 243, 0.4));
   background-size: 200% 200%;
   -webkit-animation: bg-grad 3s ease infinite;
   animation: bg-grad 3s ease infinite;

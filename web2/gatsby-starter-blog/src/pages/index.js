@@ -7,7 +7,7 @@ import Intro from "../components/intro"
 //import Light from "../components/light"
 import Seo from "../components/seo"
 
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col,Card } from "react-bootstrap"
 
 
 
@@ -16,72 +16,36 @@ const IndexPage = () => (
   
   <>
   
-  <Layout>
+  <Layout type="1">
       <Seo title="International Marketing" />
-      <Intro bg="bg-2" text="text-light">
-            <h1 className="display-1">Product and Brand</h1>
-            <p className="lead">
-              I help products to <span className="bright">shine brighter</span>. 
-            </p>
-            <p>
-              Mixing product management, strategic marketing and tech to create cohesive brands.  
-            </p>
+      <Intro bg="bg-1" text="text-light">
+            <Col lg="6">
+            <h1 className="display-3"><span className="highlight">Product</span> &amp; <span className="highlight">Brand</span> Management</h1>
+            <p className="lead">  
+            I help companies to  develop and market products for international audiences.
+            </p>           
+            </Col>
       </Intro> 
     
-    <Container>
-    <Row className="py-lg-5">
-      <Col className="py-5" lg="4" md="6">
-      <h2 className="display-4">
-        Projects
-      </h2>
-        <p className="lead">
-          Brand design and strategy
-        </p>
-        <p>
-          I have redesigned and created various brands. By working on their core values we've put them in a path that allows them, and their audience to grow. 
-        </p>
-
-        <Link
-          to="/projects/"
-          className="btn btn-primary"
-        >
-        Branding
-        </Link>
-
-      </Col>
-      
-      <Col lg={{span:4,offset:1}} className="py-3">
-        <StaticImage 
-        src="../images/latamcham/latamcham-construction.png" 
-        alt="Branding Project" 
-        className="mt-5"
-        quality="100"
-        />
-
-      </Col>
-      
-    </Row>
-    </Container>
-
-    
-    <section className="bg-dark text-light">
+        
+    <section className="py-5 text-light">
       <Container>
         <Row>
           <Col className="py-5" lg="4" md="6">
           <h2>
-            Career
+            From <span className="highlight">concept</span> to launch
           </h2>
             <p className="lead">
-              From concept to launch
+              Management of physical and digital products
             </p>
             <p>
-              I've market researched, designed and launched products in the Tech and Food industries. I've also exported and promoted them in international events. 
+              Market research as foundation for product design. Iterative product design in tech and food. THen launches through business development, exports and promotion in international events. 
             </p>
             
 
             <Link
               to="/experience/"
-              className="btn btn-secondary"
+              className="btn btn-outline-light"
             >
             Experience
             </Link>
@@ -89,7 +53,7 @@ const IndexPage = () => (
           </Col>
 
 
-          <Col lg={{span:5,offset:1}}>
+          <Col lg={{span:5,offset:2}}>
 
           <StaticImage 
             src="../images/steps.png" 
@@ -102,43 +66,85 @@ const IndexPage = () => (
         </Row>
       </Container>
     </section>
-
-    
-    
+    <section className="py-5 bg-1 text-light"  >
     <Container>
-    <Row className="my-5">
-        <Col className="py-5" lg="4" md="6">
-        <h2>About Esteban</h2>
+    <Row className="py-lg-5">
+      <Col className="py-5" lg="4" md="6">
+      <h2>
+        Branding projects
+      </h2>
         <p className="lead">
-          International background
+          Designs that resonates with their audience.
         </p>
         <p>
-          Educated in the UK and Spain and now based in Asia. 
-          I have focused on learning wide and varied skills from graphic design, marketing and product management.  
+         By working on core values to ease communication and audience growth.
         </p>
-        <Link
-          to="/about/"
-          className="btn btn-link"
-        >
-        About me
-        </Link>
 
         <Link
-          to="/contact/"
-          className="btn btn-primary ms-3"
+          to="/projects/"
+          className="btn btn-outline-light"
         >
-        Contact me
+        Branding
         </Link>
+
+      </Col>
+      
+      <Col lg={{span:4,offset:2}} className="py-3">
+        <Card>
+          <Card.Body>
+          <StaticImage 
+        src="../images/latamcham/latamcham-construction.png" 
+        alt="Branding Project" 
+        className="mt-5"
+        quality="100"
+        />
+
+          </Card.Body>
+        </Card>
         
       </Col>
-
-
+      
     </Row>
+    </Container>
+    </section>
+    <section className="bg-2">
+    
+      <Container>
+      <Row className="py-5">
+          <Col className="py-5" lg="4" md="6">
+          <h2>International Background</h2>
+          <p className="lead">
+            +15 years of experience over 5 different countries working in B2B and B2C in tech and the food industry.
+          </p>
+          <p>
+             Educated in the UK, Spain and work experience in Europe, LATAM and Asia. 
+            </p>  
+            <p>
+             Horizontal skills focused on product design: business, graphic design, marketing and management.  
+          </p>
+          <Link
+            to="/about/"
+            className="btn btn-link"
+          >
+          About me
+          </Link>
 
-    </Container> 
+          <Link
+            to="/contact/"
+            className="btn btn-outline-dark ms-3"
+          >
+          Contact me
+          </Link>
+          
+        </Col>
+
+
+      </Row>
+
+      </Container> 
     
 
-   
+   </section>
    
   </Layout>
   </>

@@ -58,21 +58,21 @@ const Layout = ({ children, type }) => {
   return (
     <>
     
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} type="dark" />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} type={type} />
         
         <main>{children}</main>
         <footer 
-        className="border-top py-3"
+        className="border-top py-5"
         >
         <Container>  
-        <Row>
+        <Row className="text-light">
           <Col>
-            <p className="small text-muted">
+            <p className="small">
               {data.site.siteMetadata?.title}  © {new Date().getFullYear()}
             </p>  
           </Col>
           <Col className="text-end small">
-            <a
+            <Link
               to="https://www.linkedin.com/in/estebantapia"
               activeClassName="active"
               className="nav-link p-0"
@@ -83,7 +83,7 @@ const Layout = ({ children, type }) => {
           quality="100" 
           height="16"
           />
-            </a>
+            </Link>
           </Col>
         </Row>        
       </Container>

@@ -7,14 +7,13 @@ import Intro from "../components/intro"
 import {Container} from "react-bootstrap"
 
 const Contact = () => (
-  <Layout>
+  <Layout type="1">
     <Seo title="Contact me" />
-    <Intro bg="bg-2" text="text-light">
+    <Intro bg="bg-1" text="text-light">
     <h1>Contact me</h1>
     <p>Let's connect.</p>
     </Intro>
-    <Container>
-
+    <Container className="text-light py-5">
     
     <ul>
       <li>Linkedin: <Link target="_blank" to="https://www.linkedin.com/in/estebantapia">estebantapia</Link></li>

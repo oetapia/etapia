@@ -1,21 +1,25 @@
-$bg: rgb(236, 239, 233);
-$primary: rgb(150,180,180);
-$main: rgb(60, 71, 71);
-$dark: rgba(146, 180, 184,0.8);
+$light: #ffffff;
+$dark: #165b60;
+$primary: #40C6CE;
+$secondary: #32DDB4;
+$tertiary: #3BC924;
 
 body {
-	background-color: $bg;
+
+	color: $dark;
+	background-color: $primary;
 	font-family: 'Sanchez', serif;
-	//font-family: 'Trirong', serif;
-	color: $main;
-	.btn-primary,.dropdown-item.active, .dropdown-item:active  {
-		background-color: darken($primary,5%);
-		border-color: $primary;
-		&:hover,&:focus {
-			background-color: darken($primary,10%);
-			border-color: darken($primary,5%);
-		}
+	
+	h1,h2,h3,h4 {
+		font-family: 'Rubik Mono One', sans-serif;
+	} 
+
+	.highlight {
+		color: $secondary;
 	}
+	
+	
+	
 	.bg-primary {
 		background-color: $primary;
 	}
@@ -26,8 +30,11 @@ body {
 	}
 	
 	.card {
-		background-color: darken($bg,0.1);
-		border-color: transparentize($dark,0.3);
+
+	}
+	
+	.animate .card {
+		
 		&:hover {
 			box-shadow: $dark 0.3em 0.3em 1em;
 			transform: translate(-0.2em, -0.2em);
@@ -36,7 +43,7 @@ body {
 	}
 
 	.bg-dark {
-		background-color: darken($dark,10%) !important;	
+		background-color: darken($primary,10%) !important;	
 	}
 	
 
@@ -50,31 +57,119 @@ body {
 		}
 	}
 
-	a, .btn-link {
-		color: $primary;
+
+
+	.text-light {
+	
+		a, .btn-link, .nav-link {
+			color: $light;
+			&:hover {
+				color: darken($light, 10%);
+			}
+		}
+
+		
+	}
+
+	a, .btn-link, .nav-link {
+		color: $dark;
 		&:hover {
-			color: darken($primary, 10%);
+			color: lighten($dark,5%);
 		}
 	}
 
+	
+	
 	.btn {
 		border-radius: 2em;
-		padding-left: 1.2em;
-		padding-right: 1.2em;
+		padding: 0.6em 2em;
+		border-width: 2px;
+		margin: 1em 0;
 	}
+
+
+	.btn-primary   {
+		background-color: transparentize($primary, $amount: 0.9);
+		border-color: lighten($primary,5%);
+		color: $primary;
+		&:hover,&:focus {
+			background-color: lighten($primary,5%);	
+			border-color: $primary;
+		}
+	}
+
+
+	.btn-outline-light {
+		&:hover {
+			color: $primary !important;
+		}
+	}
+
+
+
+	.btn-outline-dark {
+		border-color: $dark;
+		color: $dark;
+		&:hover {
+			background-color: $dark;
+			color: $secondary;
+		}
+	}
+
+	 .btn-secondary   {
+		background-color: $secondary;
+		border-color: $secondary;
+		&:hover,&:focus {
+			background-color: transparentize($secondary, $amount: 0.8);
+			border-color: darken($secondary,5%);
+			color: $secondary;
+		}
+	}
+
+	.bg-secondary {
+		background-color: $dark !important;
+	}
+
+	.dropdown-item  {
+		&:hover,&:focus {
+			background-color: $primary;
+			color: $light;
+		}
+	}
+
+
+	.dropdown-item.active, .dropdown-item:active  {
+		background-color: $primary;
+		//border: 2px solid $primary;
+		&:hover,&:focus {
+			background-color: $primary;
+			//border-color: darken($primary,5%);
+		}
+	}
+
+	.text-light .text-muted {
+		color: $dark !important;
+	}
+
 }
 
 .bg-1 {
-	background-color: transparentize($bg,0.3);
+	background-color: darken($primary,5%);
 }
 
 
 .bg-2 {
-	background-color: transparentize($dark,0.6);
+	background-color: transparentize($secondary,0.3);
 }
 
 .bg-3 {
-	background: linear-gradient(221deg, rgba(148, 176, 176,0.4), rgba(197, 230, 230, 0.1) ,rgba(193, 224, 227,.4) );
+	background-color: transparentize($tertiary,0.3);
+
+}
+
+
+.bg-loop {
+	background: linear-gradient(221deg, rgba(91, 245, 245, 0.4), rgba(150, 254, 192, 0.1) ,rgba(27, 225, 243, 0.4) );
 	background-size: 200% 200%;
 	-webkit-animation: bg-grad 3s ease infinite;
 	-moz-animation: bg-grad 3s ease infinite;

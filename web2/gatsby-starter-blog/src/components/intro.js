@@ -36,7 +36,7 @@
 	  const bgImage = convertToBgImage(image)
 
    return (
-	 <div className="bg-3 mb-5 border-bottom">
+	 <div className="bg-3 my-5 ">
 			<BackgroundImage
 					Tag="section"
 					className={bg +" intro py-5 "}

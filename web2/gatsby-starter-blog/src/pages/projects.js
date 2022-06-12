@@ -11,10 +11,10 @@ import { GatsbyImage,getImage } from "gatsby-plugin-image"
 export default function Projects({ data }) {
   return (
   <>
-  <Layout>
+  <Layout type="1">
 
     <Seo title="Other Projects" />
-    <Intro bg="bg-2"  text="text-light">
+    <Intro bg="bg-1"  text="text-light">
       <h1>Branding projects</h1>
       <p>
         I designed different brands and helped with their positioning strategy as a consultant.
@@ -24,7 +24,7 @@ export default function Projects({ data }) {
     <Container>
     <Row>
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
-         <Col className="py-3" md="3" key={id}>
+         <Col className="py-3 animate" md="3" key={id}>
          <Card >
 
                  
