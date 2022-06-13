@@ -39,7 +39,7 @@
 	 <div className="bg-3 my-5 ">
 			<BackgroundImage
 					Tag="section"
-					className={bg +" intro py-5 "}
+					className={bg +" intro py-3 "}
 					// Spread bgImage into BackgroundImage:
 					{...bgImage}
 					preserveStackingContext
