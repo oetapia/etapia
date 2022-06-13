@@ -7,11 +7,11 @@ import Intro from "../components/intro"
 import {Container} from "react-bootstrap"
 
 const Contact = () => (
-  <Layout type="1">
+  <Layout type="0">
     <Seo title="Contact me" />
-    <Intro bg="bg-1" text="text-light">
-    <h1>Contact me</h1>
-    <p>Let's connect.</p>
+    <Intro bg="bg-0" text="text-light">
+    <h1><span className="text-secondary">Contact</span> me</h1>
+    <p>Let's connect and discuss how to grow together.</p>
     </Intro>
     <Container className="text-light py-5">
     

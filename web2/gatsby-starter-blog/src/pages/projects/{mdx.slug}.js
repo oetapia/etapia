@@ -13,7 +13,7 @@ export default function PostPage({ data }) {
   
   return (
     <>
-    <Layout type="1">
+    <Layout type="0">
 
       <Container className="my-5 pt-5">
       <Row className="mb-5">

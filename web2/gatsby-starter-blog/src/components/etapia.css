@@ -8,8 +8,14 @@ body h1, body h2, body h3, body h4 {
   font-family: 'Rubik Mono One', sans-serif;
 }
 
-body .highlight {
-  color: #32DDB4;
+body .text-secondary {
+  color: #88f7dd !important;
+  border-color: #88f7dd !important;
+}
+
+body .text-tertiary {
+  color: #fff7a3;
+  border-color: #fff7a3 !important;
 }
 
 body .bg-primary {
@@ -89,18 +95,18 @@ body .btn-outline-dark {
 
 body .btn-outline-dark:hover {
   background-color: #165b60;
-  color: #32DDB4;
+  color: #88f7dd;
 }
 
 body .btn-secondary {
-  background-color: #32DDB4;
-  border-color: #32DDB4;
+  background-color: #88f7dd;
+  border-color: #88f7dd;
 }
 
 body .btn-secondary:hover, body .btn-secondary:focus {
-  background-color: rgba(50, 221, 180, 0.2);
-  border-color: #23d3a8;
-  color: #32DDB4;
+  background-color: rgba(136, 247, 221, 0.2);
+  border-color: #70f5d6;
+  color: #88f7dd;
 }
 
 body .bg-secondary {
@@ -124,16 +130,25 @@ body .text-light .text-muted {
   color: #165b60 !important;
 }
 
+body .text-dark {
+  color: #165b60;
+  border-color: #165b60 !important;
+}
+
+.bg-0 {
+  background-color: #40C6CE;
+}
+
 .bg-1 {
   background-color: #32bac3;
 }
 
 .bg-2 {
-  background-color: rgba(50, 221, 180, 0.7);
+  background-color: rgba(136, 247, 221, 0.7);
 }
 
 .bg-3 {
-  background-color: rgba(59, 201, 36, 0.7);
+  background-color: rgba(255, 247, 163, 0.7);
 }
 
 .bg-loop {

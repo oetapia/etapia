@@ -1,8 +1,8 @@
 $light: #ffffff;
 $dark: #165b60;
 $primary: #40C6CE;
-$secondary: #32DDB4;
-$tertiary: #3BC924;
+$secondary: #88f7dd;
+$tertiary: #fff7a3; 
 
 body {
 
@@ -14,11 +14,18 @@ body {
 		font-family: 'Rubik Mono One', sans-serif;
 	} 
 
-	.highlight {
-		color: $secondary;
+	.text-secondary {
+		color: $secondary !important;
+		border-color: $secondary !important;
+
 	}
+
+	.text-tertiary {
+		color: $tertiary;
+		border-color: $tertiary !important;
+		}
 	
-	
+
 	
 	.bg-primary {
 		background-color: $primary;
@@ -29,9 +36,7 @@ body {
 		border-color: transparent;
 	}
 	
-	.card {
 
-	}
 	
 	.animate .card {
 		
@@ -151,7 +156,19 @@ body {
 		color: $dark !important;
 	}
 
+	.text-dark {
+		color: $dark;
+		
+		border-color: $dark !important;
+		
+	}
+
 }
+
+.bg-0 {
+	background-color: $primary;
+}
+
 
 .bg-1 {
 	background-color: darken($primary,5%);

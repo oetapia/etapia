@@ -13,11 +13,11 @@ export default function Experience({ data }) {
   
   return (
   <>
-  <Layout type="1">
+  <Layout type="0">
     
     <Seo title="Work Experience" />
-    <Intro bg="bg-1"  text="text-light">
-      <h1>Experience</h1>
+    <Intro bg="bg-0"  text="text-light">
+      <h1><span className="text-secondary">Work</span> Experience</h1>
       <p>Product and Marketing experience in full time jobs.</p>
     </Intro>
     <Container>

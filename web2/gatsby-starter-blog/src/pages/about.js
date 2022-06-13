@@ -8,12 +8,12 @@ import {Container,Row,Col} from "react-bootstrap"
 
 const About = () => (
   <>
-  <Layout type="1">
+  <Layout type="0">
     
     <Seo title="About" />
 
-    <Intro bg="bg-1"  text="text-light">
-      <h1>About Me</h1>
+    <Intro bg="bg-0"  text="text-light">
+      <h1>About <span className="text-secondary">Esteban</span></h1>
       <p className="lead">
         Curiosity driven. Objective focused. Wide expertise. 
       </p>  
@@ -35,7 +35,7 @@ const About = () => (
         Digital Marketing: CMS (Django, Odoo, Wordpress), SEO, SEM, SMM, Google Analytics, Mailings, Landing pages, Copywriting and Content Creation.
     </p>
      </Col>
-     <Col lg={{span:5,offset:1}} className="my-5 px-lg-5 border-start">
+     <Col lg={{span:5,offset:1}} className="my-5 text-secondary px-lg-5 border-start">
      <h3>Product</h3>
      <p className="lead">
      Designed and launched in various countries.
@@ -50,21 +50,21 @@ const About = () => (
      </Col>
    </Row>
 
-   <Row className="py-lg-5">
-     <Col lg={{span:5,offset:1}} >
-     <h3>
-        Tech
-    </h3>
-    <p className="lead">
-      Web development, UI/UX. 
-    </p>
-    <p>
-     Development: CSS, HTML, JS, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing.
-    </p>
-    
+   <Row className="py-lg-5 ">
+     <Col lg={{span:5,offset:1}} className="text-tertiary border-start px-lg-5 " >
+      <h3>
+          Tech
+      </h3>
+      <p className="lead">
+        Web development, UI/UX. 
+      </p>
+      <p>
+        Development: CSS, HTML, JS, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing.
+      </p>
+      
     
      </Col>
-     <Col lg={{span:5,offset:1}} className="my-5 px-lg-5 border-start">
+     <Col lg={{span:5,offset:1}} className="my-5 ">
      <h3>
      Design
      </h3>

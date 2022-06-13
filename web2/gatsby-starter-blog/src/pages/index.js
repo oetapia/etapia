@@ -16,11 +16,11 @@ const IndexPage = () => (
   
   <>
   
-  <Layout type="1">
+  <Layout type="0">
       <Seo title="International Marketing" />
-      <Intro bg="bg-1" text="text-light">
+      <Intro bg="bg-0" text="text-light">
             <Col lg="6">
-            <h1 className="display-3"><span className="highlight">Product</span> &amp; <span className="highlight">Brand</span> Management</h1>
+            <h1 className="display-3"><span className="text-secondary">Product &amp; </span> <span className="text-tertiary">Brand</span> Management</h1>
             <p className="lead">  
             I help companies to  develop and market products for international audiences.
             </p>           
@@ -28,12 +28,12 @@ const IndexPage = () => (
       </Intro> 
     
         
-    <section className="py-5 text-light">
+    <section className="py-5 bg-1  text-light">
       <Container>
         <Row>
           <Col className="py-5" lg="4" md="6">
           <h2>
-            From <span className="highlight">concept</span> to launch
+            From <span className="text-secondary">concept</span> to <span className="text-tertiary">launch</span>
           </h2>
             <p className="lead">
               Management of physical and digital products
@@ -66,18 +66,18 @@ const IndexPage = () => (
         </Row>
       </Container>
     </section>
-    <section className="py-5 bg-1 text-light"  >
+    <section className="py-5 text-light"  >
     <Container>
     <Row className="py-lg-5">
       <Col className="py-5" lg="4" md="6">
       <h2>
-        Branding projects
+        Brands that <span className="text-tertiary">resonate</span>
       </h2>
         <p className="lead">
-          Designs that resonates with their audience.
+          Design based on core values.
         </p>
         <p>
-         By working on core values to ease communication and audience growth.
+         Focused on ease of communication and audience growth.
         </p>
 
         <Link
