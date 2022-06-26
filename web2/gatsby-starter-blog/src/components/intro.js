@@ -14,11 +14,11 @@
  import { convertToBgImage } from "gbimage-bridge"
  import BackgroundImage from 'gatsby-background-image'
 
- const Intro = ({ children,img,bg,text }) => {
+ const Intro = ({ children,img,extra,text }) => {
 	const { placeholderImage } = useStaticQuery(
 		graphql`
 		  query {
-			placeholderImage: file(relativePath: { eq: "bg.jpg" }) {
+			placeholderImage: file(relativePath: { eq: "bg.png" }) {
 			  childImageSharp {
 				gatsbyImageData(
 				  width: 1600
@@ -36,10 +36,10 @@
 	  const bgImage = convertToBgImage(image)
 
    return (
-	 <div className="bg-3 my-5 ">
+	 <>
 			<BackgroundImage
 					Tag="section"
-					className={bg +" intro py-3 "}
+					className={extra +" intro py-5 "}
 					// Spread bgImage into BackgroundImage:
 					{...bgImage}
 					preserveStackingContext
@@ -52,7 +52,7 @@
 					</Row>
 				</Container>
 			</BackgroundImage>
- 	 </div>
+ 	 </>
    )
  }
  

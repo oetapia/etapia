@@ -13,10 +13,10 @@ export default function Experience({ data }) {
   
   return (
   <>
-  <Layout type="0">
+  <Layout bg="0">
     
     <Seo title="Work Experience" />
-    <Intro bg="bg-0"  text="text-light">
+    <Intro extra="bg-0"  text="text-light">
       <h1><span className="text-secondary">Work</span> Experience</h1>
       <p>Product and Marketing experience in full time jobs.</p>
     </Intro>
@@ -25,7 +25,7 @@ export default function Experience({ data }) {
          
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
         
-         <Col className="py-3 animate" md="4" key={id}>
+         <Col className="py-3 animate" md="6"  lg="4" key={id}>
            
          <Card >
          

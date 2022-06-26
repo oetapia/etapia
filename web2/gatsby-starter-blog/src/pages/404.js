@@ -9,9 +9,9 @@ import {Container,Row,Col} from "react-bootstrap"
 
 
 const NotFoundPage = () => (
-    <Layout type="0">
+    <Layout bg="0">
     <Seo title="404: Not found" />
-    <Intro bg="bg-0" text="text-light">
+    <Intro extra="bg-0" text="text-light">
     <h1>404: Not Found</h1>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Intro>

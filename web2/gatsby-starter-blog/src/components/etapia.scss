@@ -12,7 +12,21 @@ body {
 	
 	h1,h2,h3,h4 {
 		font-family: 'Rubik Mono One', sans-serif;
+		line-height: 1em;
 	} 
+
+
+	.display-3 {
+		line-height: 1em;
+	}
+
+
+
+	.text-primary {
+		color: $primary !important;
+		border-color: $primary !important;
+
+	}
 
 	.text-secondary {
 		color: $secondary !important;
@@ -25,7 +39,9 @@ body {
 		border-color: $tertiary !important;
 		}
 	
-
+	strong {
+		font-style: italic; 
+	}
 	
 	.bg-primary {
 		background-color: $primary;
@@ -133,6 +149,8 @@ body {
 
 	.bg-secondary {
 		background-color: $dark !important;
+
+
 	}
 
 	.dropdown-item  {
@@ -163,6 +181,12 @@ body {
 		
 	}
 
+	.text-mid {
+		color: lighten($dark,15%);
+		border-color: $dark !important;
+	}
+
+
 }
 
 .bg-0 {
@@ -177,10 +201,15 @@ body {
 
 .bg-2 {
 	background-color: transparentize($secondary,0.3);
+
+
+
 }
 
 .bg-3 {
 	background-color: transparentize($tertiary,0.3);
+
+
 
 }
 

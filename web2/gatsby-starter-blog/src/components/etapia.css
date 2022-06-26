@@ -6,6 +6,16 @@ body {
 
 body h1, body h2, body h3, body h4 {
   font-family: 'Rubik Mono One', sans-serif;
+  line-height: 1em;
+}
+
+body .display-3 {
+  line-height: 1em;
+}
+
+body .text-primary {
+  color: #40C6CE !important;
+  border-color: #40C6CE !important;
 }
 
 body .text-secondary {
@@ -16,6 +26,10 @@ body .text-secondary {
 body .text-tertiary {
   color: #fff7a3;
   border-color: #fff7a3 !important;
+}
+
+body strong {
+  font-style: italic;
 }
 
 body .bg-primary {
@@ -132,6 +146,11 @@ body .text-light .text-muted {
 
 body .text-dark {
   color: #165b60;
+  border-color: #165b60 !important;
+}
+
+body .text-mid {
+  color: #24969e;
   border-color: #165b60 !important;
 }
 

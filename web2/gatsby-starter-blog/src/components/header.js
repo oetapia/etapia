@@ -4,10 +4,10 @@ import { Link } from "gatsby"
 import {Container, Nav, Navbar,NavDropdown, } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Header = ({ siteTitle, type }) => (
+const Header = ({ siteTitle, bg }) => (
   <header className="fixed-top" >
     
-      <Navbar bg={type} variant="dark" id="scroll" expand="lg">
+      <Navbar bg={bg} variant="dark" id="scroll" expand="lg">
       <Container>
         <Link
             to="/"
@@ -28,6 +28,7 @@ const Header = ({ siteTitle, type }) => (
             to="/"
             activeClassName="active"
             className="nav-link mx-3"
+            title={siteTitle}
           >
             Home
           </Link>

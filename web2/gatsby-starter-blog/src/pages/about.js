@@ -8,11 +8,11 @@ import {Container,Row,Col} from "react-bootstrap"
 
 const About = () => (
   <>
-  <Layout type="0">
+  <Layout bg="0">
     
     <Seo title="About" />
 
-    <Intro bg="bg-0"  text="text-light">
+    <Intro extra="bg-0"  text="text-light">
       <h1>About <span className="text-secondary">Esteban</span></h1>
       <p className="lead">
         Curiosity driven. Objective focused. Wide expertise. 

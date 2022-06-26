@@ -21,7 +21,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap"
 
 
-const Layout = ({ children, type }) => {
+const Layout = ({ children, bg }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,33 +32,35 @@ const Layout = ({ children, type }) => {
     }
   `)
 
-  /*
+  
 
   useEffect(() => {
-    if (!type) {
+    
       function checkScroll()  {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-          document.getElementById("scroll").classList.add("bg-dark");
-          console.log('<50');
+          document.getElementById("scroll").classList.add("shadow");
+          document.getElementById("scroll").classList.add("bg-0");
+          //console.log('<50');
           } else {
-             document.getElementById("scroll").classList.remove("bg-dark");
+             document.getElementById("scroll").classList.remove("shadow");
+             document.getElementById("scroll").classList.remove("bg-0");
           }
         }
 
         document.addEventListener('scroll', _ => 
         checkScroll()
         );    
-      }
+
   },[])
 
-  */
+  
   
 
   
   return (
     <>
     
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} type={type} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} bg={bg} />
         
         <main>{children}</main>
         <footer 
