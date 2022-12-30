@@ -42,19 +42,21 @@ const Header = ({ siteTitle, bg }) => (
             </Link>
             <NavDropdown className="mx-3" title="Experience" id="navbarScrollingDropdown">
               <Link
-                to="/projects/"
-                activeClassName="active"
-                className="dropdown-item"
-              >
-                Branding
-              </Link>
-              <Link
                 to="/experience/"
                 activeClassName="active"
                 className="dropdown-item"
               >
                 Product &amp; MK
               </Link>
+
+              <Link
+                to="/projects/"
+                activeClassName="active"
+                className="dropdown-item"
+              >
+                Branding
+              </Link>
+           
                                   
             </NavDropdown>
 

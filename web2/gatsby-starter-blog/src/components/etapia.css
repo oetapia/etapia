@@ -246,7 +246,7 @@ body .navbar-collapse.show .nav-link {
   height: auto;
 }
 
-.cloud.active {
+.active .cloud {
   -webkit-transition: 3s all ease;
   transition: 3s all ease;
   -webkit-animation: fade-cloud 2s ease-in;

@@ -288,7 +288,7 @@ body {
 	height: auto;
 }
 
-.cloud.active {
+.active .cloud {
 	transition: 3s all ease;
 	animation: fade-cloud 2s ease-in;
 }
