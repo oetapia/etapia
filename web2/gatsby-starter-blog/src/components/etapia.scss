@@ -186,11 +186,19 @@ body {
 		border-color: $dark !important;
 	}
 
+	 // NAVBAR Collapse 
+	 .navbar-collapse.show {
+		background-color: transparentize($primary,0.15);
+		margin-top: 1em;
+		.nav-link {
+			color: $light;
+		}
+	 }
 
 }
 
 .bg-0 {
-	background-color: $primary;
+	background-color: transparentize($primary,0.3);
 }
 
 
@@ -237,3 +245,145 @@ body {
     50%{background-position:10% 100%}
     100%{background-position:91% 0%}
 }
+
+
+// Home animation
+
+
+
+.animation-header {
+	display: block;
+	width: 100%;
+	position: relative;
+	//overflow: hidden;
+}
+
+.main-content {
+	z-index: 100;
+	position: relative;
+	padding-top: 15em;
+	padding-bottom: 3em;
+	text-align: center;
+}
+
+.sun {
+	width: 9em;
+	z-index: 10;
+	position: absolute;
+	opacity: 0.9;
+	top: 5em;
+	right: 44%;
+	transition: 3s ease-in-out;
+	height: auto;
+	/*
+	right: 0;
+	top: 25%;
+	animation: sunrise 20s ease-in-out infinite;
+	*/
+}
+
+
+.cloud {
+	opacity: 0.7;
+	height: auto;
+}
+
+.cloud.active {
+	transition: 3s all ease;
+	animation: fade-cloud 2s ease-in;
+}
+
+
+
+.cloud-1 {
+	width: 15em;
+	position: absolute;
+	z-index: 30;
+	right: 50%;
+	top: 7em;
+	transition: 3s ease-in-out;
+}
+
+
+.cloud-2 {
+	width: 9em;
+	position: absolute;
+	z-index: 25;
+	right: 30%;
+	top: 5em;
+	transition: 3s ease-in-out;
+}
+
+
+
+
+
+.mountain-1 {
+	left: -1em;
+	position: absolute;
+	bottom: 10%;
+	width: 90%;
+	z-index: 15;
+	transition: 3s ease-in-out;
+}
+
+
+.mountain-2 {
+	right: -1em;
+	position: absolute;
+	bottom: 10%;
+	width: 45%;
+	z-index: 20;
+	transition: 3s ease-in-out;
+}
+
+
+
+@keyframes fade-cloud {
+	0% {
+	  transform: translateX(0);
+	  opacity: 0.7;
+	}
+	50% {
+	  transform: translateX(10px);
+	  opacity: 0.6;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 0.7;
+	  }
+  }
+
+
+
+@keyframes sunrise {
+	0% {
+	  top: 25%;
+	  right: 0;
+	}
+	15% {
+		top: 20%;
+		right: 15%;
+	  }
+
+	25% {
+	  top: 15%;
+	  right: 25%;
+	}
+	50% {
+	  top: 0%;
+	  right: 50%;
+
+	}
+	75% {
+	  top: 15%;
+	  right: 75%;
+	}
+	100% {
+	  top: 25%;
+	  right: 100%;
+	}
+  }
+
+ 

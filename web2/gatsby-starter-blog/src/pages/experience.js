@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Intro from "../components/intro"
-import {Container,Card,Col,Row,Badge,Image} from "react-bootstrap"
+import {Container,Card,Col,Row,Badge} from "react-bootstrap"
 import { GatsbyImage,getImage } from "gatsby-plugin-image"
 
 export default function Experience({ data }) {

@@ -8,7 +8,7 @@
 import * as React from "react"
 import { useEffect } from "react"
 import PropTypes from "prop-types"
-import {Link, useStaticQuery, graphql } from "gatsby"
+import {useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 //import Intro from "./intro"
@@ -74,10 +74,12 @@ const Layout = ({ children, bg }) => {
             </p>  
           </Col>
           <Col className="text-end small">
-            <Link
-              to="https://www.linkedin.com/in/estebantapia"
+            <a
+              href="https://www.linkedin.com/in/estebantapia"
               activeClassName="active"
               className="nav-link p-0"
+              target="_blank"
+              rel="noreferrer"
             >
               Let's connect  <StaticImage 
           src="../images/linkedin.png" 
@@ -85,7 +87,7 @@ const Layout = ({ children, bg }) => {
           quality="100" 
           height="16"
           />
-            </Link>
+            </a>
           </Col>
         </Row>        
       </Container>

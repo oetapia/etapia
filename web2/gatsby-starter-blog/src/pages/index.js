@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 
 import Layout from "../components/layout"
-import Intro from "../components/intro"
+import Intro from "../components/intro-animation"
 //import Light from "../components/light"
 import Seo from "../components/seo"
 
@@ -20,11 +20,30 @@ const IndexPage = () => (
   <Layout >
       <Seo title="International Marketing" />
       <Intro  text="text-light">
-            <Col lg="6" className="my-5 py-5">
-            <h1 className="display-3"><span className="text-secondary">Product &amp; </span> <span className="text-tertiary">Brand</span> Management</h1>
-            <p className="lead">  
-              Helping you to create and market products for international audiences.
+            <Col lg={{span:10,offset:1}} className="text-center">
+            <h1 className="display-3"><span className="text-secondary">Product </span> Management</h1>
+            <p className="lead mb-1">  
+              Making products and brands transcend frontiers. 
             </p>           
+            <p>
+              Berlin | Madrid | Quito | Seoul 
+            </p>
+
+        
+            <Link
+              to="/experience/"
+              className="btn btn-outline-light"
+            >
+            Products
+            </Link>
+
+
+            <Link
+                to="/projects/"
+                className="btn btn-link ms-2"
+              >
+              Brands
+              </Link>
             </Col>
       </Intro> 
     
@@ -34,42 +53,41 @@ const IndexPage = () => (
         <Row>
           <Col className="py-5" lg="4" md="6">
           <h2>
-            Product managed from <span className="text-secondary">concept</span> to <span className="text-tertiary">launch</span>
+            From <span className="text-secondary">concept</span> to <span className="text-tertiary">launch</span>
           </h2>
             <p className="lead">
               Management of physical and digital products
             </p>
-            <p>
-             <strong>Market research: </strong>
-                Reports seeking a clear understanding of the user, target market and moment of use to create products that are easily adopted.
-            </p>
-            <p>
-              <strong>Product Design: </strong> An interative process seeking for product market fit by running on tests and gauging audience reaction. 
-
-            </p>
-            <p>
-              <strong>Promotion: </strong>
-              Getting the product to the right placement through business development, exports and promotion in international events. 
-            </p>
-      
-            
 
             <Link
               to="/experience/"
               className="btn btn-outline-light"
             >
-            Experience
+            Products
             </Link>
 
           </Col>
 
 
           <Col lg={{span:5,offset:2}}>
+            <ol>
+            <li className="mb-3">
+              <strong>Market research: </strong>
+                  Reports seeking a clear understanding of the user, target market and moment of use to create products that are easily adopted.
+              </li>
+              <li className="mb-3">
+                <strong>Product Design: </strong> An interative process seeking for product market fit by running tests and gauging audience reaction. 
 
+              </li>
+              <li className="mb-3">
+                <strong>Promotion: </strong>
+                Getting the product to the right placement through business development, exports and promotion in international events. 
+              </li>
+            </ol>
           <StaticImage 
             src="../images/steps.png" 
             alt="Promotion" 
-            className="mt-5"
+            className="mt-3"
             />
                       
           </Col>
@@ -82,24 +100,12 @@ const IndexPage = () => (
     <Row className="py-lg-5">
       <Col className="py-5" lg="4" md="6">
       <h2 >
-         <span className="text-mid">Brand</span> design that <span className="text-mid">resonates</span>
+         <span className="text-mid">Brands</span> that <span className="text-mid">resonate</span>
       </h2>
         <p className="lead">
-          Make you brand stand out by emphasising your differenciation. 
+          Redesigning brands to simplify and localize 
         </p>
-        <p>
-         <strong>Brand design: </strong>
-          Core elements to define a brand, including logo, isotype, typography, etc.          
-        </p>
-        <p>
-          <strong>Corporate style: </strong>
-          Defining communication in text, visual &#123;photography, illustration, graphic design&#125; video and audio. 
-        </p>
-        <p>
-          <strong>Applications: </strong>
-          From merchandise, to menus, packaging and decoration.
-        </p>
-
+        
         <Link
           to="/projects/"
           className="btn btn-outline-dark"
@@ -110,7 +116,23 @@ const IndexPage = () => (
       </Col>
       
       <Col lg={{span:4,offset:2}} className="py-3">
-        <Card>
+        <ul>
+            <li className="mb-3">
+              <strong>Brand design: </strong>
+                Core elements to define a brand, including logo, isotype, typography, etc.          
+            </li>
+            <li className="mb-3">
+              <strong>Corporate style: </strong>
+              Defining communication in text, visual &#123;photography, illustration, graphic design&#125; video and audio. 
+            </li>
+            <li className="mb-3">
+              <strong>Applications: </strong>
+              Merchandise and promotional material, menus, packaging and decoration.
+            </li>
+
+        </ul>
+
+        <Card className="shadow">
           <Card.Body>
           <StaticImage 
         src="../images/latamcham/latamcham_9.png" 
@@ -133,20 +155,9 @@ const IndexPage = () => (
           <Col className="py-5" lg="4" md="6">
           <h2><span className="text-tertiary">International</span> Background</h2>
           <p className="lead">
-            +15 years of experience over <span className="text-secondary">5 different countries </span> working in B2B and B2C in tech and the food industry.
+            +15 years of experience over <span className="text-secondary">4 different countries </span> working in B2B and B2C in tech and the food industry.
           </p>
-          <p>
-             Educated in the UK, Spain and work experience in Europe, LATAM and Asia. 
-            </p>  
-            <p>
-             Horizontal skills focused on product design: business, graphic design, marketing and management.  
-          </p>
-          <Link
-            to="/about/"
-            className="btn btn-link"
-          >
-          About me
-          </Link>
+         
 
           <Link
             to="/contact/"
@@ -158,11 +169,18 @@ const IndexPage = () => (
         </Col>
 
         <Col lg={{span:5,offset:2}}>
+          <p>
+             Educated in the UK, Spain and with work experience in Europe, LATAM and Asia. 
+            </p>  
+            <p>
+             Horizontal skills focused on product verticals: research,  marketing, graphic design, and web development.  
+          </p>
+      
 
         <StaticImage 
           src="../images/map.png" 
           alt="Map" 
-          className="mt-5"
+          className="mt-3"
           />
                     
         </Col>

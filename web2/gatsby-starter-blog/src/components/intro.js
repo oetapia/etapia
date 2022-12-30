@@ -7,14 +7,16 @@
 
  import * as React from "react"
  import PropTypes from "prop-types"
- import { useStaticQuery, graphql } from "gatsby"
+ //import { useStaticQuery, graphql } from "gatsby"
  import {Container, Row, Col} from "react-bootstrap"
- import { getImage } from "gatsby-plugin-image"
+ //import { getImage } from "gatsby-plugin-image"
 
- import { convertToBgImage } from "gbimage-bridge"
- import BackgroundImage from 'gatsby-background-image'
+ //import { convertToBgImage } from "gbimage-bridge"
+ //import BackgroundImage from 'gatsby-background-image'
 
  const Intro = ({ children,img,extra,text }) => {
+	
+	/*
 	const { placeholderImage } = useStaticQuery(
 		graphql`
 		  query {
@@ -30,14 +32,24 @@
 		  }
 		`
 	  )
-	  const image = getImage(placeholderImage)
+	  */
+	  //const image = getImage(placeholderImage)
 	
 	  // Use like this:
-	  const bgImage = convertToBgImage(image)
+	  //const bgImage = convertToBgImage(image)
 
    return (
 	 <>
-			<BackgroundImage
+
+				<Container className="pt-5 intro">
+					<Row className={text+" py-5"}>
+						<Col>
+								{children}
+						</Col>
+					</Row>
+				</Container>
+
+			{/* <BackgroundImage
 					Tag="section"
 					className={extra +" intro py-5 "}
 					// Spread bgImage into BackgroundImage:
@@ -52,6 +64,8 @@
 					</Row>
 				</Container>
 			</BackgroundImage>
+			*/
+   				}
  	 </>
    )
  }
