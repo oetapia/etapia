@@ -13,7 +13,7 @@ export default function PostPage({ data }) {
   
   return (
     <>
-    <Layout bg="0">
+    <Layout>
 
       <Container className="my-5 pt-5">
       <Row className="mb-5">
@@ -27,9 +27,9 @@ export default function PostPage({ data }) {
         ): ''}
 
         </Col>
-        <Col className="text-light">
+        <Col>
         <p className="small">
-          <Link to="/projects">/projects</Link>
+          <Link to="/projects" className="text-secondary">/projects</Link>
         </p>
         <h1>{title}</h1>
         <p className="text-muted small">

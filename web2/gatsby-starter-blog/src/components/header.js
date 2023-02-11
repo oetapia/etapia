@@ -2,23 +2,17 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import {Container, Nav, Navbar,NavDropdown, } from "react-bootstrap"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle, bg }) => (
   <header className="fixed-top" >
     
-      <Navbar bg={bg} variant="dark" id="scroll" expand="lg">
+      <Navbar bg={bg}  id="scroll" expand="lg">
       <Container>
         <Link
-            to="/"
+            to="/" 
+            className="btn"
           >
-          <StaticImage
-              className="me-lg-5"
-              src="../images/elogo-w.svg"
-              height={40}
-              formats={["auto", "webp", "avif", "svg"]}
-              alt="E Logo"
-            />
+          Esteban Tapia
           </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">

@@ -39,11 +39,11 @@ const Layout = ({ children, bg }) => {
       function checkScroll()  {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
           document.getElementById("scroll").classList.add("shadow");
-          document.getElementById("scroll").classList.add("bg-0");
+          document.getElementById("scroll").classList.add("bg-1");
           //console.log('<50');
           } else {
              document.getElementById("scroll").classList.remove("shadow");
-             document.getElementById("scroll").classList.remove("bg-0");
+             document.getElementById("scroll").classList.remove("bg-1");
           }
         }
 
@@ -67,7 +67,7 @@ const Layout = ({ children, bg }) => {
         className="border-top py-5"
         >
         <Container>  
-        <Row className="text-light">
+        <Row>
           <Col>
             <p className="small">
               {data.site.siteMetadata?.title}  © {new Date().getFullYear()}
@@ -77,7 +77,7 @@ const Layout = ({ children, bg }) => {
             <a
               href="https://www.linkedin.com/in/estebantapia"
               activeClassName="active"
-              className="nav-link p-0"
+              className="btn-outline-primary"
               target="_blank"
               rel="noreferrer"
             >
@@ -85,7 +85,7 @@ const Layout = ({ children, bg }) => {
           src="../images/linkedin.png" 
           alt="Linkedin Logo" 
           quality="100" 
-          height="16"
+          height="24"
           />
             </a>
           </Col>

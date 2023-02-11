@@ -40,8 +40,9 @@
    return (
 	 <>
 
-				<Container className=" intro">
-					<Row className={text+" "}>
+				<div className={text+ " "}>
+				<Container className="intro">
+					<Row>
 
 						<Col className="animation-header" id="animation-header">
 								<Sun className="sun"></Sun>	
@@ -54,6 +55,7 @@
 						
 					</Row>
 				</Container>
+				</div>
 
 			{/* <BackgroundImage
 					Tag="section"

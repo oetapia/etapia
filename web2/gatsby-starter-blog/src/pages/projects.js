@@ -11,11 +11,11 @@ import { GatsbyImage,getImage } from "gatsby-plugin-image"
 export default function Projects({ data }) {
   return (
   <>
-  <Layout bg="0">
+  <Layout>
 
     <Seo title="Other Projects" />
-    <Intro extra="bg-0"  text="text-light">
-      <h1><span className="text-secondary">Branding</span> projects</h1>
+    <Intro >
+      <h1>Branding projects</h1>
       <p>
         I designed different brands and helped with their positioning strategy as a consultant.
       </p>

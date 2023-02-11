@@ -7,10 +7,10 @@ import Intro from "../components/intro"
 import {Container,Card,Row,Col} from "react-bootstrap"
 
 const Contact = () => (
-  <Layout bg="0">
+  <Layout >
     <Seo title="Contact me" />
-    <Intro extra="bg-0" text="text-light">
-    <h1><span className="text-secondary">Contact</span> me</h1>
+    <Intro >
+    <h1>Contact me</h1>
     <p className="lead">Let's connect and discuss how to grow together.</p>
     <p>I'm currently based in Berlin, Germany.</p>
     </Intro>
