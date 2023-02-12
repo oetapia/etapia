@@ -106,7 +106,7 @@ const IndexPage = () => (
             </Card.Body>
             <Card.Footer>
                 <Link
-                  to="/experience/celifood"
+                  to="/experience/cereales"
                   className="btn btn-secondary stretched-link"
                 >
                 See More

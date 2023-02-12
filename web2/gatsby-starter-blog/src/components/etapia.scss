@@ -7,6 +7,8 @@ $tertiary: #D1E8DE;
 
 body {
 
+	
+
 	color: $dark;
 	background-color: $tertiary;
 	font-family: 'Cormorant', serif;
@@ -29,9 +31,22 @@ body {
 		font-weight: 300;
 	}
 
-	.display-3 {
-		
+	// TABLE addes borders and padding
+
+	.table {
+			
+		table {	
+		background-color: $primary;
+			th {
+				background-color: $tertiary;
+				padding: 0.6em;
+			}
+			td {
+				padding: 0.6em;
+			}
+		}
 	}
+
 
 	blockquote {
 		opacity: 0.7;
@@ -258,6 +273,7 @@ body {
 		}
 	 }
 
+	 
 }
 
 .bg-0 {
