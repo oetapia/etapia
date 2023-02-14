@@ -73,7 +73,7 @@ const IndexPage = () => (
        
 
       </Col>
-      <Col lg={{span:5,offset:2}}>
+      <Col lg={{span:4}}>
           <Card className="styled-card text-light  ">
             <StaticImage 
               src="../images/celifood/celifood_5.jpg"
@@ -91,7 +91,7 @@ const IndexPage = () => (
               </Card.Title>
                 <Card.Text>
                   <p>
-                  Designing, launch and promotion of a healthy cereal line locally and for exports. 
+                  Design, launch and promotion of a healthy cereal line locally and for exports. 
                   </p>
                   <Badge  bg="1"  className="me-1">
                     #b2c
@@ -101,6 +101,9 @@ const IndexPage = () => (
                   </Badge>
                   <Badge  bg="1"  className="me-1">
                     #product-development
+                  </Badge>
+                  <Badge  bg="1"  className="me-1">
+                    #latam
                   </Badge>
                 </Card.Text>
             </Card.Body>
@@ -114,9 +117,56 @@ const IndexPage = () => (
                 
             </Card.Footer>
           </Card>
+          
 
       
       </Col>
+
+      <Col lg={{span:4}}>
+          <Card className="styled-card text-light  ">
+            <StaticImage 
+              src="../images/shush/shush_23.png"
+              className="card-image shadow" 
+              alt="Branding Project" 
+              quality="100"
+              />
+            
+            <Card.Body>
+              <Card.Title>
+                <div className="small">PRODUCT</div>
+              <h4 className="display-4">
+                Shush
+              </h4>            
+              </Card.Title>
+                <Card.Text>
+                  <p>
+                  Product concept, startup set-up and product launch of an AI-powered community moderator. 
+                  </p>
+                  <Badge  bg="1"  className="me-1">
+                    #b2b
+                  </Badge>
+                  <Badge  bg="1"  className="me-1">
+                    #tech-industry
+                  </Badge>
+                  <Badge  bg="1"  className="me-1">
+                    #product-development
+                  </Badge>
+                  <Badge  bg="1"  className="me-1">
+                    asia
+                  </Badge>
+                </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+                <Link
+                  to="/experience/shush"
+                  className="btn btn-secondary stretched-link"
+                >
+                See More
+                </Link>
+                
+            </Card.Footer>
+          </Card>
+        </Col>
       
       {/*
       <Col lg={{span:4,offset:2}} className="py-3">
@@ -177,7 +227,7 @@ const IndexPage = () => (
 
           <Col lg={{span:3,offset:3}} className="p-4">
               <h3>
-                Ideation
+                1. Ideation
               </h3>
               <p>
                 Reports seeking a clear understanding of the user, target market and moment of use to create products that are easily adopted.
@@ -188,7 +238,7 @@ const IndexPage = () => (
           </Col>
           <Col lg="3" className="p-4">
                 <h3>
-                  Product development
+                  2. Product development
                 </h3>
                 <p>
                   An interative process seeking for product market fit by running tests and gauging audience reaction. 
@@ -199,7 +249,7 @@ const IndexPage = () => (
 
           <Col lg="3" className="p-4">
               <h3>
-                Promotion
+                3. Promotion
               </h3>
               <p>
                 Getting the product to the right placement through business development, exports and promotion in international events. 

@@ -36,13 +36,15 @@ body {
 	.table {
 			
 		table {	
-		background-color: $primary;
+
 			th {
 				background-color: $tertiary;
 				padding: 0.6em;
+				border: 1px solid $primary;
 			}
 			td {
 				padding: 0.6em;
+				border: 1px solid $primary;
 			}
 		}
 	}
@@ -101,6 +103,11 @@ body {
 	}
 	
 	.border-start {
+		border-color: $dark !important;
+	}
+
+
+	.border-bottom {
 		border-color: $dark !important;
 	}
 
@@ -266,10 +273,17 @@ body {
 
 	 // NAVBAR Collapse 
 	 .navbar-collapse.show {
-		background-color: transparentize($primary,0.15);
-		margin-top: 1em;
+		background-color: transparentize($light,0.1);
+		transition-duration: 500ms;
+
+		border: 1px solid $primary;
 		.nav-link {
-			color: $light;
+			border-bottom: 1px solid $primary;
+
+		}
+
+		.child::last {
+			border-bottom: transparent;
 		}
 	 }
 

@@ -1,5 +1,6 @@
 import * as React from "react"
 //import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -29,15 +30,23 @@ const About = () => (
             </p>
 
             <p>
-              Esteban has set strategy, and worked collaboratively with business and engineering teams to ensure the successful delivery of  products. 
+              Esteban has set strategy, and worked collaboratively with business and engineering teams to ensure the successful delivery of products in Spain, Ecuador, South Korea and Germany. 
             </p>
 
             <p>
-              Esteban applies hands-on knowledge accumulated over +15 years of experience in different roles in the marketing vertical.
+              Esteban applies hands-on knowledge accumulated over +15 years of experience in different roles in the marketing vertical. Including corporate and startup experience. 
             </p>
             
         </Col>
-
+        <Col lg={{offset:1,span:5}} className="p-3">
+            <StaticImage 
+              src="../images/shush/pitch.png"
+              className="img-fluid border-3 shadow" 
+              alt="K-Startup Grand Challenge" 
+              quality="100"
+              />
+            
+        </Col>
       </Row>
      
     </Intro>  
@@ -55,10 +64,10 @@ const About = () => (
       </Col>
       <Col lg={{span:5,offset:1}} >
         <p>
-            User interviews, market research, planning, strategy, demand generation, branding, positioning. | Promotion strategy: sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  | HubspotCRM, InsightlyCRM, SynergyCRM, MS Office, Google Drive, Database mining, Tableau. 
+            User interviews, market research, planning, strategy, demand generation, branding, positioning. Promotion strategy: sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  || HubspotCRM, MS Office, Google Drive, Database mining, Tableau. 
           </p>
           <p>
-            Digital Marketing: CMS (Django, Odoo, Wordpress), SEO, SEM, SMM, Google Analytics, Mailings, Landing pages, Copywriting and Content Creation.
+            Digital Marketing: CMS, SEO, SEM, SMM, Analytics, Mailings, Landing pages, Copywriting and Content Creation. || Django, Odoo, Wordpress, Google Analytics
         </p>
 
       </Col>
@@ -77,10 +86,10 @@ const About = () => (
       </Col>
       <Col lg={{span:5,offset:1}} >
          <p>
-            In the food industry: Product family design, packaging design, packaging legislation compliance (FDA, locally), nutritional tables, in store material, promotional material. Trade fairs, exports. 
+            In the <em>food industry</em>: Product family design, packaging design, packaging legislation compliance (FDA, locally), nutritional tables, in store material, promotional material. Trade fairs, exports. 
           </p>
           <p>
-              In the tech industry: Product concept, prototypes, use cases, personas, roadmap elaboration, project management, product management. 
+              In the <em>tech industry</em>: Product concept, prototypes, use cases, personas, roadmap elaboration, project management, product management. 
           </p>
 
       </Col>
@@ -101,7 +110,7 @@ const About = () => (
       <Col lg={{span:5,offset:1}} >
      
           <p>
-            Development: CSS, HTML, JavaScript, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing. Hotjar, Pendo, Google Analytics.
+            Development: CSS, HTML, JavaScript, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing. || Hotjar, Pendo, Google Analytics. 
           </p>
 
       </Col>
@@ -120,13 +129,13 @@ const About = () => (
       </Col>
       <Col lg={{span:5,offset:1}} >
             <p>
-              Photography: Digital Photography, Lightning techniques, Adobe Photoshop, Adobe Lightroom, Affinity Photo. 
+              Photography: Digital Photography, Lightning Techniques || Adobe Photoshop, Adobe Lightroom, Affinity Photo. 
             </p>
             <p>
-              Print: Adobe InDesign, Affinity Publisher, Leaflets, Catalogues, Adobe Illustrator, Logo Design.
+              Print: Logo Design, Banners, Leaflets, Catalogues || Adobe InDesign, Affinity Publisher, Adobe Illustrator, Affinity Designer.
             </p>
             <p>
-              Media: Video capture, Adobe Premiere, Video Edition.
+              Media: Video Capture, Video Edition || Adobe Premiere, iMovie
             </p>
 
       </Col>
