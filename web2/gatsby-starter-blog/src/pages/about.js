@@ -1,5 +1,5 @@
 import * as React from "react"
-//import { Link } from "gatsby"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -59,16 +59,22 @@ const About = () => (
               <span >Marketing</span> Management
           </h2>
         <p className="lead">
-          Set up and managed marketing teams.
+            Educated in Business
         </p>
       </Col>
       <Col lg={{span:5,offset:1}} >
         <p>
-            User interviews, market research, planning, strategy, demand generation, branding, positioning. Promotion strategy: sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  || HubspotCRM, MS Office, Google Drive, Database mining, Tableau. 
-          </p>
-          <p>
+            Demand generation: User interviews, market research, planning, strategy, positioning, branding. Marketing management.
+        </p>
+
+        <p>
             Digital Marketing: CMS, SEO, SEM, SMM, Analytics, Mailings, Landing pages, Copywriting and Content Creation. || Django, Odoo, Wordpress, Google Analytics
         </p>
+
+        <p>
+            Promotion strategy: sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  || HubspotCRM, MS Office, Google Drive, Database mining, Tableau. 
+          </p>
+          
 
       </Col>
     </Row>
@@ -86,10 +92,11 @@ const About = () => (
       </Col>
       <Col lg={{span:5,offset:1}} >
          <p>
-            In the <em>food industry</em>: Product family design, packaging design, packaging legislation compliance (FDA, locally), nutritional tables, in store material, promotional material. Trade fairs, exports. 
+            In the <em>food industry</em>: Product family design, packaging design, packaging legislation compliance (FDA, locally), nutritional tables, in store material, promotional material. Trade fairs, exports. See <Link to="/experience/cereales">Celifood</Link>
           </p>
           <p>
               In the <em>tech industry</em>: Product concept, prototypes, use cases, personas, roadmap elaboration, project management, product management. 
+              See <Link to="/experience/shush">Shush</Link>
           </p>
 
       </Col>
@@ -110,7 +117,7 @@ const About = () => (
       <Col lg={{span:5,offset:1}} >
      
           <p>
-            Development: CSS, HTML, JavaScript, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing. || Hotjar, Pendo, Google Analytics. 
+            Development: CSS, HTML, JavaScript, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing. || Hotjar, Pendo, Google Analytics, Visual Studio Code, Jira.
           </p>
 
       </Col>

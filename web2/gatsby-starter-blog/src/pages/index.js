@@ -21,7 +21,7 @@ const IndexPage = () => (
   <>
   
   <Layout >
-      <Seo title="International Marketing" />
+      <Seo title="International Product and Marketing" />
       <Intro  text="bg-1">
             <Col lg={{span:10,offset:1}} >
             <h1 >Product Management</h1>
@@ -74,7 +74,7 @@ const IndexPage = () => (
 
       </Col>
       <Col lg={{span:4}}>
-          <Card className="styled-card text-light  ">
+          <Card className="styled-card text-light mb-3 ">
             <StaticImage 
               src="../images/celifood/celifood_5.jpg"
               className="card-image shadow" 
@@ -123,7 +123,7 @@ const IndexPage = () => (
       </Col>
 
       <Col lg={{span:4}}>
-          <Card className="styled-card text-light  ">
+          <Card className="styled-card text-light mb-3  ">
             <StaticImage 
               src="../images/shush/shush_23.png"
               className="card-image shadow" 

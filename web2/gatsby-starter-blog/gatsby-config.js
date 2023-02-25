@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Esteban Tapia`,
-    description: `Mixing product management, strategic marketing and tech to create cohesive brands.`,
+    description: `Product management, strategic marketing and tech expertise.`,
     author: `@oetapia`,
     siteUrl: `https://www.estebantapia.com`,
   },
@@ -47,7 +47,8 @@ module.exports = {
       },
       
     },
-    {
+    //{
+     /*
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
@@ -58,7 +59,8 @@ module.exports = {
         ],
         display: 'swap'
       }
-    },
+      */
+    //},
     {
       resolve: `gatsby-source-filesystem`,
       options: {
