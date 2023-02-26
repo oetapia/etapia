@@ -53,33 +53,7 @@ const About = () => (
     <Container >
    
 
-   <Row className="py-lg-5 border-bottom">
-    <Col className="py-5 text-end" lg="4" md="6">
-        <h2>
-              <span >Marketing</span> Management
-          </h2>
-        <p className="lead">
-            Educated in Business
-        </p>
-      </Col>
-      <Col lg={{span:5,offset:1}} >
-        <p>
-            Demand generation: User interviews, market research, planning, strategy, positioning, branding. Marketing management.
-        </p>
-
-        <p>
-            Digital Marketing: CMS, SEO, SEM, SMM, Analytics, Mailings, Landing pages, Copywriting and Content Creation. || Django, Odoo, Wordpress, Google Analytics
-        </p>
-
-        <p>
-            Promotion strategy: sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  || HubspotCRM, MS Office, Google Drive, Database mining, Tableau. 
-          </p>
-          
-
-      </Col>
-    </Row>
-
-    <Row className="py-lg-5 border-bottom">
+    <Row className="py-lg-5 border-top">
     <Col className="py-5 text-end" lg="4" md="6">
       
         <h2>
@@ -103,7 +77,74 @@ const About = () => (
     </Row>
 
 
-    <Row className="py-lg-5 border-bottom">
+   <Row className="py-lg-5 border-top">
+    <Col className="py-5 text-end" lg="4" md="6">
+        <h2>
+              <span >Marketing</span> Management
+          </h2>
+        <p className="lead">
+            Educated in Business.
+        </p>
+      </Col>
+      <Col lg={{span:5,offset:1}} >
+
+        <p className="font-italic">
+        Graduate Degree in Business Administration
+        Madrid, Spain [Universidad Rey Juan Carlos]
+        </p>
+
+        <p>
+            Demand generation: User interviews, market research, planning, strategy, positioning, branding. Marketing management.
+        </p>
+
+        <p>
+            Digital Marketing: CMS, SEO, SEM, SMM, Analytics, Mailings, Landing pages, Copywriting and Content Creation. || Django, Odoo, Wordpress, Google Analytics
+        </p>
+
+        <p>
+            Promotion strategy: sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  || HubspotCRM, MS Office, Google Drive, Database mining, Tableau. 
+          </p>
+          
+
+      </Col>
+    </Row>
+
+
+    <Row className="py-lg-5 border-top ">
+    <Col className="py-5 text-end" lg="4" md="6">
+      
+        <h2>
+              <span >Design</span> and Art Direction
+          </h2>
+          <p className="lead">
+              Educated in Art Direction.
+          </p>  
+        
+      </Col>
+      <Col lg={{span:5,offset:1}} >
+
+            <p className="font-italic">
+                Art Direction and Graphics Design
+                Madrid, Spain, [CICE]
+            </p>
+        
+            <p>
+              Photography: Digital Photography, Lightning Techniques || Adobe Photoshop, Adobe Lightroom, Affinity Photo. 
+            </p>
+            <p>
+              Print: Logo Design, Banners, Leaflets, Catalogues || Adobe InDesign, Affinity Publisher, Adobe Illustrator, Affinity Designer.
+            </p>
+            <p>
+              Media: Video Capture, Video Edition || Adobe Premiere, iMovie
+            </p>
+
+      </Col>
+    </Row>
+
+  
+
+
+    <Row className="py-lg-5 border-top">
     <Col className="py-5 text-end" lg="4" md="6">
       
            <h2>
@@ -122,33 +163,6 @@ const About = () => (
 
       </Col>
     </Row>
-
-    <Row className="py-lg-5 ">
-    <Col className="py-5 text-end" lg="4" md="6">
-      
-        <h2>
-              <span >Design</span> and Art Direction
-          </h2>
-          <p className="lead">
-              Educated in Art Direction.
-          </p>  
-        
-      </Col>
-      <Col lg={{span:5,offset:1}} >
-            <p>
-              Photography: Digital Photography, Lightning Techniques || Adobe Photoshop, Adobe Lightroom, Affinity Photo. 
-            </p>
-            <p>
-              Print: Logo Design, Banners, Leaflets, Catalogues || Adobe InDesign, Affinity Publisher, Adobe Illustrator, Affinity Designer.
-            </p>
-            <p>
-              Media: Video Capture, Video Edition || Adobe Premiere, iMovie
-            </p>
-
-      </Col>
-    </Row>
-
-  
    
    </Container>
   </Layout>

@@ -50,6 +50,14 @@ const Header = ({ siteTitle, bg }) => (
               >
                 Branding
               </Link>
+
+                <Link
+                to="/blog/"
+                activeClassName="active"
+                className="dropdown-item"
+              >
+                Blog
+              </Link>
            
                                   
             </NavDropdown>

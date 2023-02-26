@@ -93,7 +93,7 @@ body .border-start {
   border-color: #215F68 !important;
 }
 
-body .border-bottom {
+body .border-bottom, body .border-top {
   border-color: #215F68 !important;
 }
 

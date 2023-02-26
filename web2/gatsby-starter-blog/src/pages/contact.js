@@ -34,13 +34,13 @@ const Contact = () => (
           <Card className="mb-5">
           <Card.Header>
             <Card.Title>
-              <h3>Linkedin</h3>
+              <h3>Calendly</h3>
             </Card.Title>
           </Card.Header>
           
           <Card.Body>
 
-                <Link target="_blank" to="https://www.linkedin.com/in/estebantapia">estebantapia</Link>
+                <Link target="_blank" to="https://calendly.com/oetapia">Book a meeting</Link>
               
           </Card.Body>
         </Card>
