@@ -67,6 +67,7 @@ body {
 	}
 
 
+
 	.text-primary {
 		color: $primary !important;
 		border-color: $primary !important;
@@ -96,17 +97,28 @@ body {
 		background-color: transparent;
 		border-color: transparent;
 	}
+
+	.navbar {
+		.nav-link, .dropdown-menu {
+			font-size: 65%;
+			text-transform: uppercase;
+			font-weight: 600;
+			letter-spacing: 0.1em;
+		}
+
+
+	}
 	
 	.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
 		color: darken($secondary,20%);
 	}
 
 	.navbar-light .navbar-nav .nav-link {
-		color: $primary;
+		color: darken($primary,10%);
 	}
 
 	.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-		color: $secondary;
+		color: darken($secondary,20%);
 	}
 	
 	.border-start {
@@ -175,9 +187,9 @@ body {
 	}
 
 	a, .btn-link, .nav-link {
-		color: $dark;
+		color:  darken($secondary,10%);
 		&:hover {
-			color: lighten($dark,5%);
+			color: darken($secondary,0%);
 		}
 	}
 
@@ -248,19 +260,18 @@ body {
 	}
 
 	.dropdown-item  {
-		font-size: large;
 		&:hover,&:focus {
-			background-color: $primary;
+			background-color: $secondary;
 			color: $light;
 		}
 	}
 
 
 	.dropdown-item.active, .dropdown-item:active  {
-		background-color: $primary;
+		background-color: $secondary;
 		//border: 2px solid $primary;
 		&:hover,&:focus {
-			background-color: $primary;
+			background-color: $secondary;
 			//border-color: darken($primary,5%);
 		}
 	}
@@ -301,12 +312,13 @@ body {
 }
 
 .bg-0 {
-	background-color: transparentize($primary,0.3);
+	background-color: transparentize(rgba(203,229,217,1),0.3);
 }
 
 
 .bg-1 {
-	background: linear-gradient(180deg, rgba(158, 211, 188, 0.4) ,rgba(209, 232, 222, 0.4) );
+	background: rgb(181,225,197);
+	background: linear-gradient(180deg,rgba(158,211,188,.4),rgba(209,232,222,.4))
 }
 
 
@@ -317,7 +329,11 @@ body {
 
 .bg-3 {
 	background-color: transparentize($tertiary,0.3);
+}
 
+.bg-4 {
+	background: rgb(181,225,197);
+	background: linear-gradient(180deg, rgba(181,225,197,1) 0%, rgba(209,229,203,1) 31%, rgba(209,232,222,0.8) 100%);
 }
 
 
@@ -360,13 +376,13 @@ body {
 .main-content {
 	z-index: 100;
 	position: relative;
-	padding-top: 15em;
+	padding-top: 12em;
 	padding-bottom: 3em;
 	text-align: center;
 }
 
 .sun {
-	width: 7em;
+	width: 5em;
 	z-index: 10;
 	position: absolute;
 	opacity: 0.9;
@@ -386,11 +402,31 @@ body {
 	opacity: 0.7;
 	height: auto;
 	transition: 3s all ease;
-	animation: fade-cloud 2s ease-in;
+	animation: fade-cloud 3s ease-in-out;
 }
 
-.active .cloud {
+  
+
+.cloud-1 {
+	width: 9em;
+	position: absolute;
+	z-index: 30;
+	right: 50%;
+	top: 7em;
+	transition: 3s ease-in-out;
 }
+
+
+.cloud-2 {
+	width: 6em;
+	position: absolute;
+	z-index: 25;
+	right: 35%;
+	top: 6em;
+	transition: 3s ease-in-out;
+}
+
+
 
 .active {
 	.petal {
@@ -401,57 +437,30 @@ body {
 	  
 	  .petal-1 {
 		top: 0.3em;
-		left: 12em;
+		left: 22%;
 		transform: rotate(180deg) translateX(-10px);
 		animation-name: petal-1;
 	  }
 	  
 	  .petal-2 {
 		top: 0.9em;
-		left: 14em;
+		left: 24%;
 		transform: rotate(210deg) translateX(-10px);
 		animation-name: petal-2;
 	  }
 	  
 	  .petal-3 {
 		top: 1.2em;
-		left: 16em;
+		left: 26%;
 		transform: rotate(240deg) translateX(-10px);
 		animation-name: petal-3;
 	  }
 	  
-	  .petal-4 {
-		top: 1em;
-		left: 19em;
-		transform: rotate(270deg) translateX(-10px);
-		animation-name: petal-4;
-	  }
-	  
+
 }
 
 .cherry-tree {
 	width: 25%;
-}
-
-  
-
-.cloud-1 {
-	width: 12em;
-	position: absolute;
-	z-index: 30;
-	right: 50%;
-	top: 9em;
-	transition: 3s ease-in-out;
-}
-
-
-.cloud-2 {
-	width: 9em;
-	position: absolute;
-	z-index: 25;
-	right: 30%;
-	top: 7em;
-	transition: 3s ease-in-out;
 }
 
 
@@ -549,12 +558,12 @@ body {
 	}
 	50% {
 	  transform: translateX(20px);
-	  opacity: 0.6;
+	  opacity: 0.5;
 	}
 
 	100% {
 		transform: translateX(0);
-		opacity: 0.7;
+		opacity: 0.6;
 	  }
   }
 

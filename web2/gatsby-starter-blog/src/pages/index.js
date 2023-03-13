@@ -44,13 +44,13 @@ const IndexPage = () => {
   
     <Layout >
         <Seo title="International Product and Marketing" />
-        <Intro  text="bg-1">
+        <Intro  text="bg-4">
               <Col lg={{span:10,offset:1}} >
               <h1 >Product Management</h1>
               <p className="lead">
                   End-to-end design and launch of products internationally
               </p>      
-              <p className="small">
+              <p className="small font-italic">
                 Now in Berlin 
               </p>
   
@@ -74,7 +74,6 @@ const IndexPage = () => {
           <Petal className="petal-1 petal"></Petal>
           <Petal className="petal-2 petal"></Petal>
           <Petal className="petal-3 petal"></Petal>
-          <Petal className="petal-4 petal"></Petal>
         </div>
       <Container>
         <Row className="py-5">
@@ -235,7 +234,7 @@ const IndexPage = () => {
       </Container>
       </section>
           
-      <section className="py-5 bg-1 ">
+      <section className="py-5  ">
         <Container>
           <Row>
           <Col className="py-5 " lg="4" md="6">
