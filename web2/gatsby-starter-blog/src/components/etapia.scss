@@ -26,6 +26,25 @@ body {
 		color: lighten($dark,6%);
 	} 
 
+
+	.display-1 {
+		font-weight: 500 !important;
+	}
+
+	.display-5 {
+		font-weight: 100 !important;
+	}
+
+	.number {
+		font-size: 1.2em;
+		border: 1px solid $dark;
+		border-radius: 100%;
+		height: 2em;
+		width: 2em;
+		padding-top: 0.2em;
+		text-align: center;
+	}
+
 	h4 {
 		margin-top: 1em;
 		font-size: 1em;

@@ -8,8 +8,7 @@ import Intro from "../components/intro-animation"
 //import Light from "../components/light"
 import CherryTree from "../images/assets/cherry-tree-2.svg"
 import Petal from "../images/assets/petal-1.svg"
-import Mountain1 from "../images/assets/mount-pattern-1.svg"
-import Mountain2 from "../images/assets/mount-pattern-2.svg"
+
 
 
 import Seo from "../components/seo"
@@ -46,14 +45,13 @@ const IndexPage = () => {
         <Seo title="International Product and Marketing" />
         <Intro  text="bg-4">
               <Col lg={{span:10,offset:1}} >
-              <h1 >Product Management</h1>
+              <h1 className="display-1 mb-1">Product</h1>
               <p className="lead">
-                  End-to-end design and launch of products internationally
+                  End-to-end strategy and lifecycle management of digital and physical products
               </p>      
-              <p className="small font-italic">
-                Now in Berlin 
+              <p>
+                  Managing processes and teams to create and launch products internationally in B2B and B2C.
               </p>
-  
           
               <Link
                 to="/about/"
@@ -67,7 +65,76 @@ const IndexPage = () => {
               </Col>
         </Intro> 
   
+
+        <section className="py-5">
+            <Container>
+              <Row className="py-5">
+                
+              <Col lg={{span:4}} className="py-5">
+               <p className="number">
+                1
+                </p>
+               <h3>
+                 Ideation
+               </h3>
+               <p className="lead">
+                customer, competitor, company 
+               </p>
+               <p>
+               Using expertise in market research to prepare detailed reports that deep dive in markets analyzing customers' needs, how well competitors are serving them and where the our company has a value differentiation.
+               </p>    
   
+          
+                       
+           </Col>
+         
+              </Row>
+              <Row className="py-5">
+              <Col lg={{span:4, offset:3}} className="py-5">
+                <p className="number">
+                2
+                </p>
+                 <h3>
+                   Product development
+                 </h3>
+                 <p className="lead">
+                   wireframes, figma, html/js prototypes
+                 </p>
+                   
+                 <p>
+                 An interative process seeking for product market fit by running tests and gauging audience reaction using multiple techniques to build product concepts, from hand drawings, to print, and digital, using methods that help stakeholders understand the scope.
+                  
+                 </p>
+ 
+               
+           </Col>
+
+            </Row>
+            <Row className="py-5">
+        
+           <Col lg={{span:4, offset:6}} className="py-4">
+              
+                <p className="number">
+                3
+                </p>
+               <h3>
+                
+                 Promotion
+               </h3>
+               <p className="lead">
+                 documentation, promotion, feedback
+               </p>
+
+               <p>
+                 Applying experience in business development to get the product to the right placement through channel management, exports and promotion in international events. 
+
+               </p>
+               
+           </Col>
+ 
+         </Row>
+              </Container>
+        </section>  
        <section className="py-5 position-relative" id="quote"  >
         <div className="animation">
           <CherryTree className="cherry-tree"></CherryTree>
@@ -83,7 +150,7 @@ const IndexPage = () => {
                   simplicity is achieved through iterations and a clear understanding of the medium and audience 
               </blockquote>     
           </Col>
-          <Col lg={{span:4,offset:1}} className="pt-5">
+          <Col lg={{span:5,offset:1}} className="pt-5">
             <p className="border-start p-5 mt-5">
               Esteban is a product manager with a background in business, design and  experience in corporate and startups
             </p>
@@ -93,16 +160,20 @@ const IndexPage = () => {
       <Row className="py-lg-5 animate " >
         <Col className="py-5" lg="4" md="6">
         <h2>
-           Featured projects
+           Success stories
         </h2>
           <p className="lead">
-            A career that includes branding, product and marketing in B2B and B2C in Asia, South America and Europe
+              Digital and physical producst in B2B and B2C
+          </p>
+          <p>
+            A career that includes branding, product and marketing in Asia, South America and Europe
           </p>
           
-         
-  
         </Col>
-        <Col lg={{span:4}}>
+        </Row>
+        <Row>
+ 
+        <Col lg={{span:5, offset: 1}}>
             <Card className="styled-card text-light mb-3 ">
               <StaticImage 
                 src="../images/celifood/celifood_5.jpg"
@@ -113,8 +184,8 @@ const IndexPage = () => {
               
               <Card.Body>
                 <Card.Title>
-                  <div className="small">PRODUCT</div>
-                <h4 className="display-4">
+                  <div className="small mb-0">PRODUCT</div>
+                <h4 className="display-4 mt-0">
                   Celifood
                 </h4>            
                 </Card.Title>
@@ -151,7 +222,7 @@ const IndexPage = () => {
         
         </Col>
   
-        <Col lg={{span:4}}>
+        <Col lg={{span:5, offset: 1}}>
             <Card className="styled-card text-light mb-3  ">
               <StaticImage 
                 src="../images/shush/shush_23.png"
@@ -162,8 +233,8 @@ const IndexPage = () => {
               
               <Card.Body>
                 <Card.Title>
-                  <div className="small">PRODUCT</div>
-                <h4 className="display-4">
+                  <div className="small mb-0">PRODUCT</div>
+                  <h4 className="display-4 mt-0">
                   Shush
                 </h4>            
                 </Card.Title>
@@ -233,81 +304,23 @@ const IndexPage = () => {
       </Row>
       </Container>
       </section>
-          
-      <section className="py-5  ">
-        <Container>
-          <Row>
-          <Col className="py-5 " lg="4" md="6">
-            <h2>
-              From concept to launch
-            </h2>
-              <p className="lead">
-                With hands-on experience in the whole product development and management  of physical and digital products
-              </p>
-  
-             
-            
-            </Col>
-          </Row>
-  
-          <Row>
-           
-  
-  
-            <Col lg={{span:3,offset:3}} className="p-4">
-                <h3>
-                  1. Ideation
-                </h3>
-                <p>
-                  Reports seeking a clear understanding of the user, target market and moment of use to create products that are easily adopted.
-                </p>    
-   
-           
-                        
-            </Col>
-            <Col lg="3" className="p-4">
-                  <h3>
-                    2. Product development
-                  </h3>
-                  <p>
-                    An interative process seeking for product market fit by running tests and gauging audience reaction. 
-                  </p>
-  
-                
-            </Col>
-  
-            <Col lg="3" className="p-4">
-                <h3>
-                  3. Promotion
-                </h3>
-                <p>
-                  Getting the product to the right placement through business development, exports and promotion in international events. 
-  
-                </p>
-                
-            </Col>
-  
-          </Row>
-        </Container>
-      </section>
+      
      
       <section className="mt-5 pt-5">
       
-        <Container fluid>
+        <Container>
         <Row >
-          <Col lg="3" xs="2" className="d-none d-lg-block ps-0 position-relative overflow-hidden">
-                <Mountain1 className="img-fluid position-absolute bottom-0" ></Mountain1>                      
-          </Col>
-            <Col className="py-5 text-center"  md="6">
-            <h2>International Experience</h2>
+            <Col className="py-5 "  lg="6">
+            <h2>Esteban</h2>
             <p className="lead">
-              +15 years of work experience spanning 4 different countries in tech and the food industry.
+            marketing, design, tech
             </p>
             <p>
-               Educated in the UK, Spain and with work experience in Europe, LATAM and Asia. 
+            +15 years of work experience spanning 4 different countries in tech and the food industry.
+               
             </p>  
             <p>
-              Product management, marketing, business development and brand design. 
+            Educated in the UK, Spain and with work experience in Europe, LATAM and Asia. 
             </p>
   
             <Link
@@ -318,10 +331,10 @@ const IndexPage = () => {
             </Link>
             
           </Col>
-  
-          <Col lg="3" xs="2"  className="d-none d-lg-block position-relative overflow-hidden">
-                <Mountain2 className="img-fluid position-absolute bottom-0" ></Mountain2>                      
+          <Col>
+             
           </Col>
+
         </Row>
   
         </Container> 
