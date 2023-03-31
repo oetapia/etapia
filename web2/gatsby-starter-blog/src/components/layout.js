@@ -39,11 +39,11 @@ const Layout = ({ children, bg, variant }) => {
       function checkScroll()  {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
           document.getElementById("scroll").classList.add("shadow");
-          document.getElementById("scroll").classList.add("bg-0");
+          document.getElementById("scroll").classList.add("bg-3");
           //console.log('<50');
           } else {
              document.getElementById("scroll").classList.remove("shadow");
-             document.getElementById("scroll").classList.remove("bg-0");
+             document.getElementById("scroll").classList.remove("bg-3");
           }
         }
 

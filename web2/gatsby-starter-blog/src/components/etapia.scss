@@ -1,8 +1,8 @@
 $light: #ffffff;
 $dark: #252727;
 
-$secondary: #8f85c5;
 $primary: #7dc4c1; 
+$secondary: #8f85c5;
 $tertiary: #e5e1ed;
 
 body {
@@ -362,13 +362,18 @@ body {
 
 
 .bg-1 {
-	background-color: transparentize($primary,0.3);
+	background: transparentize($primary,0.3);
+	
 }
 
 
 .bg-2 {
-	background-color: transparentize($secondary,0.3);
+	background: transparentize($secondary,0.3);
+	background: linear-gradient(180deg, rgba(160, 150, 216, 0.8),rgba(143, 133, 197,.9))
+}
 
+.bg-2.shadow {
+	box-shadow: 0 .5rem 1rem rgba(127, 117, 179, 0.3)!important;
 }
 
 .bg-3 {

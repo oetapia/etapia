@@ -309,11 +309,18 @@ body .navbar-collapse.show .child::last {
 }
 
 .bg-1 {
-  background-color: rgba(125, 196, 193, 0.7);
+  background: rgba(125, 196, 193, 0.7);
 }
 
 .bg-2 {
-  background-color: rgba(143, 133, 197, 0.7);
+  background: rgba(143, 133, 197, 0.7);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 150, 216, 0.8)), to(rgba(143, 133, 197, 0.9)));
+  background: linear-gradient(180deg, rgba(160, 150, 216, 0.8), rgba(143, 133, 197, 0.9));
+}
+
+.bg-2.shadow {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(127, 117, 179, 0.3) !important;
+          box-shadow: 0 0.5rem 1rem rgba(127, 117, 179, 0.3) !important;
 }
 
 .bg-3 {
