@@ -14,10 +14,14 @@ const Contact = ({ data }) => {
   return (
   <Layout >
     <Seo title="Contact me" />
-    <Intro img={imageData} >
-    <h1>Contact me</h1>
-    <p className="lead">Let's connect and discuss how to grow together.</p>
-    <p>I'm currently based in Berlin, Germany.</p>
+    <Intro >
+    <Row>
+      <Col lg={{span:6}} className="mt-5 p-5" >
+        <h1>Contact me</h1>
+        <p className="lead">Let's connect and discuss how to grow together.</p>
+        <p>I'm currently based in Berlin, Germany.</p>
+      </Col>
+    </Row>
     </Intro>
     <Container className="py-5">
     <Row>

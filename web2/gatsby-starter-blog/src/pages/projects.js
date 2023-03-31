@@ -15,16 +15,20 @@ export default function Projects({ data }) {
 
     <Seo title="Other Projects" />
     <Intro >
+    <Row>
+      <Col lg={{span:6}} className="mt-5 p-5" >
       <h1>Branding projects</h1>
       <p>
         I designed different brands and helped with their positioning strategy as a consultant.
       </p>
+      </Col>
+     </Row> 
     </Intro>
     
     <Container>
     <Row>
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
-         <Col className="py-3 animate" md="6" lg="3" key={id}>
+         <Col className="py-5 animate" md="6" lg="3" key={id}>
          <Card >
 
                  
@@ -57,7 +61,7 @@ export default function Projects({ data }) {
               <Card.Footer className="text-center">
                 <Link  
                   to={`/${frontmatter.path}`}
-                  className="btn btn-primary stretched-link"
+                  className="btn btn-secondary stretched-link"
                   >
                   See more
                 </Link>

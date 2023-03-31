@@ -14,13 +14,13 @@ const About = ({ data }) => {
 
   return(
   <>
-  <Layout variant="dark">
+  <Layout>
     
     <Seo title="About" />
 
-    <Intro text="text-light"  img={imageData}>
-      <Row>
-        <Col lg="6">
+    <Intro >
+       <Row>
+            <Col lg={{span:6}} className="mt-5 p-5" >
             <h1>About Esteban</h1>
             <p className="lead">
               Product driven by design.
@@ -207,7 +207,7 @@ export default About
 
 export const query = graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "sky-night.jpg" }) {
+    placeholderImage: file(relativePath: { eq: "cherrytree.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           width: 1800

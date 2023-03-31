@@ -140,12 +140,12 @@ body .styled-card .card-footer {
 }
 
 body .animate .card:hover {
-  -webkit-box-shadow: #252727 0.3em 0.3em 1em;
-          box-shadow: #252727 0.3em 0.3em 1em;
+  -webkit-box-shadow: #aea1c7 0.3em 0.3em 1em;
+          box-shadow: #aea1c7 0.3em 0.3em 1em;
   -webkit-transform: translate(-0.2em, -0.2em);
           transform: translate(-0.2em, -0.2em);
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 body .bg-dark {
@@ -190,8 +190,8 @@ body .btn {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 body .btn-primary {
@@ -214,6 +214,10 @@ body .btn-outline-primary:hover {
   border-color: #7dc4c1;
   background-color: #7dc4c1 !important;
   color: #8f85c5 !important;
+}
+
+body .bg-primary {
+  background-color: #7dc4c1;
 }
 
 body .btn-outline-light:hover {
@@ -253,7 +257,7 @@ body .btn-secondary:hover, body .btn-secondary:focus {
 }
 
 body .bg-secondary {
-  background-color: #252727 !important;
+  background-color: #8f85c5 !important;
 }
 
 body .dropdown-item:hover, body .dropdown-item:focus {
@@ -299,13 +303,13 @@ body .navbar-collapse.show .child::last {
 }
 
 .bg-0 {
-  background-color: rgba(229, 225, 237, 0.7);
-}
-
-.bg-1 {
   background: #b5e1c5;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(158, 211, 188, 0.4)), to(rgba(209, 232, 222, 0.4)));
   background: linear-gradient(180deg, rgba(158, 211, 188, 0.4), rgba(209, 232, 222, 0.4));
+}
+
+.bg-1 {
+  background-color: rgba(125, 196, 193, 0.7);
 }
 
 .bg-2 {
@@ -318,8 +322,8 @@ body .navbar-collapse.show .child::last {
 
 .bg-4 {
   background: #b5e1c5;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5e1c5), color-stop(50%, #c3e3f2), to(#8f85c5));
-  background: linear-gradient(180deg, #b5e1c5 0%, #c3e3f2 50%, #8f85c5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#8adad6), color-stop(35%, #7dc4c1), to(#8f85c5));
+  background: linear-gradient(180deg, #8adad6 0%, #7dc4c1 35%, #8f85c5 100%);
 }
 
 .bg-loop {

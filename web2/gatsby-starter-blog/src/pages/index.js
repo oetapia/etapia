@@ -35,12 +35,12 @@ const IndexPage = ({ data }) => {
   return (
     <>
   
-    <Layout variant="dark">
+    <Layout>
         <Seo title="International Product and Marketing" />
         <Intro text="text-light" img={imageData}>
           <Row>
 
-              <Col lg={{span:6}} className="mt-5 pt-5" >
+              <Col lg={{span:6}} className="mt-5 p-5" >
               <h1 className="mt-5 mb-1">Customer focused products</h1>
               <p className="lead">
                   End-to-end strategy and design of <em>digital</em> and <em>physical</em> products.
@@ -136,7 +136,7 @@ const IndexPage = ({ data }) => {
       <Container>
       
       
-      <Row className="py-lg-5 animate " >
+      <Row className="py-lg-5  " >
         <Col className="py-5" lg="4" md="6">
         <h2>
            Success stories
@@ -150,7 +150,7 @@ const IndexPage = ({ data }) => {
           
         </Col>
         </Row>
-        <Row className="animation">
+        <Row className="animate">
  
         <Col lg={{span:5, offset: 1}}>
             <Card className="styled-card mb-3 ">

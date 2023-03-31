@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import {Container, Nav, Navbar,NavDropdown, } from "react-bootstrap"
 
 const Header = ({ siteTitle, bg, variant }) => (
-  <header className="fixed-top" >
+  <header className="sticky-top" >
     
       <Navbar bg={bg} variant={variant}  id="scroll" expand="lg">
       <Container>

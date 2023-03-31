@@ -17,15 +17,22 @@ export default function Experience({ data }) {
     
     <Seo title="Work Experience" />
     <Intro  >
+    <Row>
+      <Col lg={{span:6}} className="mt-5 p-5" >
       <h1>Work Experience</h1>
-      <p>Product and Marketing experience in full time jobs.</p>
+      <p className="lead">Product and Marketing</p>
+      <p>
+        Work experience in full time jobs in Spain, Ecuador, South Korea and Germany.
+      </p>
+      </Col>
+      </Row>
     </Intro>
     <Container>
     <Row>
          
         {data.allMdx.nodes.map(({ id, excerpt, frontmatter, slug }) => (
         
-         <Col className="py-3 animate" md="6"  lg="4" key={id}>
+         <Col className="py-5 animate" md="6"  lg="4" key={id}>
            
          <Card >
          
@@ -57,7 +64,7 @@ export default function Experience({ data }) {
               <Card.Footer className="text-center">
                 <Link  
                   to={`/${frontmatter.path}`}
-                  className="btn btn-primary stretched-link"
+                  className="btn btn-secondary stretched-link"
                   >
                   See more
                 </Link>

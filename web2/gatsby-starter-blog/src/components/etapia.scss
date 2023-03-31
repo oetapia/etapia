@@ -174,9 +174,9 @@ body {
 	.animate .card {
 		
 		&:hover {
-			box-shadow: $dark 0.3em 0.3em 1em;
+			box-shadow: darken($tertiary, 20%) 0.3em 0.3em 1em;
 			transform: translate(-0.2em, -0.2em);
-			transition-duration: 300ms;
+			transition-duration: 500ms;
 		}
 	}
 
@@ -229,7 +229,7 @@ body {
 		font-weight: 600;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
-		transition-duration: 300ms;
+		transition-duration: 500ms;
 	}
 
 
@@ -251,6 +251,11 @@ body {
 			background-color: $primary !important;
 			color: $secondary !important;
 		}
+	}
+
+
+	.bg-primary {
+		background-color: $primary;
 	}
 
 	.btn-outline-light {
@@ -290,8 +295,9 @@ body {
 		}
 	}
 
+
 	.bg-secondary {
-		background-color: $dark !important;
+		background-color: $secondary!important;
 
 
 	}
@@ -349,13 +355,14 @@ body {
 }
 
 .bg-0 {
-	background-color: transparentize($tertiary,0.3);
+	background: rgb(181,225,197);
+	background: linear-gradient(180deg,rgba(158,211,188,.4),rgba(209,232,222,.4))
 }
 
 
+
 .bg-1 {
-	background: rgb(181,225,197);
-	background: linear-gradient(180deg,rgba(158,211,188,.4),rgba(209,232,222,.4))
+	background-color: transparentize($primary,0.3);
 }
 
 
@@ -370,7 +377,7 @@ body {
 
 .bg-4 {
 	background: rgb(181,225,197);
-	background: linear-gradient(180deg, rgba(181,225,197,1) 0%, rgb(195, 227, 242) 50%, rgb(143, 133, 197) 100%);
+	background: linear-gradient(180deg,   rgb(138, 218, 214) 0%, rgb(125, 196, 193) 35%, rgb(143, 133, 197) 100%);
 }
 
 

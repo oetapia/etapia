@@ -17,8 +17,13 @@ export default function Experience({ data }) {
     
     <Seo title="Blog" />
     <Intro  >
+    <Row>
+      <Col lg={{span:6}} className="mt-5 p-5" >
       <h1>Blog</h1>
-      <p>Lessons in product</p>
+      <p className="lead">Lessons in product</p>
+      <p>Garnered from multiple industries.</p>
+      </Col>
+      </Row>
     </Intro>
     <Container>
     <Row>
@@ -44,7 +49,7 @@ export default function Experience({ data }) {
                 </p>
                 <p className="small mt-0">
                 {frontmatter.tags.map((tag, i) => [
-                  <Badge key={i} bg="secondary"  className="me-1">
+                  <Badge key={i} bg="primary"  className="me-1">
                     {tag}
                   </Badge>
                 ])}
@@ -57,7 +62,7 @@ export default function Experience({ data }) {
               <Card.Footer className="text-center">
                 <Link  
                   to={`/${frontmatter.path}`}
-                  className="btn btn-primary stretched-link"
+                  className="btn btn-secondary stretched-link"
                   >
                   See more
                 </Link>
