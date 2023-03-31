@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -7,13 +8,17 @@ import Seo from "../components/seo"
 import Intro from "../components/intro"
 import {Container,Row,Col} from "react-bootstrap"
 
-const About = () => (
+const About = ({ data }) => {
+
+  const imageData = data.placeholderImage.childImageSharp.gatsbyImageData
+
+  return(
   <>
-  <Layout >
+  <Layout variant="dark">
     
     <Seo title="About" />
 
-    <Intro >
+    <Intro text="text-light"  img={imageData}>
       <Row>
         <Col lg="6">
             <h1>About Esteban</h1>
@@ -25,20 +30,10 @@ const About = () => (
               Esteban has researched, designed, and launched physical and software products in B2B and B2C. 
             </p>
 
-            <p>
-              Applying skills from market research and experience overseas to gain a deep understanding of customer's needs and market trends in each industry worked.
-            </p>
-
-            <p>
-              Esteban has set strategy, and worked collaboratively with business and engineering teams to ensure the successful delivery of products in Spain, Ecuador, South Korea and Germany. 
-            </p>
-
-            <p>
-              Esteban applies hands-on knowledge accumulated over +15 years of experience in different roles in the marketing vertical. Including corporate and startup experience. 
-            </p>
             
         </Col>
-        <Col lg={{offset:1,span:5}} className="p-3">
+
+        <Col lg={{offset:1,span:5}} className="px-3">
             <StaticImage 
               src="../images/shush/pitch.png"
               className="img-fluid border-3 shadow" 
@@ -47,11 +42,47 @@ const About = () => (
               />
             
         </Col>
+
       </Row>
      
     </Intro>  
     <Container >
    
+   <Row  className="py-5">
+
+      <Col lg="6 ">
+
+           <p>
+              Applying skills from market research and experience overseas to gain a deep understanding of customer's needs and market trends in each industry worked.
+            </p>
+
+      
+      </Col>
+      
+    </Row>
+
+    <Row className="py-5">
+        <Col lg="6">
+
+            <p>
+              Esteban has set strategy, and worked collaboratively with business and engineering teams to ensure the successful delivery of products in Spain, Ecuador, South Korea and Germany. 
+            </p>
+
+            
+        
+        </Col>
+    </Row>
+
+    <Row className="py-5">
+
+      <Col lg="6">
+        <p>
+              Esteban applies hands-on knowledge accumulated over +15 years of experience in different roles in the marketing vertical. Including corporate and startup experience. 
+            </p>
+      </Col>
+
+    </Row>
+
 
     <Row className="py-lg-5 border-top">
     <Col className="py-5 text-end" lg="4" md="6">
@@ -168,5 +199,23 @@ const About = () => (
   </Layout>
   </>
 )
+  }
 
 export default About
+
+// Set image for header background 
+
+export const query = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "sky-night.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1800
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+  }
+`
+

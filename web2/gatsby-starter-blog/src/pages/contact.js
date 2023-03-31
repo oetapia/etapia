@@ -1,15 +1,20 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Intro from "../components/intro"
 import {Container,Card,Row,Col} from "react-bootstrap"
 
-const Contact = () => (
+
+const Contact = ({ data }) => {
+  const imageData = data.placeholderImage.childImageSharp.gatsbyImageData
+
+  return (
   <Layout >
     <Seo title="Contact me" />
-    <Intro >
+    <Intro img={imageData} >
     <h1>Contact me</h1>
     <p className="lead">Let's connect and discuss how to grow together.</p>
     <p>I'm currently based in Berlin, Germany.</p>
@@ -65,5 +70,22 @@ const Contact = () => (
     </Container>
   </Layout>
 )
+}
 
 export default Contact
+
+// Set image for header background 
+
+export const query = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "building.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1800
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+  }
+`

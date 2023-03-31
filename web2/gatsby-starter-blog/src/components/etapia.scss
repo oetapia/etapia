@@ -1,9 +1,9 @@
 $light: #ffffff;
-$dark: #215F68;
+$dark: #252727;
 
-$primary: #479A96; 
-$secondary: #F8B780;
-$tertiary: #D1E8DE;
+$secondary: #8f85c5;
+$primary: #7dc4c1; 
+$tertiary: #e5e1ed;
 
 body {
 
@@ -23,12 +23,15 @@ body {
 		letter-spacing: 0.3em;
 		font-size: 1em;
 		margin-bottom: 1em;
-		color: lighten($dark,6%);
 	} 
 
 
-	.display-1 {
+	.display-1, .display-3, .display-5 {
 		font-weight: 500 !important;
+		//background: -webkit-linear-gradient(#eee, #333);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		line-height: 1.1em;
 	}
 
 	.display-5 {
@@ -43,6 +46,9 @@ body {
 		width: 2em;
 		padding-top: 0.2em;
 		text-align: center;
+		color: $light;
+		border: none;
+
 	}
 
 	h4 {
@@ -130,6 +136,7 @@ body {
 	
 	.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
 		color: darken($secondary,20%);
+
 	}
 
 	.navbar-light .navbar-nav .nav-link {
@@ -140,18 +147,18 @@ body {
 		color: darken($secondary,20%);
 	}
 	
-	.border-start {
-		border-color: $dark !important;
+	.border-start, .border-end {
+		border-color: $secondary !important;
 	}
 
 
 	.border-bottom, .border-top {
-		border-color: $dark !important;
+		border-color: $secondary !important;
 	}
 
 
 	.styled-card {
-		background-color: $dark;
+		background-color: darken($light,3%);
 		border-radius: 1em;
 		.card-image {
 			border-radius: 1em 1em 0 0;
@@ -222,6 +229,7 @@ body {
 		font-weight: 600;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;
+		transition-duration: 300ms;
 	}
 
 
@@ -248,6 +256,16 @@ body {
 	.btn-outline-light {
 		&:hover {
 			color: $primary !important;
+		}
+	}
+
+	.btn-outline-secondary {
+		color: $secondary !important;
+		border-color: $secondary;
+		&:hover {
+			border-color: $secondary;
+			background-color: transparentize($secondary, 0.2) !important;
+			color: $tertiary !important;
 		}
 	}
 
@@ -331,7 +349,7 @@ body {
 }
 
 .bg-0 {
-	background-color: transparentize(rgba(203,229,217,1),0.3);
+	background-color: transparentize($tertiary,0.3);
 }
 
 
@@ -352,7 +370,7 @@ body {
 
 .bg-4 {
 	background: rgb(181,225,197);
-	background: linear-gradient(180deg, rgba(181,225,197,1) 0%, rgba(209,229,203,1) 31%, rgba(209,232,222,0.8) 100%);
+	background: linear-gradient(180deg, rgba(181,225,197,1) 0%, rgb(195, 227, 242) 50%, rgb(143, 133, 197) 100%);
 }
 
 

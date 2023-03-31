@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import {Container, Nav, Navbar,NavDropdown, } from "react-bootstrap"
 
-const Header = ({ siteTitle, bg }) => (
+const Header = ({ siteTitle, bg, variant }) => (
   <header className="fixed-top" >
     
-      <Navbar bg={bg}  id="scroll" expand="lg">
+      <Navbar bg={bg} variant={variant}  id="scroll" expand="lg">
       <Container>
         <Link
             to="/" 
-            className="btn"
+            className={(variant==="dark"? "text-light " : '') + "btn "}
           >
           Esteban Tapia
           </Link>

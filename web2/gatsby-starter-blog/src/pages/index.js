@@ -1,26 +1,20 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-
 import Layout from "../components/layout"
-import Intro from "../components/intro-animation"
-//import Light from "../components/light"
-import CherryTree from "../images/assets/cherry-tree-2.svg"
-import Petal from "../images/assets/petal-1.svg"
-
-
+import Intro from "../components/intro"
 
 import Seo from "../components/seo"
-
 import { Container, Row, Col,Card, Badge } from "react-bootstrap"
 import { useEffect } from "react"
 
 
+const IndexPage = ({ data }) => {
 
-const IndexPage = () => {
+  const imageData = data.placeholderImage.childImageSharp.gatsbyImageData
 
-  
 
 
   useEffect(() => {
@@ -41,13 +35,15 @@ const IndexPage = () => {
   return (
     <>
   
-    <Layout >
+    <Layout variant="dark">
         <Seo title="International Product and Marketing" />
-        <Intro  text="bg-4">
-              <Col lg={{span:10,offset:1}} >
-              <h1 className="display-1 mb-1">Product</h1>
+        <Intro text="text-light" img={imageData}>
+          <Row>
+
+              <Col lg={{span:6}} className="mt-5 pt-5" >
+              <h1 className="mt-5 mb-1">Customer focused products</h1>
               <p className="lead">
-                  End-to-end strategy and lifecycle management of digital and physical products
+                  End-to-end strategy and design of <em>digital</em> and <em>physical</em> products.
               </p>      
               <p>
                   Managing processes and teams to create and launch products internationally in B2B and B2C.
@@ -59,10 +55,10 @@ const IndexPage = () => {
               >
               About me
               </Link>
-  
-  
               
               </Col>
+            
+          </Row>
         </Intro> 
   
 
@@ -70,8 +66,8 @@ const IndexPage = () => {
             <Container>
               <Row className="py-5">
                 
-              <Col lg={{span:4}} className="py-5">
-               <p className="number">
+              <Col lg={{span:4}} className="p-5 my-5 border-end">
+               <p className="number shadow bg-2">
                 1
                 </p>
                <h3>
@@ -81,7 +77,7 @@ const IndexPage = () => {
                 customer, competitor, company 
                </p>
                <p>
-               Using expertise in market research to prepare detailed reports that deep dive in markets analyzing customers' needs, how well competitors are serving them and where the our company has a value differentiation.
+               Using expertise in market research to prepare detailed reports that <em>deep dive</em> in markets analyzing customers' needs, how well competitors are serving them and where the our company has a value differentiation.
                </p>    
   
           
@@ -89,9 +85,9 @@ const IndexPage = () => {
            </Col>
          
               </Row>
-              <Row className="py-5">
-              <Col lg={{span:4, offset:3}} className="py-5">
-                <p className="number">
+              <Row className="py-5 ">
+              <Col lg={{span:4, offset:3}} className="p-5 my-5 border-end">
+                <p className="number shadow bg-2">
                 2
                 </p>
                  <h3>
@@ -112,9 +108,9 @@ const IndexPage = () => {
             </Row>
             <Row className="py-5">
         
-           <Col lg={{span:4, offset:6}} className="py-4">
+           <Col lg={{span:4, offset:6}} className="p-5 my-5 border-end">
               
-                <p className="number">
+                <p className="number shadow bg-2">
                 3
                 </p>
                <h3>
@@ -136,27 +132,10 @@ const IndexPage = () => {
               </Container>
         </section>  
        <section className="py-5 position-relative" id="quote"  >
-        <div className="animation">
-          <CherryTree className="cherry-tree"></CherryTree>
-          <Petal className="petal-1 petal"></Petal>
-          <Petal className="petal-2 petal"></Petal>
-          <Petal className="petal-3 petal"></Petal>
-        </div>
+       <hr />  
       <Container>
-        <Row className="py-5">
-          <Col className="py-5">
-          
-            <blockquote className="display-3 font-italic mb-1">      
-                  simplicity is achieved through iterations and a clear understanding of the medium and audience 
-              </blockquote>     
-          </Col>
-          <Col lg={{span:5,offset:1}} className="pt-5">
-            <p className="border-start p-5 mt-5">
-              Esteban is a product manager with a background in business, design and  experience in corporate and startups
-            </p>
-          </Col>
-        </Row>
-      <hr />
+      
+      
       <Row className="py-lg-5 animate " >
         <Col className="py-5" lg="4" md="6">
         <h2>
@@ -171,10 +150,10 @@ const IndexPage = () => {
           
         </Col>
         </Row>
-        <Row>
+        <Row className="animation">
  
         <Col lg={{span:5, offset: 1}}>
-            <Card className="styled-card text-light mb-3 ">
+            <Card className="styled-card mb-3 ">
               <StaticImage 
                 src="../images/celifood/celifood_5.jpg"
                 className="card-image shadow" 
@@ -193,16 +172,16 @@ const IndexPage = () => {
                     <p>
                     Design, launch and promotion of a healthy cereal line locally and for exports. 
                     </p>
-                    <Badge  bg="1"  className="me-1">
+                    <Badge  bg="2"  className="me-1">
                       #b2c
                     </Badge>
-                    <Badge  bg="1"  className="me-1">
+                    <Badge  bg="2"  className="me-1">
                       #food-industry
                     </Badge>
-                    <Badge  bg="1"  className="me-1">
+                    <Badge  bg="2"  className="me-1">
                       #product-development
                     </Badge>
-                    <Badge  bg="1"  className="me-1">
+                    <Badge  bg="2"  className="me-1">
                       #latam
                     </Badge>
                   </Card.Text>
@@ -223,7 +202,7 @@ const IndexPage = () => {
         </Col>
   
         <Col lg={{span:5, offset: 1}}>
-            <Card className="styled-card text-light mb-3  ">
+            <Card className="styled-card  mb-3  ">
               <StaticImage 
                 src="../images/shush/shush_23.png"
                 className="card-image shadow" 
@@ -242,17 +221,17 @@ const IndexPage = () => {
                     <p>
                     Product concept, startup set-up and product launch of an AI-powered community moderator. 
                     </p>
-                    <Badge  bg="1"  className="me-1">
+                    <Badge  bg="2"  className="me-1">
                       #b2b
                     </Badge>
-                    <Badge  bg="1"  className="me-1">
+                    <Badge  bg="2"  className="me-1">
                       #tech-industry
                     </Badge>
-                    <Badge  bg="1"  className="me-1">
+                    <Badge  bg="2"  className="me-1">
                       #product-development
                     </Badge>
-                    <Badge  bg="1"  className="me-1">
-                      asia
+                    <Badge  bg="2"  className="me-1">
+                      #asia
                     </Badge>
                   </Card.Text>
               </Card.Body>
@@ -268,39 +247,7 @@ const IndexPage = () => {
             </Card>
           </Col>
         
-        {/*
-        <Col lg={{span:4,offset:2}} className="py-3">
-          <h2>
-            Brand design:
-          </h2>
-               Core elements to define a brand, including logo, isotype, typography, etc.      
-          <ul>
-    
-              <li className="mb-3">
-                <strong>Corporate style: </strong>
-                Defining communication in text, visual &#123;photography, illustration, graphic design&#125; video and audio. 
-              </li>
-              <li className="mb-3">
-                <strong>Applications: </strong>
-                Merchandise and promotional material, menus, packaging and decoration.
-              </li>
-  
-          </ul>
-  
-          <Card className="shadow">
-            <Card.Body>
-            <StaticImage 
-          src="../images/latamcham/latamcham_9.png" 
-          alt="Branding Project" 
-          quality="100"
-          />
-  
-            </Card.Body>
-          </Card>
-          
-        </Col>
-      */}
-  
+     
       </Row>
       </Container>
       </section>
@@ -351,3 +298,20 @@ const IndexPage = () => {
 
 
 export default IndexPage
+
+
+// Set image for header background 
+
+export const query = graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "river.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1800
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+  }
+`

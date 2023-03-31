@@ -21,7 +21,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "react-bootstrap"
 
 
-const Layout = ({ children, bg }) => {
+const Layout = ({ children, bg, variant }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -60,7 +60,7 @@ const Layout = ({ children, bg }) => {
   return (
     <>
     
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} bg={bg} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} bg={bg} variant={variant} />
         
         <main>{children}</main>
         <footer 
@@ -77,7 +77,7 @@ const Layout = ({ children, bg }) => {
             <a
               href="https://www.linkedin.com/in/estebantapia"
               activeClassName="active"
-              className="btn-outline-primary"
+              className="btn-outline-secondary btn"
               target="_blank"
               rel="noreferrer"
             >
