@@ -328,6 +328,10 @@ body {
 		color: $dark !important;
 	}
 
+	.text-muted {
+		color: darken($tertiary, 20%) !important;
+	}
+
 	.text-dark {
 		color: $dark;
 		

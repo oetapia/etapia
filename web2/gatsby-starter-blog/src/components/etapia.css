@@ -282,6 +282,10 @@ body .text-light .text-muted {
   color: #252727 !important;
 }
 
+body .text-muted {
+  color: #aea1c7 !important;
+}
+
 body .text-dark {
   color: #252727;
   border-color: #252727 !important;

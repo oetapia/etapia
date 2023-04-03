@@ -22,8 +22,8 @@ const About = ({ data }) => {
        <Row>
             <Col lg={{span:6}} className="mt-5 p-5" >
             <h1>About Esteban</h1>
-            <p className="lead">
-              Product driven by design.
+            <p className="lead text-muted">
+              Product driven by marketing and design.
 
             </p>  
             <p>
@@ -31,6 +31,10 @@ const About = ({ data }) => {
             </p>
 
             
+            <p>
+              Applying skills from market research and experience overseas to gain a deep understanding of customer's needs and market trends in each industry worked.
+            </p>
+
         </Col>
 
         <Col lg={{offset:1,span:5}} className="px-3">
@@ -48,40 +52,32 @@ const About = ({ data }) => {
     </Intro>  
     <Container >
    
-   <Row  className="py-5">
 
-      <Col lg="6 ">
 
-           <p>
-              Applying skills from market research and experience overseas to gain a deep understanding of customer's needs and market trends in each industry worked.
-            </p>
+    <Row >
 
-      
-      </Col>
-      
-    </Row>
-
-    <Row className="py-5">
-        <Col lg="6">
+        <Col lg={{span:4}}>
+          <StaticImage 
+                src="../images/circles.svg"
+                className="img-fluid" 
+                alt="Marketing, design and tech" 
+                quality="100"
+                />
+          </Col>
+        <Col lg={{offset:1, span:6}} className="py-5">
 
             <p>
               Esteban has set strategy, and worked collaboratively with business and engineering teams to ensure the successful delivery of products in Spain, Ecuador, South Korea and Germany. 
             </p>
 
-            
+            <p>
+              Esteban applies hands-on knowledge accumulated over +15 years of experience in different roles in the marketing vertical. Including corporate and startup experience. 
+            </p>
         
         </Col>
     </Row>
 
-    <Row className="py-5">
-
-      <Col lg="6">
-        <p>
-              Esteban applies hands-on knowledge accumulated over +15 years of experience in different roles in the marketing vertical. Including corporate and startup experience. 
-            </p>
-      </Col>
-
-    </Row>
+  
 
 
     <Row className="py-lg-5 border-top">
@@ -90,18 +86,20 @@ const About = ({ data }) => {
         <h2>
               <span >Product</span> Management
           </h2>
-          <p className="lead">
+          <p className="lead text-muted">
           Designed and launched in various countries.
           </p>
         
       </Col>
       <Col lg={{span:5,offset:1}} >
-         <p>
-            In the <em>food industry</em>: Product family design, packaging design, packaging legislation compliance (FDA, locally), nutritional tables, in store material, promotional material. Trade fairs, exports. See <Link to="/experience/cereales">Celifood</Link>
-          </p>
+    
           <p>
-              In the <em>tech industry</em>: Product concept, prototypes, use cases, personas, roadmap elaboration, project management, product management. 
-              See <Link to="/experience/shush">Shush</Link>
+              In the <em>tech industry</em>: User interviews, eliciting requirements, personas, use cases, roadmap elaboration, product concept, prototypes, backlog management, kanban and scrum. 
+              See <Link to="/experience/shush">Shush</Link> and <Link to="/experience/pendulum">pendulum.health</Link>
+          </p>
+
+          <p>
+            Web and front-end development: CSS, HTML, JavaScript, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing. || Hotjar, Pendo, Google Analytics, Visual Studio Code, Jira. See <Link to="/projects/werkit">Werkit</Link>
           </p>
 
       </Col>
@@ -113,7 +111,7 @@ const About = ({ data }) => {
         <h2>
               <span >Marketing</span> Management
           </h2>
-        <p className="lead">
+        <p className="lead text-muted">
             Educated in Business.
         </p>
       </Col>
@@ -123,6 +121,11 @@ const About = ({ data }) => {
         Graduate Degree in Business Administration
         Madrid, Spain [Universidad Rey Juan Carlos]
         </p>
+
+
+        <p>
+            In the <em>food industry</em>: Product family design, packaging design, packaging legislation compliance (FDA, locally), nutritional tables, in store material, promotional material. Trade fairs, exports. See <Link to="/experience/cereales">Celifood</Link>
+          </p>
 
         <p>
             Demand generation: User interviews, market research, planning, strategy, positioning, branding. Marketing management.
@@ -147,7 +150,7 @@ const About = ({ data }) => {
         <h2>
               <span >Design</span> and Art Direction
           </h2>
-          <p className="lead">
+          <p className="lead text-muted">
               Educated in Art Direction.
           </p>  
         
@@ -172,28 +175,7 @@ const About = ({ data }) => {
       </Col>
     </Row>
 
-  
 
-
-    <Row className="py-lg-5 border-top">
-    <Col className="py-5 text-end" lg="4" md="6">
-      
-           <h2>
-            Front-end <span > Development</span> 
-          </h2>
-          <p className="lead">
-            Web development, UI/UX. 
-          </p>
-        
-      </Col>
-      <Col lg={{span:5,offset:1}} >
-     
-          <p>
-            Development: CSS, HTML, JavaScript, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing. || Hotjar, Pendo, Google Analytics, Visual Studio Code, Jira.
-          </p>
-
-      </Col>
-    </Row>
    
    </Container>
   </Layout>

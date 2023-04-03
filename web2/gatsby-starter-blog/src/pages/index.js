@@ -40,8 +40,19 @@ const IndexPage = ({ data }) => {
         <Intro text="text-light" img={imageData}>
           <Row>
 
+             <Col  lg={{order:1, span:5} }>
+                <StaticImage 
+                  src="../images/pendulum/pendulum-tablet.png"
+                  className="img-fluid" 
+                  alt="Branding Project" 
+                  quality="100"
+                  />
+            
+          
+              </Col>
+
               <Col lg={{span:6}} className="mt-5 p-5" >
-              <h1 className="mt-5 mb-1">Customer focused products</h1>
+              <h1 className="mt-3 mt-lg-5 mb-1">Customer focused products</h1>
               <p className="lead">
                   End-to-end strategy and design of <em>digital</em> and <em>physical</em> products.
               </p>      
@@ -58,6 +69,7 @@ const IndexPage = ({ data }) => {
               
               </Col>
             
+             
           </Row>
         </Intro> 
   
@@ -73,60 +85,97 @@ const IndexPage = ({ data }) => {
                <h3>
                  Ideation
                </h3>
-               <p className="lead">
+               <p className="lead text-muted">
                 customer, competitor, company 
                </p>
                <p>
-               Using expertise in market research to prepare detailed reports that <em>deep dive</em> in markets analyzing customers' needs, how well competitors are serving them and where the our company has a value differentiation.
+               Using expertise in market research to prepare detailed reports that <em>deep dive</em> in markets. 
                </p>    
+                <p>
+                By analyzing customers' needs, and how well competitors are serving them we can decide where  our company will have a value differentiation.
+                </p>
   
           
                        
            </Col>
+
+           <Col lg={{span:2,offset:2}} className="pt-5 px-5 px-lg-0" >
+
+           <StaticImage 
+                src="../images/customer-report.png"
+                className="img-fluid" 
+                alt="Branding Project" 
+                quality="100"
+                />
+           </Col>
+          
          
               </Row>
               <Row className="py-5 ">
-              <Col lg={{span:4, offset:3}} className="p-5 my-5 border-end">
+              <Col lg={{span:4, offset:2}} className="p-5 my-5 border-end">
                 <p className="number shadow bg-2">
                 2
                 </p>
                  <h3>
                    Product development
                  </h3>
-                 <p className="lead">
+                 <p className="lead text-muted">
                    wireframes, figma, html/js prototypes
                  </p>
                    
                  <p>
-                 An interative process seeking for product market fit by running tests and gauging audience reaction using multiple techniques to build product concepts, from hand drawings, to print, and digital, using methods that help stakeholders understand the scope.
-                  
+                 An iterative process seeking for <em>product-market fit</em> by running tests and audience reaction.
+                 </p>
+                 <p>
+                 Help stakeholders understand the scope and interest by producing product concepts, hand drawings, prints, to interactive digital protypes.
                  </p>
  
                
            </Col>
+           <Col lg={{span:2,offset:2}} className="pt-5 px-5 px-lg-0" >
 
+          <StaticImage 
+              src="../images/ab-test.png"
+              className="img-fluid" 
+              alt="Branding Project" 
+              quality="100"
+              />
+          </Col>
             </Row>
             <Row className="py-5">
         
-           <Col lg={{span:4, offset:6}} className="p-5 my-5 border-end">
+           <Col lg={{span:4, offset:3}} className="p-5 my-5 border-end">
               
                 <p className="number shadow bg-2">
                 3
                 </p>
                <h3>
                 
-                 Promotion
+                 Launch
                </h3>
-               <p className="lead">
+               <p className="lead text-muted">
                  documentation, promotion, feedback
                </p>
-
+              
+              <p>
+                Preparing for launch, testing usability and creating promotional strategies using marketing principles. 
+              </p>
                <p>
-                 Applying experience in business development to get the product to the right placement through channel management, exports and promotion in international events. 
+                 By applying experience from business development to get the product to the right placement through channel management, exports and promotion in international events. 
 
                </p>
                
            </Col>
+
+           <Col lg={{span:2,offset:2}} className="pt-5 px-5 px-lg-0" >
+
+          <StaticImage 
+              src="../images/landing-page.png"
+              className="img-fluid" 
+              alt="Branding Project" 
+              quality="100"
+              />
+          </Col>
  
          </Row>
               </Container>
@@ -142,7 +191,7 @@ const IndexPage = ({ data }) => {
            Success stories
         </h2>
           <p className="lead">
-              Digital and physical producst in B2B and B2C
+              Digital and physical products in B2B and B2C
           </p>
           <p>
             A career that includes branding, product and marketing in Asia, South America and Europe
@@ -152,11 +201,11 @@ const IndexPage = ({ data }) => {
         </Row>
         <Row className="animate">
  
-        <Col lg={{span:5, offset: 1}}>
-            <Card className="styled-card mb-3 ">
+        <Col lg={{span:4, offset: 2}} >
+            <Card className="styled-card mb-5 ">
               <StaticImage 
                 src="../images/celifood/celifood_5.jpg"
-                className="card-image shadow" 
+                className="card-image" 
                 alt="Branding Project" 
                 quality="100"
                 />
@@ -201,11 +250,11 @@ const IndexPage = ({ data }) => {
         
         </Col>
   
-        <Col lg={{span:5, offset: 1}}>
-            <Card className="styled-card  mb-3  ">
+        <Col lg={{span:4, offset: 2}}>
+            <Card className="styled-card  mb-5  ">
               <StaticImage 
                 src="../images/shush/shush_23.png"
-                className="card-image shadow" 
+                className="card-image" 
                 alt="Branding Project" 
                 quality="100"
                 />
@@ -278,8 +327,13 @@ const IndexPage = ({ data }) => {
             </Link>
             
           </Col>
-          <Col>
-             
+          <Col lg={{span:4,offset:2}}>
+          <StaticImage 
+                src="../images/circles.svg"
+                className="img-fluid" 
+                alt="Marketing, design and tech" 
+                quality="100"
+                />
           </Col>
 
         </Row>
