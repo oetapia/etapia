@@ -7,6 +7,11 @@ body {
   font-weight: 300;
 }
 
+body .shadow {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(127, 117, 179, 0.3) !important;
+          box-shadow: 0 0.5rem 1rem rgba(127, 117, 179, 0.3) !important;
+}
+
 body h1, body h2, body h3 {
   line-height: 1.3em;
   text-transform: uppercase;
@@ -123,7 +128,7 @@ body .border-start, body .border-end {
 }
 
 body .border-bottom, body .border-top {
-  border-color: #8f85c5 !important;
+  border-color: rgba(143, 133, 197, 0.7) !important;
 }
 
 body .styled-card {
@@ -316,11 +321,6 @@ body .navbar-collapse.show .child::last {
   background: rgba(143, 133, 197, 0.7);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(160, 150, 216, 0.8)), to(rgba(143, 133, 197, 0.9)));
   background: linear-gradient(180deg, rgba(160, 150, 216, 0.8), rgba(143, 133, 197, 0.9));
-}
-
-.bg-2.shadow {
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(127, 117, 179, 0.3) !important;
-          box-shadow: 0 0.5rem 1rem rgba(127, 117, 179, 0.3) !important;
 }
 
 .bg-3 {
