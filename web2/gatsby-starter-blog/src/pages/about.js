@@ -27,12 +27,13 @@ const About = ({ data }) => {
 
             </p>  
             <p>
-              Esteban has researched, designed, and launched physical and software products in B2B and B2C. 
+              Esteban has researched industries, designed products, and in multiple industries B2B and B2C products. 
             </p>
-
             
             <p>
-              By applying skills from market research and experience in multiple markets to gain a deep understanding of customer's needs and market trends in each industry worked.
+              By applying skills from design and market research
+              
+               and experience in multiple markets to gain a deep understanding of customer's needs and trends in each industry worked.
             </p>
 
         </Col>
@@ -102,7 +103,7 @@ const About = ({ data }) => {
               </small>
             </li>
             <li>
-                Front-end development: <br />
+            <span className="badge bg-2">B2B</span> Front-end development: <br />
                 <small>
                  CSS, HTML, JavaScript. Gatsby, ReactJS (ES6 JS), Wordpress (PHP), Python (Django, Wagtail), Bootstrap. | Visual Studio, Git, Hotjar, Pendo, Google Analytics.
                  See <Link to="/projects/werkit">Werkit</Link>
@@ -111,7 +112,7 @@ const About = ({ data }) => {
           </ul>
           
           <p>
-            In the <em>exports industry</em> 
+            In the <em>exports industry</em>: 
           </p>
           <ul>
             <li><span className="badge bg-2">B2C</span> Product design and launch: 
@@ -137,27 +138,47 @@ const About = ({ data }) => {
       </Col>
       <Col lg={{span:5,offset:1}} >
 
-        <p className="font-italic">
+        <p className="font-italic text-muted" >
         Graduate Degree in Business Administration
         Madrid, Spain [Universidad Rey Juan Carlos]
         </p>
 
+        <p>Digital Marketing:</p>
+        <ul>
+          <li><span className="badge bg-2">B2C</span>  Promotion: <br /> 
+            <small>
+             SEO, SEM, SMM. Google Analytics, Hotjar
+            </small>
+             </li>
+          <li>
+          <span className="badge bg-2">B2B</span>  Collaterals: <br />
+            <small>
+             Touch point strategy, website, landing pages, copywriting, success stories, product specs. | CMS: Django, Odoo, Wordpress, Joomla HubspotCRM, MS Office, Google Drive, SQL, Tableau. 
+            </small>
+          </li>
 
-       
-
-        <p>
-            Demand generation: User interviews, market research, planning, strategy, positioning, branding. Marketing management.
-        </p>
-
-        <p>
-            Digital Marketing: CMS, SEO, SEM, SMM, Analytics, Mailings, Landing pages, Copywriting and Content Creation. || Django, Odoo, Wordpress, Google Analytics
-        </p>
-
-        <p>
-            Traditional marketing: promotion strategy, sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  || HubspotCRM, MS Office, Google Drive, Database mining, Tableau. 
-          </p>
           
+        </ul>
 
+        <p>Traditional Marketing:</p>
+        <ul>
+          <li>
+          <span className="badge bg-2">B2C</span>  Demand Generation: <br />
+          <small>
+            User interviews, market analysis, competitor analysis, marketing strategy. 
+          </small>
+          </li>    
+
+          <li>
+          <span className="badge bg-2">B2C</span>  Go-to-Market: <br />  
+          <small>
+            Positioning, branding, promotion strategy, sponsorship, exhibitions, trade fairs, advertising, ATL and BTL.
+          </small>
+          </li>
+       
+        </ul>
+  
+        
       </Col>
     </Row>
 
@@ -175,20 +196,21 @@ const About = ({ data }) => {
       </Col>
       <Col lg={{span:5,offset:1}} >
 
-            <p className="font-italic">
+            <p className="font-italic text-muted">
                 Art Direction and Graphics Design
                 Madrid, Spain, [CICE]
             </p>
-        
-            <p>
-              Photography: Digital Photography, Lightning Techniques || Adobe Photoshop, Adobe Lightroom, Affinity Photo. 
-            </p>
-            <p>
-              Print: Logo Design, Banners, Leaflets, Catalogues || Adobe InDesign, Affinity Publisher, Adobe Illustrator, Affinity Designer.
-            </p>
-            <p>
-              Media: Video Capture, Video Edition || Adobe Premiere, iMovie
-            </p>
+            <ul className="small">
+              <li>
+                Photography: Digital Photography, Lightning Techniques || Adobe Photoshop, Adobe Lightroom, Affinity Photo.  See <Link to="/projects/rdc">RdC</Link>
+              </li>
+              <li>
+                Print: Logo Design, Banners, Leaflets, Catalogues || Adobe InDesign, Affinity Publisher, Adobe Illustrator, Affinity Designer.
+              </li>
+              <li>
+                Media: Video Capture, Video Edition || Adobe Premiere, iMovie
+              </li>
+            </ul>
 
       </Col>
     </Row>

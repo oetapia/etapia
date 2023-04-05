@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
     <>
   
     <Layout>
-        <Seo title="International Product and Marketing" />
+        <Seo title="Product and Marketing Management" />
         <Intro text="text-light" img={imageData}>
           <Row>
 
@@ -328,7 +328,7 @@ const IndexPage = ({ data }) => {
             </Link>
             
           </Col>
-          <Col lg={{span:4,offset:2}} class="py-3">
+          <Col lg={{span:4,offset:2}} className="py-3">
           <StaticImage 
                 src="../images/circles.svg"
                 className="img-fluid" 
