@@ -68,12 +68,12 @@ const Layout = ({ children, bg, variant }) => {
         >
         <Container>  
         <Row>
-          <Col>
-            <p className="small">
+          <Col lg="6">
+            <p className="text-center py-3 small">
               {data.site.siteMetadata?.title}  © {new Date().getFullYear()}
             </p>  
           </Col>
-          <Col className="text-end small">
+          <Col lg="6" className="text-center text-end small">
             <a
               href="https://www.linkedin.com/in/estebantapia"
               activeClassName="active"

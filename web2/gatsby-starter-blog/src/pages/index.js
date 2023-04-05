@@ -40,19 +40,20 @@ const IndexPage = ({ data }) => {
         <Intro text="text-light" img={imageData}>
           <Row>
 
-             <Col  lg={{order:1, span:5} }>
+             <Col  lg={{order:1, span:5, offset:1} } className="text-center">
                 <StaticImage 
                   src="../images/pendulum/pendulum-tablet.png"
                   className="img-fluid" 
                   alt="Branding Project" 
                   quality="100"
                   />
-            
+
+              <p className="font-italic small text-muted pt-5">fig: pendulum.health dashboard</p>
           
               </Col>
 
               <Col lg={{span:6}} className="mt-5 p-5" >
-              <h1 className="mt-3 mt-lg-5 mb-1">Customer focused products</h1>
+              <h1 className="mb-3">Customer focused products</h1>
               <p className="lead">
                   End-to-end strategy and design of <em>digital</em> and <em>physical</em> products.
               </p>      
@@ -62,7 +63,7 @@ const IndexPage = ({ data }) => {
           
               <Link
                 to="/about/"
-                className="btn btn-secondary"
+                className="mt-5 btn btn-outline-light"
               >
               About me
               </Link>
@@ -194,7 +195,7 @@ const IndexPage = ({ data }) => {
               Digital and physical products in B2B and B2C
           </p>
           <p>
-            A career that includes branding, product and marketing in Asia, South America and Europe
+            A career that includes branding, product and marketing in Asia, South America and Europe.
           </p>
           
         </Col>
@@ -212,7 +213,7 @@ const IndexPage = ({ data }) => {
               
               <Card.Body>
                 <Card.Title>
-                  <div className="small mb-0">PRODUCT</div>
+                  <div className="small mb-0">PHYSICAL PRODUCT</div>
                 <h4 className="display-4 mt-0">
                   Celifood
                 </h4>            
@@ -261,7 +262,7 @@ const IndexPage = ({ data }) => {
               
               <Card.Body>
                 <Card.Title>
-                  <div className="small mb-0">PRODUCT</div>
+                  <div className="small mb-0">DIGITAL PRODUCT</div>
                   <h4 className="display-4 mt-0">
                   Shush
                 </h4>            
@@ -305,14 +306,14 @@ const IndexPage = ({ data }) => {
       <section className="mt-5 pt-5">
       
         <Container>
-        <Row >
+        <Row className="py-5">
             <Col className="py-5 "  lg="6">
             <h2>Esteban</h2>
-            <p className="lead">
+            <p className="lead text-muted">
             marketing, design, tech
             </p>
             <p>
-            +15 years of work experience spanning 4 different countries in tech and the food industry.
+            +15 years of work experience spanning 4 different countries in <em>tech</em> and <em>exports</em>.
                
             </p>  
             <p>
@@ -327,7 +328,7 @@ const IndexPage = ({ data }) => {
             </Link>
             
           </Col>
-          <Col lg={{span:4,offset:2}}>
+          <Col lg={{span:4,offset:2}} class="py-3">
           <StaticImage 
                 src="../images/circles.svg"
                 className="img-fluid" 
@@ -358,7 +359,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "river.jpg" }) {
+    placeholderImage: file(relativePath: { eq: "93078.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 1800

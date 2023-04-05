@@ -265,7 +265,8 @@ body {
 
 	.btn-outline-light {
 		&:hover {
-			color: $primary !important;
+			color: $secondary !important;
+			background-color: transparentize($light, .6);
 		}
 	}
 
@@ -325,7 +326,7 @@ body {
 	}
 
 	.text-light .text-muted {
-		color: $dark !important;
+		color: darken($tertiary, 5%) !important;
 	}
 
 	.text-muted {
@@ -344,19 +345,23 @@ body {
 		border-color: $dark !important;
 	}
 
+
+
 	 // NAVBAR Collapse 
 	 .navbar-collapse.show {
-		background-color: transparentize($light,0.1);
+		background-color: transparent;
 		transition-duration: 500ms;
-
-		border: 1px solid $primary;
-		.nav-link {
-			border-bottom: 1px solid $primary;
-
+		.dropdown {
+			.dropdown-menu {
+				background-color: transparent;
+				border: 0;
+			}
+		
 		}
 
-		.child::last {
-			border-bottom: transparent;
+		.nav-link {
+			background-color: transparent;
+
 		}
 	 }
 
@@ -388,7 +393,7 @@ body {
 
 .bg-4 {
 	background: rgb(181,225,197);
-	background: linear-gradient(180deg,   rgb(138, 218, 214) 0%, rgb(125, 196, 193) 35%, rgb(143, 133, 197) 100%);
+	background: linear-gradient(180deg,   rgb(138, 218, 214) 0%, rgb(125, 196, 193) 35%, rgb(114, 168, 183) 100%);
 }
 
 

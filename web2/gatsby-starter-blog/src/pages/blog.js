@@ -49,7 +49,7 @@ export default function Experience({ data }) {
                 </p>
                 <p className="small mt-0">
                 {frontmatter.tags.map((tag, i) => [
-                  <Badge key={i} bg="primary"  className="me-1">
+                  <Badge key={i} bg="secondary"  className="me-1">
                     {tag}
                   </Badge>
                 ])}

@@ -226,7 +226,8 @@ body .bg-primary {
 }
 
 body .btn-outline-light:hover {
-  color: #7dc4c1 !important;
+  color: #8f85c5 !important;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 body .btn-outline-secondary {
@@ -279,7 +280,7 @@ body .dropdown-item.active:hover, body .dropdown-item.active:focus, body .dropdo
 }
 
 body .text-light .text-muted {
-  color: #252727 !important;
+  color: #d7d1e3 !important;
 }
 
 body .text-muted {
@@ -297,18 +298,18 @@ body .text-mid {
 }
 
 body .navbar-collapse.show {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
-  border: 1px solid #7dc4c1;
+}
+
+body .navbar-collapse.show .dropdown .dropdown-menu {
+  background-color: transparent;
+  border: 0;
 }
 
 body .navbar-collapse.show .nav-link {
-  border-bottom: 1px solid #7dc4c1;
-}
-
-body .navbar-collapse.show .child::last {
-  border-bottom: transparent;
+  background-color: transparent;
 }
 
 .bg-0 {
@@ -333,8 +334,8 @@ body .navbar-collapse.show .child::last {
 
 .bg-4 {
   background: #b5e1c5;
-  background: -webkit-gradient(linear, left top, left bottom, from(#8adad6), color-stop(35%, #7dc4c1), to(#8f85c5));
-  background: linear-gradient(180deg, #8adad6 0%, #7dc4c1 35%, #8f85c5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#8adad6), color-stop(35%, #7dc4c1), to(#72a8b7));
+  background: linear-gradient(180deg, #8adad6 0%, #7dc4c1 35%, #72a8b7 100%);
 }
 
 .bg-loop {

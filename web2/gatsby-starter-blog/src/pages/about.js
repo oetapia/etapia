@@ -18,7 +18,7 @@ const About = ({ data }) => {
     
     <Seo title="About" />
 
-    <Intro >
+    <Intro text="text-light" img={imageData}>
        <Row>
             <Col lg={{span:6}} className="mt-5 p-5" >
             <h1>About Esteban</h1>
@@ -32,7 +32,7 @@ const About = ({ data }) => {
 
             
             <p>
-              Applying skills from market research and experience overseas to gain a deep understanding of customer's needs and market trends in each industry worked.
+              By applying skills from market research and experience in multiple markets to gain a deep understanding of customer's needs and market trends in each industry worked.
             </p>
 
         </Col>
@@ -40,9 +40,9 @@ const About = ({ data }) => {
         <Col lg={{offset:1,span:5}} className="px-3">
             <StaticImage 
               src="../images/shush/pitch.png"
-              className="img-fluid border-3 shadow" 
+              className="img-fluid img-thumbnail border-3 shadow" 
               alt="K-Startup Grand Challenge" 
-              quality="100"
+              quality="90"
               />
             
         </Col>
@@ -56,7 +56,7 @@ const About = ({ data }) => {
 
     <Row >
 
-        <Col lg={{span:4}}>
+        <Col className="p-5" lg={{span:4}}>
           <StaticImage 
                 src="../images/circles.svg"
                 className="img-fluid" 
@@ -84,7 +84,7 @@ const About = ({ data }) => {
     <Col className="py-5 text-end" lg="4" md="6">
       
         <h2>
-              <span >Product</span> Management
+              <span>Product</span> Management
           </h2>
           <p className="lead text-muted">
           Designed and launched in various countries.
@@ -94,13 +94,33 @@ const About = ({ data }) => {
       <Col lg={{span:5,offset:1}} >
     
           <p>
-              In the <em>tech industry</em>: User interviews, eliciting requirements, personas, use cases, roadmap elaboration, product concept, prototypes, backlog management, kanban and scrum. 
+              In the <em>tech industry</em> : 
+          </p>    
+          <ul>
+            <li className="mb-3"><span className="badge bg-2">B2B</span>  Agile development: <br /> <small>User interviews, eliciting requirements, personas, use cases, roadmap elaboration, product concept, prototypes, backlog management, kanban and scrum. | Trello, Confluence, Jira.
               See <Link to="/experience/shush">Shush</Link> and <Link to="/experience/pendulum">pendulum.health</Link>
-          </p>
-
+              </small>
+            </li>
+            <li>
+                Front-end development: <br />
+                <small>
+                 CSS, HTML, JavaScript. Gatsby, ReactJS (ES6 JS), Wordpress (PHP), Python (Django, Wagtail), Bootstrap. | Visual Studio, Git, Hotjar, Pendo, Google Analytics.
+                 See <Link to="/projects/werkit">Werkit</Link>
+                </small> 
+            </li>
+          </ul>
+          
           <p>
-            Web and front-end development: CSS, HTML, JavaScript, React, Gatsby, PHP, Python, Django, Bootstrap, JAM Stack and LAMP Stack. Data Analytics, Heat Maps, A/B testing. || Hotjar, Pendo, Google Analytics, Visual Studio Code, Jira. See <Link to="/projects/werkit">Werkit</Link>
+            In the <em>exports industry</em> 
           </p>
+          <ul>
+            <li><span className="badge bg-2">B2C</span> Product design and launch: 
+              <br />
+              <small>
+              Research, strategy, packaging, legislation compliance (local and FDA), demand generation, promotional material, events, trade fairs, exports. <br />See <Link to="/experience/cereales">Celifood</Link>
+              </small> 
+            </li>
+          </ul>
 
       </Col>
     </Row>
@@ -123,9 +143,7 @@ const About = ({ data }) => {
         </p>
 
 
-        <p>
-            In the <em>food industry</em>: Product family design, packaging design, packaging legislation compliance (FDA, locally), nutritional tables, in store material, promotional material. Trade fairs, exports. See <Link to="/experience/cereales">Celifood</Link>
-          </p>
+       
 
         <p>
             Demand generation: User interviews, market research, planning, strategy, positioning, branding. Marketing management.
@@ -136,7 +154,7 @@ const About = ({ data }) => {
         </p>
 
         <p>
-            Promotion strategy: sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  || HubspotCRM, MS Office, Google Drive, Database mining, Tableau. 
+            Traditional marketing: promotion strategy, sponsorship, exhibitions, trade fairs, advertising, ATL and BTL  || HubspotCRM, MS Office, Google Drive, Database mining, Tableau. 
           </p>
           
 
@@ -189,7 +207,7 @@ export default About
 
 export const query = graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "cherrytree.jpg" }) {
+    placeholderImage: file(relativePath: { eq: "93079.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 1800
